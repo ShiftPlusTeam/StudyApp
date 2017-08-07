@@ -9,10 +9,13 @@
 import Foundation
 
 //各画面で必要となるデータを扱うクラス
-//Singleton
 
 
 class  AppDataController {
+    
+    //Singleton
+    static let sharedInstance = AppDataController()
+    
     
     // Propties
     //フィールド値を隠蔽
