@@ -71,9 +71,45 @@ class  AppDataController {
         return kind
     }
     
+    // 現在の問題数
+    // 1 2 3
+    private var currentCount: Int = 0
+    
+    public func setCurrentCount(a: Int) {
+        currentCount = a
+    }
+    
+    //現在何問目か取得
+    public func setCurrentCount() -> (Int) {
+        return currentCount
+    }
+    
     
     
     // Method
+    
+    // イニシャライザ
+    init() {
+        
+    }
+    
+    
+    // QuestionDataのインスタンスを生成するメソッド
+    public func createQuestionDataInstance() -> () {
+        
+    }
+    
+    //currentCountをインクリメント
+    public func incrementCurrentCount() -> () {
+        currentCount = currentCount + 1
+    }
+    
+    
+    //正解数と不正解数を返却するメソッド
+    public func getCorrectCount() -> () {
+        
+    }
+    
     
     
     
