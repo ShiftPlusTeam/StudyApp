@@ -9,29 +9,64 @@
 import Foundation
 
 //各画面で必要となるデータを扱うクラス
+//Singleton
+
 
 class  AppDataController {
     
-    // Field
+    // Propties
+    //フィールド値を隠蔽
     
     // 資格名
     // ex) CCNA LPIC
-    var name: String = "資格名"
+    private var name: String = "資格名"
+    
+    public func setName(a: String) {
+        name = a
+    }
+    
+    public func getName() -> (String) {
+        return name
+    }
+    
     
     // ジャンル
     // ex) Network Database
-    var genre: [String] = []
+    public private(set) var genre: [String] = []
+    
+    public func setGenre(a: [String]) {
+        genre = a
+    }
+    
+    public func getGenre() -> ([String]) {
+        return genre
+    }
     
     
     // 問題数
     // ex) 5 10 All
-    var count: String = "5"
+    private var count: String = "5"
+    
+    public func setCount(a: String) {
+        count = a
+    }
+    
+    public func getCount() -> (String) {
+        return count
+    }
+    
     
     // 問題の種別
     // 全問 未回答 不正解
-    var kind: String = "全問"
+    private var kind: String = "全問"
     
+    public func setKind(a: String) {
+        kind = a
+    }
     
+    public func getKind() -> (String) {
+        return kind
+    }
     
     
     
