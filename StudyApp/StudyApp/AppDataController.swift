@@ -20,6 +20,8 @@ class  AppDataController {
     // Propties
     //フィールド値を隠蔽
     
+    static let shared = AppDataController()
+    
     // 資格名
     // ex) CCNA LPIC
     private var name: String = "資格名"
@@ -89,7 +91,7 @@ class  AppDataController {
     // Method
     
     // イニシャライザ
-    init() {
+    private init() {
         
     }
     
