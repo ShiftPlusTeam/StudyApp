@@ -22,6 +22,11 @@ class  AppDataController {
     
     static let shared = AppDataController()
     
+    // イニシャライザ
+    private init() {
+        
+    }
+    
     // 資格名
     // ex) CCNA LPIC
     private var name: String = "資格名"
@@ -37,7 +42,7 @@ class  AppDataController {
     
     // ジャンル
     // ex) Network Database
-    public private(set) var genre: [String] = []
+    private var genre: [String] = []
     
     public func setGenre(a: [String]) {
         genre = a
@@ -73,7 +78,7 @@ class  AppDataController {
         return kind
     }
     
-    // 現在の問題数
+    // 現在の解いている問題数
     // 1 2 3
     private var currentCount: Int = 0
     
@@ -90,14 +95,18 @@ class  AppDataController {
     
     // Method
     
-    // イニシャライザ
-    private init() {
+    //QuestionDataのインスタンスを生成するメソッド
+    //引数で指定した数のインスタンスを生成
+    public func createQuestionDataInstance(count: Int) -> () {
+        var questionData: [QuestionData] = []
         
-    }
-    
-    
-    // QuestionDataのインスタンスを生成するメソッド
-    public func createQuestionDataInstance() -> () {
+        var i: Int = 0
+        
+        while i > count {
+            i = i + 1
+            questionData.append(QuestionData())
+        }
+        i=0
         
     }
     
