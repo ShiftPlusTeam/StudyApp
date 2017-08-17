@@ -23,7 +23,7 @@ class  AppDataController {
     static let shared = AppDataController()
     
     // イニシャライザ
-    private init() {
+    init() {
         
     }
     
