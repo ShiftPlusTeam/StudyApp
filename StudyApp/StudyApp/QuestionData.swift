@@ -38,6 +38,7 @@ class QuestionData {
     //問題の番号
     var questionNo: String = "A"
     
+    
     //クラスが生成されたときの処理
     //    init(questionSourceDataArray: [String]) {
     //        question = questionSourceDataArray[0]
@@ -48,6 +49,7 @@ class QuestionData {
     //        correctAnswer = Int(questionSourceDataArray[5])!
     //    }
     //
+    
     
     //選択された番号が正解か判定する
     func isCorrect() -> Bool {

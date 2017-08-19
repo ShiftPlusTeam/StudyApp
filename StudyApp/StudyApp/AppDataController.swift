@@ -20,8 +20,6 @@ class  AppDataController {
     // Propties
     //フィールド値を隠蔽
     
-    static let shared = AppDataController()
-    
     // イニシャライザ
     init() {
         
@@ -31,10 +29,12 @@ class  AppDataController {
     // ex) CCNA LPIC
     private var name: String = "資格名"
     
+    //setter
     public func setName(a: String) {
         name = a
     }
     
+    //getter
     public func getName() -> (String) {
         return name
     }
@@ -44,10 +44,12 @@ class  AppDataController {
     // ex) Network Database
     private var genre: [String] = []
     
+    //setter
     public func setGenre(a: [String]) {
         genre = a
     }
     
+    //getter
     public func getGenre() -> ([String]) {
         return genre
     }
@@ -57,10 +59,12 @@ class  AppDataController {
     // ex) 5 10 All
     private var count: String = "5"
     
+    //setter
     public func setCount(a: String) {
         count = a
     }
     
+    //getter
     public func getCount() -> (String) {
         return count
     }
@@ -70,10 +74,12 @@ class  AppDataController {
     // 全問 未回答 不正解
     private var kind: String = "全問"
     
+    //setter
     public func setKind(a: String) {
         kind = a
     }
     
+    //getter
     public func getKind() -> (String) {
         return kind
     }
@@ -82,12 +88,14 @@ class  AppDataController {
     // 1 2 3
     private var currentCount: Int = 0
     
+    //setter
     public func setCurrentCount(a: Int) {
         currentCount = a
     }
     
+    //getter
     //現在何問目か取得
-    public func setCurrentCount() -> (Int) {
+    public func getCurrentCount() -> (Int) {
         return currentCount
     }
     
@@ -106,7 +114,7 @@ class  AppDataController {
             i = i + 1
             questionData.append(QuestionData())
         }
-        i=0
+        
         
     }
     
@@ -117,6 +125,7 @@ class  AppDataController {
     
     
     //正解数と不正解数を返却するメソッド
+    //引数で指定したインデックスの問題に対して正解か不正解かを返す
     public func getCorrectCount() -> () {
         
     }
