@@ -16,17 +16,16 @@ class  AppDataController {
     //Singleton
     static let sharedInstance = AppDataController()
     
-    
-    // Propties
-    //フィールド値を隠蔽
-    
-    // イニシャライザ
+    //イニシャライザ
     init() {
         
     }
     
-    // 資格名
-    // ex) CCNA LPIC
+    //問題
+    var questionData: [QuestionData] = []
+    
+    //資格名
+    //ex) CCNA LPIC
     private var name: String = "資格名"
     
     //setter
@@ -40,8 +39,8 @@ class  AppDataController {
     }
     
     
-    // ジャンル
-    // ex) Network Database
+    //ジャンル
+    //ex) Network Database
     private var genre: [String] = []
     
     //setter
@@ -55,8 +54,8 @@ class  AppDataController {
     }
     
     
-    // 問題数
-    // ex) 5 10 All
+    //問題数
+    //ex) 5 10 All
     private var count: String = "5"
     
     //setter
@@ -70,8 +69,8 @@ class  AppDataController {
     }
     
     
-    // 問題の種別
-    // 全問 未回答 不正解
+    //問題の種別
+    //全問 未回答 不正解
     private var kind: String = "全問"
     
     //setter
@@ -84,8 +83,8 @@ class  AppDataController {
         return kind
     }
     
-    // 現在の解いている問題数
-    // 1 2 3
+    //現在の解いている問題数
+    //1 2 3
     private var currentCount: Int = 0
     
     //setter
@@ -106,8 +105,6 @@ class  AppDataController {
     //QuestionDataのインスタンスを生成するメソッド
     //引数で指定した数のインスタンスを生成
     public func createQuestionDataInstance(count: Int) -> () {
-        var questionData: [QuestionData] = []
-        
         var i: Int = 0
         
         while i > count {
@@ -124,8 +121,7 @@ class  AppDataController {
     }
     
     
-    //正解数と不正解数を返却するメソッド
-    //引数で指定したインデックスの問題に対して正解か不正解かを返す
+    //正解数を返却するメソッド
     public func getCorrectCount() -> () {
         
     }
