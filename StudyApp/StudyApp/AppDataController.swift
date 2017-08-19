@@ -113,6 +113,14 @@ class  AppDataController {
         }
     }
     
+    //QuestionDataのインスタンスに値をセットするメソッド
+    //全インスタンスに対して乱数の問題番号の問題をセットする
+    public func setQuestionDataInstance() -> () {
+        //ここは現状実装不可
+        //realmの実装待ち
+    }
+    
+    
     //currentCountをインクリメント
     public func incrementCurrentCount() -> () {
         currentCount = currentCount + 1
