@@ -111,8 +111,6 @@ class  AppDataController {
             i = i + 1
             questionData.append(QuestionData())
         }
-        
-        
     }
     
     //currentCountをインクリメント
@@ -122,8 +120,38 @@ class  AppDataController {
     
     
     //正解数を返却するメソッド
-    public func getCorrectCount() -> () {
+    public func getCorrectCount() -> (Int) {
         
+        //カウント数
+        var count: Int = 0
+        
+        for question in questionData {
+            
+            if question.isCorrect() {
+                count = count + 1
+            } else {
+                
+            }
+        }
+        return count
+    }
+    
+    
+    //不正解数を返却するメソッド
+    public func getIncorrectCount() -> (Int) {
+        
+        //カウント数
+        var count: Int = 0
+        
+        for question in questionData {
+            
+            if !(question.isCorrect()) {
+                count = count + 1
+            } else {
+                
+            }
+        }
+        return count
     }
     
     
