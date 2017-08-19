@@ -84,7 +84,8 @@ class  AppDataController {
     }
     
     //現在の解いている問題数
-    //1 2 3
+    //0から始めること(配列のインデックスに用いるため)
+    //0 1 2
     private var currentCount: Int = 0
     
     //setter
@@ -120,6 +121,13 @@ class  AppDataController {
         //realmの実装待ち
     }
     
+    //現在の問題数に対応するQuestionDataのインスタンスを取得するメソッド
+    public func getCurrentQuestionData() -> (QuestionData) {
+        let question: QuestionData = questionData[currentCount]
+        
+        return question
+    }
+    
     
     //currentCountをインクリメント
     public func incrementCurrentCount() -> () {
@@ -127,7 +135,7 @@ class  AppDataController {
     }
     
     
-    //正解数を返却するメソッド
+    //正解数を取得するメソッド
     public func getCorrectCount() -> (Int) {
         
         //カウント数
@@ -145,7 +153,7 @@ class  AppDataController {
     }
     
     
-    //不正解数を返却するメソッド
+    //不正解数を取得するメソッド
     public func getIncorrectCount() -> (Int) {
         
         //カウント数
@@ -161,7 +169,6 @@ class  AppDataController {
         }
         return count
     }
-    
     
     
     
