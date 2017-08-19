@@ -9,7 +9,7 @@
 import Foundation
 
 //1つの問題に関する情報を格納するクラス
-class Question {
+class QuestionData {
     
     //問題文
     var question: String = "問題文"
