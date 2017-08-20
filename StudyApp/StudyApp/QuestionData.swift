@@ -66,4 +66,42 @@ class QuestionData {
     }
 }
 
-//
+//クイズデータの管理クラス
+class QuestionDataManager {
+    
+    //シングルトン
+    static let sharedinstance = QuestionDataManager()
+    
+    //問題文を格納する配列
+    var questionDataArray = [QuestionData]()
+    
+    //現在の問題のインデックス
+    var  nowQuestionIndex: Int = 0
+    
+    //初期化
+    private init() {
+        
+    }
+    //問題文の読み込み,getter
+    func loadQuestion () {
+        //格納済みの問題は削除
+        questionDataArray.removeAll()
+        //現在の問題のインデックスの初期化
+        nowQuestionIndex = 0
+        
+        //csvファイルパス
+        guard let csvFilePath = Bundle.main.Path(forResource: "question",ofType: "csv") else {
+            //csvファイルなし
+            print("csvファイルが存在しません")
+            return
+        }
+        
+        //csvファイル読み込み
+        do {
+            let csvStringData = try String(contentsOfFile: csvFilePath, encording: String.Encoding.utf8)
+            
+        }
+        
+    }
+    
+}
