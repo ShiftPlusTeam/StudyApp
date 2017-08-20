@@ -99,9 +99,27 @@ class QuestionDataManager {
         //csvファイル読み込み
         do {
             let csvStringData = try String(contentsOfFile: csvFilePath, encording: String.Encoding.utf8)
-            
+            //csvを1行ずつ読み込む
+            csvStringData.enumerateLines(autoreleasepool(invoking: { (line, stop) in let questionSourceDataArray = line.components(separatedBy: ",")
+                //問題文を格納するオブジェクト
+                let questionData = QuestionData(questtionSourceDataArry: questionSourceDataArray)
+                //問題を追加
+                self.questionDataArray.append(questionData)
+            })
+        } catch let error {
+            print("csvファイル読み込みエラー:\(error)")
+            return
         }
         
     }
     
+    //次の問題を取り出す
+    func nextQuestion() -> QuestionData? {
+        if nowQuestionIndex < questionDataArray.count {
+            let nextquestion = questionDataArray[nowQuestionIndex]
+            nowQuestionIndex += 1
+            return nextquestion
+        }
+        return nil
+    }
 }
