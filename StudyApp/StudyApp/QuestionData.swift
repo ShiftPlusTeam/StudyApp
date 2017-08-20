@@ -9,7 +9,7 @@
 import Foundation
 
 //1つの問題に関する情報を格納するクラス
-class Question {
+class QuestionData {
     
     //問題文
     var question: String = "問題文"
@@ -38,6 +38,7 @@ class Question {
     //問題の番号
     var questionNo: String = "A"
     
+    
     //クラスが生成されたときの処理
     //    init(questionSourceDataArray: [String]) {
     //        question = questionSourceDataArray[0]
@@ -48,6 +49,7 @@ class Question {
     //        correctAnswer = Int(questionSourceDataArray[5])!
     //    }
     //
+    
     
     //選択された番号が正解か判定する
     func isCorrect() -> Bool {
