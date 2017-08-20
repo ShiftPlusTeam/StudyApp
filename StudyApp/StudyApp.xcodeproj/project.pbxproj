@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		76201C2B1F491E8D001F8AD1 /* question.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76201C2A1F491E8D001F8AD1 /* question.csv */; };
+		76201C2D1F497279001F8AD1 /* QuestionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76201C2C1F497279001F8AD1 /* QuestionDataManager.swift */; };
 		76D018CA1F30360400B8EBF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D018C91F30360400B8EBF8 /* AppDelegate.swift */; };
 		76D018CC1F30360400B8EBF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D018CB1F30360400B8EBF8 /* ViewController.swift */; };
 		76D018CF1F30360400B8EBF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76D018CD1F30360400B8EBF8 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		76201C2A1F491E8D001F8AD1 /* question.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = question.csv; sourceTree = "<group>"; };
+		76201C2C1F497279001F8AD1 /* QuestionDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDataManager.swift; sourceTree = "<group>"; };
 		76D018C61F30360400B8EBF8 /* StudyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76D018C91F30360400B8EBF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76D018CB1F30360400B8EBF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				76D018CB1F30360400B8EBF8 /* ViewController.swift */,
 				76D018CD1F30360400B8EBF8 /* Main.storyboard */,
 				76DC6B4B1F47DD4D0005C85F /* QuestionData.swift */,
+				76201C2C1F497279001F8AD1 /* QuestionDataManager.swift */,
 				76201C2A1F491E8D001F8AD1 /* question.csv */,
 				76D018D01F30360400B8EBF8 /* Assets.xcassets */,
 				76D018D21F30360400B8EBF8 /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 				76D018CC1F30360400B8EBF8 /* ViewController.swift in Sources */,
 				7E58BAF21F38ADFC0031F082 /* AppDataController.swift in Sources */,
 				76D018CA1F30360400B8EBF8 /* AppDelegate.swift in Sources */,
+				76201C2D1F497279001F8AD1 /* QuestionDataManager.swift in Sources */,
 				76DC6B4C1F47DD4D0005C85F /* QuestionData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
