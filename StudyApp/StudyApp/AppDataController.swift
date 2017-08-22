@@ -118,7 +118,12 @@ class  AppDataController {
     //全インスタンスに対して乱数の問題番号の問題をセットする
     public func setQuestionDataInstance() -> () {
         //ここは現状実装不可
-        //realmの実装待ち
+        
+        for question in questionData {
+            
+            //ここの処理はrealmの実装待ち
+            //realmの値をQuestionDataのインスタンスに入れる必要あり？？
+        }
     }
     
     //現在の問題数に対応するQuestionDataのインスタンスを取得するメソッド
