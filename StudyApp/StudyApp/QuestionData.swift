@@ -12,133 +12,105 @@ import AudioToolbox
 //1つの問題に関する情報を格納するクラス
 class QuestionData {
     
-    init(questionSourceDataArray: [String]) {
-        question = questionSourceDataArray[0]
-        optionA = questionSourceDataArray[1]
-        optionB = questionSourceDataArray[2]
-        optionC = questionSourceDataArray[3]
-        optionD = questionSourceDataArray[4]
-        correctAnswer = questionSourceDataArray[5]
-        comment = questionSourceDataArray[6]
-    }
-    
-    //　シングルトンオブジェクトの宣言
-    static let sharedInstance = QuestionData()
-    
-    var questionDataArray = [QuestionData]()
-    var nowQuestionIndex: Int = 0
-    
-    // 初期化処理
-    // シングルトンを保証するためにprivateで宣言する
-    private init() {
-        
-    }
-    
-    // CSVファイルから問題文を読み込む処理（relumeはようわからん）
-    func loadQuestion() {
-        
-        // 格納済みの問題文の削除
-        questionDataArray.removeAll()
-        
-        // 問題文のIndexを初期化
-        nowQuestionIndex = 0
-        
-        // CSVファイルパスの取得
-        guard let csvFilePath = Bundle.main.path(forResource: "question", ofType: "csv") else {
-            print("csvファイルが存在しません")
-            return
-        }
-        // ファイル内容の取得
-        do {
-            let csvStringData = try String(contentsOfFile: csvFilePath, encoding: String.Encoding.utf8)
-            
-            // csvデータを1行ずつ読み込む
-            csvStringData.enumerateLines(invoking: { (line, stop) in
-                // カンマ区切りで分割
-                let questionSourceDataArray = line.components(separatedBy: ",")
-                // 問題データを格納するオブジェクトを作成
-                let questionData = QuestionData(questionSourceDataArray: questionSourceDataArray)
-                // 問題を追加
-                self.questionDataArray.append(questionData)
-                // 問題番号を設定
-                questionData.questionNo = self.questionDataArray.count
-            })
-        } catch let error {
-            print("csvファイル読み込みエラーが発生しました:\(error)")
-            return
-        }
-    }
-    
     //問題文
-    var question: String = "問題文"
-    
-    //問題文のgetter
-    public func getQuestionName() -> (String) {
-        return question
-    }
-    
-    //問題文のsetter
-    public func setQuestionName(question: String) {
-        let question = QuestionData.question
+    @IBOutlet weak var question: UILabel!
+    //問題文/getter/setter
+    var questiontext: String {
+        get {
+            return String(question.text!)
+        }
+        set {
+            question.text = "(nowQuestionText)"
+        }
     }
     
     //解説文
-    var comment: String = "解説文"
-    
-    //問題文のgetter
-    public func getCommentName() -> (String) {
-        return comment
-    }
-    
-    //問題文のsetter
-    public func setCommentName(question: String) {
-        let question = QuestionData.comment
+    @IBOutlet weak var comment: UILabel!
+    //解説文/getter/setter
+    var commenttext: String {
+        get {
+            return String(comment.text!)
+        }
+        set {
+            comment.text = "(nowCommentText)"
+        }
     }
     
     //選択肢A
-    var optionA: String = "A"
-    
-    //選択肢B
-    var optionB: String = "B"
-    
-    //選択肢C
-    var optionC: String = "C"
-    
-    //選択肢D
-    var optionD: String = "D"
-    
-    //正解の番号
-    var correctAnswer: String = "X"
-    
-    //選択された番号
-    var ChoiceAnswer: String = "Y"
-    
-    //問題の番号
-    var questionNo: Int = 0
-    
-    //選択された番号が正解か判定する
-    func isCorrect() -> Bool {
-        
-        //答えが一致しているか判定する
-        if correctAnswer == ChoiceAnswer {
-            
-            //正解
-            return true
+    @IBOutlet weak var optionA: UIButton!
+    //選択肢A/getter/setter
+    var optionAtitle: String {
+        get {
+            return String(describing: optionA.titleLabel!)
         }
-        
-        //不正解
-        return false
+        set {
+            self.optionA.title
+        }
+    }
+
+    //選択肢B
+    @IBOutlet weak var optionB: UIButton!
+    //選択肢B/getter/setter
+    var optionBtitle: String {
+        get {
+            return String(describing: optionB.title)
+        }
+        set {
+            self.optionB.title
+        }
     }
     
+    //選択肢C
+    @IBOutlet weak var optionC: UIButton!
+    //選択肢C/getter/setter
+    var optionCtitle: String {
+        get {
+            return String(describing: optionC.title)
+        }
+        set {
+            self.optionC.title
+        }
+    }
     
+    //選択肢D
+    @IBOutlet weak var optionD: UIButton!
+    //選択肢D/getter/setter
+    var optionDtitle: String {
+        get {
+            return String(describing: optionD.title)
+        }
+        set {
+            self.optionD.title
+        }
+    }
     
+    //正解
+    @IBOutlet weak var correctanswer: UILabel!
+    //正解/getter/setter
+    var correctanswertext: String {
+        get {
+            return String(correctanswer.text!)
+        }
+        set {
+            correctanswer.text = "(nowCorrectAnswerText)"
+        }
+    }
     
-    
-    
-    
-    
-    
+    //回答
+    @IBOutlet weak var selectanswer: UILabel!
+    //回答/getter/setter
+    var selectanswertext: String {
+        get {
+            return String(selectanswer.text!)
+        }
+        set {
+            selectanswer.text = "(nowSelectAnswerText)"
+        }
+   
+    }
+
 }
+
 
 
 
