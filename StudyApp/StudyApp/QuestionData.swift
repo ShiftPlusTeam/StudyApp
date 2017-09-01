@@ -7,106 +7,91 @@
 //
 
 import UIKit
-import AudioToolbox
 
-//1つの問題に関する情報を格納するクラス
+//問題クラス
 class QuestionData {
     
-    //問題文
-    @IBOutlet weak var question: UILabel!
+    var questionNo: Int = 0
+    
     //問題文/getter/setter
-    var questiontext: String {
+    var question: String {
         get {
-            return String(question.text!)
+            return self.question
         }
-        set {
-            question.text = "(nowQuestionText)"
+        set(questionNo) {
+            
         }
     }
     
-    //解説文
-    @IBOutlet weak var comment: UILabel!
     //解説文/getter/setter
-    var commenttext: String {
+    var comment: String {
         get {
-            return String(comment.text!)
+            return self.question
         }
-        set {
-            comment.text = "(nowCommentText)"
+        set(questionNo) {
+            
         }
     }
     
-    //選択肢A
-    @IBOutlet weak var optionA: UIButton!
     //選択肢A/getter/setter
-    var optionAtitle: String {
+    var optionA: String {
         get {
-            return String(describing: optionA.titleLabel!)
+            return self.optionA
         }
-        set {
-            self.optionA.title
+        set(questionNo) {
+            
         }
     }
 
-    //選択肢B
-    @IBOutlet weak var optionB: UIButton!
     //選択肢B/getter/setter
-    var optionBtitle: String {
+    var optionB: String {
         get {
-            return String(describing: optionB.title)
+            return self.optionB
         }
-        set {
-            self.optionB.title
+        set(questionNo) {
+            
         }
     }
     
-    //選択肢C
-    @IBOutlet weak var optionC: UIButton!
     //選択肢C/getter/setter
-    var optionCtitle: String {
+    var optionC: String {
         get {
-            return String(describing: optionC.title)
+            return self.optionC
         }
-        set {
-            self.optionC.title
+        set(questionNo) {
+            
         }
     }
     
-    //選択肢D
-    @IBOutlet weak var optionD: UIButton!
     //選択肢D/getter/setter
-    var optionDtitle: String {
+    var optionD: String {
         get {
-            return String(describing: optionD.title)
+            return self.optionD
         }
-        set {
-            self.optionD.title
+        set(questionNo) {
+            
         }
     }
     
-    //正解
-    @IBOutlet weak var correctanswer: UILabel!
     //正解/getter/setter
-    var correctanswertext: String {
+    var answer: String {
         get {
-            return String(correctanswer.text!)
+            return self.answer
         }
-        set {
-            correctanswer.text = "(nowCorrectAnswerText)"
+        set(questionNo) {
+            
         }
     }
     
-    //回答
-    @IBOutlet weak var selectanswer: UILabel!
+
     //回答/getter/setter
-    var selectanswertext: String {
+    var select: String {
         get {
-            return String(selectanswer.text!)
+            return self.select
         }
-        set {
-            selectanswer.text = "(nowSelectAnswerText)"
+        set(questionNo) {
+            
         }
-   
     }
 
 }
