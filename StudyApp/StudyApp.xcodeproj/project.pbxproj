@@ -18,6 +18,7 @@
 		76D018D11F30360400B8EBF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76D018D01F30360400B8EBF8 /* Assets.xcassets */; };
 		76D018D41F30360400B8EBF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76D018D21F30360400B8EBF8 /* LaunchScreen.storyboard */; };
 		7E58BAF21F38ADFC0031F082 /* AppDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E58BAF11F38ADFC0031F082 /* AppDataController.swift */; };
+		7E8E61BE1F5A561400ACA547 /* RealmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8E61BD1F5A561400ACA547 /* RealmController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		76D018D31F30360400B8EBF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76D018D51F30360400B8EBF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E58BAF11F38ADFC0031F082 /* AppDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataController.swift; sourceTree = "<group>"; };
+		7E8E61BD1F5A561400ACA547 /* RealmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		76D018C81F30360400B8EBF8 /* StudyApp */ = {
 			isa = PBXGroup;
 			children = (
+				7E8E61BD1F5A561400ACA547 /* RealmController.swift */,
 				76D018C91F30360400B8EBF8 /* AppDelegate.swift */,
 				7E58BAF11F38ADFC0031F082 /* AppDataController.swift */,
 				76D018CB1F30360400B8EBF8 /* ViewController.swift */,
@@ -160,6 +163,7 @@
 				76201C311F49733E001F8AD1 /* ResultViewController.swift in Sources */,
 				76D018CA1F30360400B8EBF8 /* AppDelegate.swift in Sources */,
 				76201C331F497360001F8AD1 /* QuestionViewContoroller.swift in Sources */,
+				7E8E61BE1F5A561400ACA547 /* RealmController.swift in Sources */,
 				76201C2F1F497322001F8AD1 /* StartViewController.swift in Sources */,
 				76201C3E1F525078001F8AD1 /* QuestionData.swift in Sources */,
 			);
