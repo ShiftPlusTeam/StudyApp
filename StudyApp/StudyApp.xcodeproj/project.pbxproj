@@ -93,8 +93,8 @@
 		76D018C81F30360400B8EBF8 /* StudyApp */ = {
 			isa = PBXGroup;
 			children = (
-				7E8E61BD1F5A561400ACA547 /* RealmController.swift */,
 				76D018C91F30360400B8EBF8 /* AppDelegate.swift */,
+				7E8E61BD1F5A561400ACA547 /* RealmController.swift */,
 				7E58BAF11F38ADFC0031F082 /* AppDataController.swift */,
 				76D018CB1F30360400B8EBF8 /* ViewController.swift */,
 				76D018CD1F30360400B8EBF8 /* Main.storyboard */,
