@@ -10,15 +10,15 @@ import Foundation
 import RealmSwift
 
 class License: Object  {
-    //資格一覧DB   
+    //資格一覧DB
     //Id:資格ID
     //Name:資格名
     //Rate:正答率
     //Purshase:購入済みであるかどうか
-    dynamic var Id :Int16 = 0
-    dynamic var Name :String = ""
-    dynamic var Rate :Int8 = 0
-    dynamic var Purshase :Bool = false
+    dynamic var id :Int16 = 0
+    dynamic var name :String = ""
+    dynamic var rate :Int8 = 0
+    dynamic var purshase :Bool = false
     
 }
 
@@ -36,22 +36,35 @@ class Question :Object{
     //Answer:正解の選択肢
     //Correct:過去に正解したかどうか
     //Done:過去に回答したかどうか
-
-    dynamic var No :Int8 = 0
-    dynamic var LicenseId :Int8 = 0
-    dynamic var Genre :String = ""
-    dynamic var Problem :String = ""
-    dynamic var Comment :String = ""
-    dynamic var OptionA :String = ""
-    dynamic var OptionB :String = ""
-    dynamic var OptionC :String = ""
-    dynamic var OptionD :String = ""
-    dynamic var Answer :String = ""
-    dynamic var Correct :Bool = false
-    dynamic var Done :Bool = false
+    
+    dynamic var no :Int8 = 0
+    dynamic var licenseId :Int8 = 0
+    dynamic var genre :String = ""
+    dynamic var problem :String = ""
+    dynamic var comment :String = ""
+    dynamic var optionA :String = ""
+    dynamic var optionB :String = ""
+    dynamic var optionC :String = ""
+    dynamic var optionD :String = ""
+    dynamic var answer :String = ""
+    dynamic var correct :Bool = false
+    dynamic var done :Bool = false
+    
+    //回答が正解かどうかを返すメソッド
+    func getAnswes(_ selectedOption :String) -> Bool {
+        if selectedOption == answer {
+            return true
+        } else {
+            return false
+        }
+    }
     
 }
 
+
+
+
+//  Realmデータベースの資格テーブルを直接操作するクラス
 class RealmControllerLicense{
     
     let realm = try! Realm()
@@ -72,10 +85,10 @@ class RealmControllerLicense{
     func addLicense(_ licenseName :String) {
         let myLisence = License()
         
-        myLisence.Name = licenseName
-        myLisence.Id = (result.last?.Id)! + 1
-        myLisence.Rate = 0
-        myLisence.Purshase = false
+        myLisence.name = licenseName
+        myLisence.id = (result.last?.id)! + 1
+        myLisence.rate = 0
+        myLisence.purshase = false
         
         try! realm.write {
             realm.add(myLisence)
@@ -90,15 +103,16 @@ class RealmControllerLicense{
     }
 }
 
+//  Realmデータベースの問題テーブルを直接操作するクラス
 class RealmControllerQuestion{
     let realm = try! Realm()
     let result :Results<Question>
     
     //RealmControllerQuestionのイニシャライザ　引数は資格ID
-    init(_ LicenseId :String) {
-        result = try! Realm().objects(Question.self).filter("LisenceId = \(LicenseId)").sorted(byKeyPath: "No")
+    init(_ licenseId :String) {
+        result = try! Realm().objects(Question.self).filter("lisenceId = \(licenseId)").sorted(byKeyPath: "no")
     }
-
+    
     //全問題をリスト型で返す
     func getResult() -> List<Question> {
         return List<Question>(result)
@@ -112,16 +126,16 @@ class RealmControllerQuestion{
     
     //未回答問題を指定された個数ランダムで返す
     func getRandomResultNotDone(_ number :Int) -> List<Question> {
-        let searchResult = getRandomResult("Done = false", number)
+        let searchResult = getRandomResult("done = false", number)
         return searchResult
     }
     
     //未正解問題を指定された個数ランダムで返す
     func getRandomResultNotCorrect(_ number :Int) -> List<Question>{
-        let searchResult = getRandomResult("Correct = false", number)
+        let searchResult = getRandomResult("correct = false", number)
         return searchResult
     }
- 
+    
     //全問題から指定した個数分ランダムソートで返す
     func getRandomResult(_ number :Int) -> List<Question> {
         let searchResult = result
@@ -184,29 +198,45 @@ class RealmControllerQuestion{
         return randomResult
     }
     
+    //問題番号と回答を引数にし、回答後、正解したかどうかを返す
+    func answer(_ questionNo :Int8 , _ selectOption :String) -> String{
+        let taegetQuestion = result.filter("No = \(questionNo)").first
+        let answerResult = taegetQuestion?.getAnswes(selectOption)
+        if answerResult == false {
+            taegetQuestion?.done = true
+            return "QuestuonNo:\(String(describing: taegetQuestion?.no)) Done:true Correct:false"
+        } else {
+            taegetQuestion?.done = true
+            taegetQuestion?.correct = true
+            return "QuestuonNo:\(String(describing: taegetQuestion?.no)) Done:true Correct:true"
+        }
+    }
+    
     //※データベースのオブジェクト群を加工するメソッドはこちらで提供する
     
+    //CSVの１センテンスをパーズしてDBにレコードをインサートする
     func addQestion(_ newQesCsvSent :String) {
         let myQes = Question()
         let ally = newQesCsvSent.components(separatedBy: ",")
         
         //ダウンキャストがうまくいかないとエラーが起こるので、場合分け必須
-        myQes.No = ally[0] as! Int8
-        myQes.LicenseId = ally[1] as! Int8
-        myQes.Genre = ally[2]
-        myQes.Problem = ally[3]
-        myQes.Comment = ally[4]
-        myQes.OptionA = ally[5]
-        myQes.OptionB = ally[6]
-        myQes.OptionC = ally[7]
-        myQes.OptionD = ally[8]
-        myQes.Answer = ally[9]
-        myQes.Correct = false
-        myQes.Done = false
+        myQes.no = ally[0] as! Int8
+        myQes.licenseId = ally[1] as! Int8
+        myQes.genre = ally[2]
+        myQes.problem = ally[3]
+        myQes.comment = ally[4]
+        myQes.optionA = ally[5]
+        myQes.optionB = ally[6]
+        myQes.optionC = ally[7]
+        myQes.optionD = ally[8]
+        myQes.answer = ally[9]
+        myQes.correct = false
+        myQes.done = false
         try! realm.write {
             realm.add(myQes)
         }
     }
+    
     
     func csvToArray () {
         //csvのファイルパスを取得
@@ -223,23 +253,25 @@ class RealmControllerQuestion{
         }
     }
     
+    
+    
     func addQuestion(_ csvArr :String) {
         let question = Question()
         let ally = csvArr.components(separatedBy: ",")
         
         //ダウンキャストがうまくいかないとエラーが起こるので、場合分け必須
-        question.No = ally[0] as! Int8
-        question.LicenseId = ally[1] as! Int8
-        question.Genre = ally[2]
-        question.Problem = ally[3]
-        question.Comment = ally[4]
-        question.OptionA = ally[5]
-        question.OptionB = ally[6]
-        question.OptionC = ally[7]
-        question.OptionD = ally[8]
-        question.Answer = ally[9]
-        question.Correct = false
-        question.Done = false
+        question.no = ally[0] as! Int8
+        question.licenseId = ally[1] as! Int8
+        question.genre = ally[2]
+        question.problem = ally[3]
+        question.comment = ally[4]
+        question.optionA = ally[5]
+        question.optionB = ally[6]
+        question.optionC = ally[7]
+        question.optionD = ally[8]
+        question.answer = ally[9]
+        question.correct = false
+        question.done = false
         try! realm.write {
             realm.add(question)
         }
