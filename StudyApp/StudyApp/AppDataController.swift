@@ -85,7 +85,7 @@ class AppDataController {
         
         for result in results {
             
-            if result.Correct {
+            if result.correct {
                 count = count + 1
             } else {
                 
@@ -107,7 +107,7 @@ class AppDataController {
         
         for result in results {
             
-            if !(result.Correct) {
+            if !(result.correct) {
                 count = count + 1
             } else {
                 
