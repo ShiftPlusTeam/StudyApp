@@ -236,47 +236,4 @@ class RealmControllerQuestion{
             realm.add(myQes)
         }
     }
-<<<<<<< HEAD
-=======
-    
-    
-    func csvToArray () {
-        //csvのファイルパスを取得
-        if let csvPath = Bundle.main.path(forResource: "question", ofType: "csv") {
-            do {
-                //csvのファイルのデータを所得
-                let csvStr = try String(contentsOfFile:csvPath, encoding:String.Encoding.utf8)
-                //csvファイルを改行区切りで配列に格納
-                let csvArr = csvStr.components(separatedBy: .newlines)
-                print(csvArr)
-            } catch let error as NSError {
-                print(error.localizedDescription)
-            }
-        }
-    }
-    
-    
-    
-    func addQuestion(_ csvArr :String) {
-        let question = Question()
-        let ally = csvArr.components(separatedBy: ",")
-        
-        //ダウンキャストがうまくいかないとエラーが起こるので、場合分け必須
-        question.no = ally[0] as! Int8
-        question.licenseId = ally[1] as! Int8
-        question.genre = ally[2]
-        question.problem = ally[3]
-        question.comment = ally[4]
-        question.optionA = ally[5]
-        question.optionB = ally[6]
-        question.optionC = ally[7]
-        question.optionD = ally[8]
-        question.answer = ally[9]
-        question.correct = false
-        question.done = false
-        try! realm.write {
-            realm.add(question)
-        }
-    }
->>>>>>> fb53405f8591fb41130f24f92c07f34bebf80a51
 }
