@@ -22,32 +22,38 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
     //セルに表示する文字列の個数を返す
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        
+        let realmControllerLicense = RealmControllerLicense()
+        let results = realmControllerLicense.getResult()
+        
+        let count: Int = results.count
+        
+        return count
     }
+    
     
     //セルに値を設定するデータソースメソッド
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        // セルを取得する
-        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "WeightCell")
+        let realmControllerLicense = RealmControllerLicense()
+        let results = realmControllerLicense.getResult()
         
-        //let object = result?[indexPath.row]
+        // セルを取得する
+        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "LicenseCell")
+        
+        let object = results[indexPath.row]
         
         // セルに表示する値を設定する
-        //cell.textLabel?.text = object?.name
-        //cell.detailTextLabel?.text = (object?.rep)! + "レップ  " + (object?.set)! + "セット"
-        cell.detailTextLabel?.textColor = UIColor.gray
+        cell.textLabel?.text = object.name
         
         return cell
     }
