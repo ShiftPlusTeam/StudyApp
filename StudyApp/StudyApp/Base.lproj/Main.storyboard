@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2Wh-NJ-2fO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2Wh-NJ-2fO">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -110,7 +110,7 @@
         <!--問題数選択画面-->
         <scene sceneID="DWK-aW-wfa">
             <objects>
-                <viewController id="rRX-2J-YYl" sceneMemberID="viewController">
+                <viewController id="rRX-2J-YYl" customClass="SelectAmountOfQuestionViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZXI-qq-HQe"/>
                         <viewControllerLayoutGuide type="bottom" id="JpU-Rt-Dab"/>
@@ -214,12 +214,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bNt-v0-vg2" firstAttribute="top" secondItem="ZXI-qq-HQe" secondAttribute="bottom" constant="25" id="Rkb-jq-9io"/>
+                            <constraint firstItem="bNt-v0-vg2" firstAttribute="top" secondItem="ZXI-qq-HQe" secondAttribute="bottom" constant="25" id="sAz-dR-a55"/>
                             <constraint firstItem="bNt-v0-vg2" firstAttribute="leading" secondItem="ubU-fa-ZW1" secondAttribute="leading" constant="5" id="sTb-In-fpc"/>
                             <constraint firstAttribute="trailing" secondItem="bNt-v0-vg2" secondAttribute="trailing" id="zwG-OJ-oAr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="問題数選択画面" id="XOd-Ch-z9B"/>
+                    <connections>
+                        <outlet property="AllOfAll" destination="63b-ZP-HNN" id="f5m-eq-gwe"/>
+                        <outlet property="AllOfAllFalse" destination="kaI-P2-y3K" id="zm9-b3-cDp"/>
+                        <outlet property="AllOfAllYet" destination="uRz-We-KQk" id="cJN-re-eKw"/>
+                        <outlet property="FiveOfALL" destination="I1q-Nd-1bS" id="3zK-FE-qUi"/>
+                        <outlet property="FiveOfAll" destination="I1q-Nd-1bS" id="iZR-S1-40a"/>
+                        <outlet property="FiveOfAllFalse" destination="hvH-gR-mPq" id="5dL-F7-kw6"/>
+                        <outlet property="FiveOfAllYet" destination="mzW-If-0gb" id="IFB-b9-OJL"/>
+                        <outlet property="SelectView" destination="ubU-fa-ZW1" id="pSN-P1-9S1"/>
+                        <outlet property="TenOfAll" destination="V5u-Hh-dVc" id="Ocb-1O-2de"/>
+                        <outlet property="TenOfAllFalse" destination="eVE-TW-myP" id="oWu-rK-a82"/>
+                        <outlet property="TenOfAllYet" destination="2Ak-t1-04A" id="0SJ-Tc-7eS"/>
+                        <outlet property="TwentyOfAll" destination="uGb-X0-YC6" id="yZv-Ow-V6e"/>
+                        <outlet property="TwentyOfAllFalse" destination="8iY-fj-Th2" id="UTq-Jb-ACf"/>
+                        <outlet property="TwentyOfAllYet" destination="obP-sD-1Tp" id="paK-G1-6Mg"/>
+                        <outlet property="UI" destination="ubU-fa-ZW1" id="wU4-4e-ev6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66y-bY-apI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
