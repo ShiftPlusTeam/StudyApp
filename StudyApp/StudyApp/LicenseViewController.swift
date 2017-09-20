@@ -68,7 +68,12 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     //セルがタップされた時に呼び出されるデリゲートメソッド
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //セルの選択解除
+        tableView.deselectRow(at: indexPath, animated: true)
         
+        //ここに遷移処理を書く
+        //遷移先の画面がある程度完成してから着手
+        //self.present(SecondViewController(), animated: true, completion: nil)
         
         let cell = tableView.cellForRow(at: indexPath)
         
