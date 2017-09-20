@@ -6,10 +6,10 @@
 //  Copyright © 2017 ShiftPlus+. All rights reserved.
 //
 //
-//・資格の一覧が表示される。
+//✔︎資格の一覧が表示される。
 //・資格を選択後「ジャンル選択画面」へ画面遷移する。
 //・資格の右の欄に解答済みと未回答の比率が表示される。
-//・未購入は、グレーアウトされて表示される。
+//✔︎未購入は、グレーアウトされて表示される。
 //・資格名をバーに入れると検索が可能
 
 import UIKit
@@ -29,13 +29,14 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
-    //セルに表示する文字列の個数を返す
+    //セルに表示する行数を返す
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         let realmControllerLicense = RealmControllerLicense()
         let results = realmControllerLicense.getResult()
         
         let count: Int = results.count
+        print(count)
         
         return count
     }
@@ -54,6 +55,12 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         // セルに表示する値を設定する
         cell.textLabel?.text = object.name
+        print(object.name)
+        
+        //未購入の場合はセルをグレーアウト
+        if !(object.purshase) {
+            cell.textLabel?.backgroundColor = UIColor.gray
+        }
         
         return cell
     }
@@ -61,10 +68,11 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     //セルがタップされた時に呼び出されるデリゲートメソッド
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
         let cell = tableView.cellForRow(at: indexPath)
         
-        //選択したセルにチェックマークをつける
-        cell?.accessoryType = .checkmark
+        
     }
     
     
