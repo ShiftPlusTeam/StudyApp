@@ -124,18 +124,6 @@ class RealmControllerQuestion{
         return List<Question>(searchResult)
     }
     
-    //未回答問題を指定された個数ランダムで返す
-    func getRandomResultNotDone(_ number :Int) -> List<Question> {
-        let searchResult = getRandomResult("done = false", number)
-        return searchResult
-    }
-    
-    //未正解問題を指定された個数ランダムで返す
-    func getRandomResultNotCorrect(_ number :Int) -> List<Question>{
-        let searchResult = getRandomResult("correct = false", number)
-        return searchResult
-    }
-    
     //全問題から指定した個数分ランダムソートで返す
     func getRandomResult(_ number :Int) -> List<Question> {
         let searchResult = result
@@ -198,6 +186,22 @@ class RealmControllerQuestion{
         return randomResult
     }
     
+    
+    //個数、回答履歴、正当是非を引数に、指定された条件に合致する問題を、指定された個数、リスト型で返す
+    func  getConditionallyResult(_ number :Int, _ notDone :Bool, _ notCorrect :Bool) -> List<Question> {
+        var searchResult = List<Question>()
+        if notDone && notCorrect {//未回答&&未正解(未回答問題は全て未正解)
+            searchResult = getRandomResult("done = false" , number)
+        }else if !notDone && notCorrect {//回答済&&未正解
+            searchResult = getRandomResult("done = true AND correct = false", number)
+        }else if !notDone && !notCorrect {//回答済&&正解済
+            searchResult = getRandomResult("done = true AND correct = true", number)
+        }else {
+            searchResult = getRandomResult(number)
+        }
+        return searchResult
+    }
+    
     //問題番号と回答を引数にし、回答後、正解したかどうかを返す
     func answer(_ questionNo :Int8 , _ selectOption :String) -> String{
         let taegetQuestion = result.filter("No = \(questionNo)").first
@@ -211,8 +215,22 @@ class RealmControllerQuestion{
             return "QuestuonNo:\(String(describing: taegetQuestion?.no)) Done:true Correct:true"
         }
     }
+
+
+    //ここから先は用途未定
+    //未回答問題を指定された個数ランダムで返す
+    func getRandomResultNotDone(_ number :Int) -> List<Question> {
+        let searchResult = getRandomResult("done = false", number)
+        return searchResult
+    }
     
-    //※データベースのオブジェクト群を加工するメソッドはこちらで提供する
+    //未正解問題を指定された個数ランダムで返す
+    func getRandomResultNotCorrect(_ number :Int) -> List<Question>{
+        let searchResult = getRandomResult("correct = false", number)
+        return searchResult
+    }
+    
+    
     
     //CSVの１センテンスをパーズしてDBにレコードをインサートする
     func addQestion(_ newQesCsvSent :String) {
