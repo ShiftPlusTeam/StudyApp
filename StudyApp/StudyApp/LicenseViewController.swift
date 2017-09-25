@@ -76,7 +76,7 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         let object = results[indexPath.row]
         
         AppDataController.id = object.id
-        
+        AppDataController.name = object.name
         
         //遷移先の画面がある程度完成してから着手
         //self.present(SecondViewController(), animated: true, completion: nil)
