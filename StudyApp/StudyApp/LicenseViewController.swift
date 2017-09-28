@@ -8,7 +8,7 @@
 //
 //✔︎資格の一覧が表示される。
 //・資格を選択後「ジャンル選択画面」へ画面遷移する。
-//・資格の右の欄に解答済みと未回答の比率が表示される。
+//✔︎資格の右の欄に解答済みと未回答の比率が表示される。
 //✔︎未購入は、グレーアウトされて表示される。
 //・資格名をバーに入れると検索が可能
 
@@ -18,6 +18,9 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     //関連付けされたテーブルビュー
     @IBOutlet weak var tableView: UITableView!
+    
+    //関連付けされたプログレスバー
+    @IBOutlet weak var progressBar: UIProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +64,9 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         if !(object.purshase) {
             cell.textLabel?.backgroundColor = UIColor.gray
         }
+        
+        //プログレスバーの設定
+        progressBar.progress = object.rate
         
         return cell
     }
