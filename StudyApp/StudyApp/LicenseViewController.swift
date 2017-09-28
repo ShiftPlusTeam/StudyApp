@@ -19,9 +19,6 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
     //関連付けされたテーブルビュー
     @IBOutlet weak var tableView: UITableView!
     
-    //関連付けされたプログレスバー
-    @IBOutlet weak var progressBar: UIProgressView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,6 +63,7 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         //プログレスバーの設定
+        var progressBar = tableView.viewWithTag(1) as UIProgressView?
         progressBar.progress = object.rate
         
         return cell

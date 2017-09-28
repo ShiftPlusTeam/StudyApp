@@ -54,7 +54,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="progressBar" destination="czu-J9-qE0" id="grb-02-mDa"/>
                         <outlet property="tableView" destination="Fp6-Fj-lSu" id="MRe-Xt-xtp"/>
                     </connections>
                 </viewController>
