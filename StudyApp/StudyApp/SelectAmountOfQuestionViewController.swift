@@ -8,12 +8,6 @@
 
 import UIKit
 
-//問題数(5 10 20 100)
-public var count: Int = 5
-
-//問題の種別(全問 未回答 不正解)
-public var kind: String = "全問"
-
 class SelectAmountOfQuestionViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet var SelectView: UIView!
@@ -47,63 +41,63 @@ class SelectAmountOfQuestionViewController: UIViewController, UITableViewDelegat
     @IBOutlet weak var AllOfAllFalse: UIButton!
     
     @IBAction func tapFiveOfAll() {
-        count = 5
-        kind = "全問"
+        AppDataController.count = 5
+        AppDataController.kind = "全問"
     }
     
     @IBAction func taptenOfAll() {
-        count = 10
-        kind = "全問"
+        AppDataController.count = 10
+        AppDataController.kind = "全問"
     }
     
     @IBAction func taptwentyOfAll() {
-        count = 20
-        kind = "全問"
+        AppDataController.count = 20
+        AppDataController.kind = "全問 "
     }
     
     @IBAction func tapAllOfAll() {
-        count = 100
-        kind = "全問"
+        AppDataController.count = 100
+        AppDataController.kind = "全問"
     }
     
     @IBAction func tapFiveOfAllYet() {
-        count = 5
-        kind = "未回答"
+        AppDataController.count = 5
+        AppDataController.kind = "未回答"
     }
     
     @IBAction func taptenOfAllYet() {
-        count = 10
-        kind = "未回答"
+        AppDataController.count = 10
+        AppDataController.kind = "未回答"
     }
     
     @IBAction func taptwentyOfAllYet() {
-        count = 20
-        kind = "未回答"
+        AppDataController.count = 20
+        AppDataController.kind = "未回答"
     }
     
     @IBAction func tapAllOfAllYet() {
-        count = 100
-        kind = "未回答"
+        AppDataController.count = 100
+        AppDataController.kind = "未回答"
     }
     
     @IBAction func tapFiveOfAllFalse() {
-        count = 5
-        kind = "不正解"
+        AppDataController.count = 5
+        AppDataController.kind = "不正解"
     }
     
     @IBAction func taptenOfAllFalse() {
-        count = 10
-        kind = "不正解"
+        AppDataController.count = 10
+        AppDataController.kind = "不正解"
     }
     
     @IBAction func taptwentyOfAllFalse() {
-        count = 20
-        kind = "不正解"
+        AppDataController.count = 20
+        AppDataController.kind = "不正解"
     }
     
     @IBAction func tapAllOfAllFalse() {
-        count = 100
-        kind = "不正解"
+        AppDataController.count = 100
+        AppDataController.kind = "不正解"
     }
 
 }

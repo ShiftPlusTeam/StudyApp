@@ -63,8 +63,8 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         //プログレスバーの設定
-        var progressBar = tableView.viewWithTag(1) as UIProgressView?
-        progressBar.progress = object.rate
+//        var progressBar = tableView.viewWithTag(1) as UIProgressView?
+//        progressBar.progress = object.rate
         
         return cell
     }
@@ -79,8 +79,8 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         let results = realmControllerLicense.getResult()
         let object = results[indexPath.row]
         
-        AppDataController.id = object.id
-        AppDataController.name = object.name
+//        AppDataController.id = object.id
+//        AppDataController.name = object.name
         
         //遷移先の画面がある程度完成してから着手
         //self.present(SecondViewController(), animated: true, completion: nil)

@@ -25,10 +25,10 @@ class AppDataController {
     static var name: String = "資格名"
     //ジャンル
     static var genre: [String] = []
-//    //問題数(5 10 20 100)
-//    static var count: Int = 5
-//    //問題の種別(全問 未回答 不正解)
-//    static var kind: String = "全問"
+    //問題数(5 10 20 100)
+    static var count: Int = 5
+    //問題の種別(全問 未回答 不正解)
+    static var kind: String = "全問"
     //ランダムか否か
     static var random: Bool = true
     

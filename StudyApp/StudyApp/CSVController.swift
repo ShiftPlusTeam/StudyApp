@@ -20,7 +20,7 @@ class CSVController {
             do {
                 
                 //RealmControllerLicenseのインスタンス生成
-                let realmControllerLicense = RealmControllerLicense(name)
+                let realmControllerLicense = RealmControllerLicense()
                 
                 //csvのファイルのデータを所得
                 let LicenseStr = try String(contentsOfFile:csvPath, encoding:String.Encoding.utf8)
