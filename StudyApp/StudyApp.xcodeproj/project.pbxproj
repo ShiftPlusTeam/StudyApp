@@ -11,8 +11,8 @@
 		2F788C0B1F5A572100B7805E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F788C081F5A572100B7805E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2F788C0C1F5A572100B7805E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F788C091F5A572100B7805E /* RealmSwift.framework */; };
 		2F788C0D1F5A572100B7805E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F788C091F5A572100B7805E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		760EB0AE1F80787C009F32E5 /* license.csv in Resources */ = {isa = PBXBuildFile; fileRef = 760EB0AD1F80787C009F32E5 /* license.csv */; };
 		76201C2B1F491E8D001F8AD1 /* question.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76201C2A1F491E8D001F8AD1 /* question.csv */; };
-		76201C2F1F497322001F8AD1 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76201C2E1F497322001F8AD1 /* StartViewController.swift */; };
 		76201C3E1F525078001F8AD1 /* CSVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76201C3D1F525078001F8AD1 /* CSVController.swift */; };
 		76D018CA1F30360400B8EBF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D018C91F30360400B8EBF8 /* AppDelegate.swift */; };
 		76D018CC1F30360400B8EBF8 /* SelectAmountOfQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D018CB1F30360400B8EBF8 /* SelectAmountOfQuestionViewController.swift */; };
@@ -42,8 +42,8 @@
 /* Begin PBXFileReference section */
 		2F788C081F5A572100B7805E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		2F788C091F5A572100B7805E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		760EB0AD1F80787C009F32E5 /* license.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.csv; sourceTree = "<group>"; };
 		76201C2A1F491E8D001F8AD1 /* question.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = question.csv; sourceTree = "<group>"; };
-		76201C2E1F497322001F8AD1 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		76201C3D1F525078001F8AD1 /* CSVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVController.swift; sourceTree = "<group>"; };
 		76D018C61F30360400B8EBF8 /* StudyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76D018C91F30360400B8EBF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,10 +73,10 @@
 		76D018BD1F30360400B8EBF8 = {
 			isa = PBXGroup;
 			children = (
-				2F788C081F5A572100B7805E /* Realm.framework */,
-				2F788C091F5A572100B7805E /* RealmSwift.framework */,
 				76D018C81F30360400B8EBF8 /* StudyApp */,
 				76D018C71F30360400B8EBF8 /* Products */,
+				2F788C081F5A572100B7805E /* Realm.framework */,
+				2F788C091F5A572100B7805E /* RealmSwift.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,18 +91,18 @@
 		76D018C81F30360400B8EBF8 /* StudyApp */ = {
 			isa = PBXGroup;
 			children = (
+				76D018CD1F30360400B8EBF8 /* Main.storyboard */,
+				76D018D21F30360400B8EBF8 /* LaunchScreen.storyboard */,
 				76D018C91F30360400B8EBF8 /* AppDelegate.swift */,
+				76201C3D1F525078001F8AD1 /* CSVController.swift */,
 				7E8E61BD1F5A561400ACA547 /* RealmController.swift */,
 				7E58BAF11F38ADFC0031F082 /* AppDataController.swift */,
-				76201C3D1F525078001F8AD1 /* CSVController.swift */,
-				76D018CB1F30360400B8EBF8 /* SelectAmountOfQuestionViewController.swift */,
 				7E7C706B1F6CE77F0050A618 /* LicenseViewController.swift */,
-				76D018CD1F30360400B8EBF8 /* Main.storyboard */,
-				76201C2E1F497322001F8AD1 /* StartViewController.swift */,
+				76D018CB1F30360400B8EBF8 /* SelectAmountOfQuestionViewController.swift */,
+				760EB0AD1F80787C009F32E5 /* license.csv */,
 				76201C2A1F491E8D001F8AD1 /* question.csv */,
-				76D018D01F30360400B8EBF8 /* Assets.xcassets */,
-				76D018D21F30360400B8EBF8 /* LaunchScreen.storyboard */,
 				76D018D51F30360400B8EBF8 /* Info.plist */,
+				76D018D01F30360400B8EBF8 /* Assets.xcassets */,
 			);
 			path = StudyApp;
 			sourceTree = "<group>";
@@ -167,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				760EB0AE1F80787C009F32E5 /* license.csv in Resources */,
 				76D018D41F30360400B8EBF8 /* LaunchScreen.storyboard in Resources */,
 				76D018D11F30360400B8EBF8 /* Assets.xcassets in Resources */,
 				76201C2B1F491E8D001F8AD1 /* question.csv in Resources */,
@@ -186,7 +187,6 @@
 				7E58BAF21F38ADFC0031F082 /* AppDataController.swift in Sources */,
 				76D018CA1F30360400B8EBF8 /* AppDelegate.swift in Sources */,
 				7E8E61BE1F5A561400ACA547 /* RealmController.swift in Sources */,
-				76201C2F1F497322001F8AD1 /* StartViewController.swift in Sources */,
 				76201C3E1F525078001F8AD1 /* CSVController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

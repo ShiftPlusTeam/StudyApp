@@ -11,10 +11,36 @@ import UIKit
 //CSVクラス
 class CSVController {
     
-    let name = ""
+    let name = "test"
     
+    func LicenseToArray () {
+        
+        //csvのファイルパスを取得
+        if let csvPath = Bundle.main.path(forResource: "License", ofType: "csv") {
+            do {
+                
+                //RealmControllerLicenseのインスタンス生成
+                let realmControllerLicense = RealmControllerLicense(name)
+                
+                //csvのファイルのデータを所得
+                let LicenseStr = try String(contentsOfFile:csvPath, encoding:String.Encoding.utf8)
+                
+                //csvファイルを改行区切りで配列に格納
+                let LicenseArr = LicenseStr.components(separatedBy: .newlines)
+                //print(csvArr)
+                
+                for LicenseRow in LicenseArr {
+                    realmControllerLicense.addLicense(LicenseRow)
+                }
+                
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
+        
+    }
     
-    func csvToArray () {
+    func QuestionToArray () {
         
         //csvのファイルパスを取得
         if let csvPath = Bundle.main.path(forResource: "question", ofType: "csv") {
@@ -24,14 +50,14 @@ class CSVController {
                 let realmControllerQuestion = RealmControllerQuestion(name)
                 
                 //csvのファイルのデータを所得
-                let csvStr = try String(contentsOfFile:csvPath, encoding:String.Encoding.utf8)
+                let QuestionStr = try String(contentsOfFile:csvPath, encoding:String.Encoding.utf8)
                 
                 //csvファイルを改行区切りで配列に格納
-                let csvArr = csvStr.components(separatedBy: .newlines)
+                let QuestionArr = QuestionStr.components(separatedBy: .newlines)
                 //print(csvArr)
                 
-                for csvRow in csvArr {
-                    realmControllerQuestion.addQestion(csvRow)
+                for QuestionRow in QuestionArr {
+                    realmControllerQuestion.addQestion(QuestionRow)
                 }
                 
             } catch let error as NSError {
