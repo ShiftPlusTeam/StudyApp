@@ -8,6 +8,12 @@
 
 import UIKit
 
+//問題数(5 10 20 100)
+public var count: Int = 5
+
+//問題の種別(全問 未回答 不正解)
+public var kind: String = "全問"
+
 class SelectAmountOfQuestionViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet var SelectView: UIView!
@@ -39,12 +45,6 @@ class SelectAmountOfQuestionViewController: UIViewController, UITableViewDelegat
     @IBOutlet weak var TenOfAllFalse: UIButton!
     @IBOutlet weak var TwentyOfAllFalse: UIButton!
     @IBOutlet weak var AllOfAllFalse: UIButton!
-    
-    //問題数(5 10 20 100)
-    public var count: Int = 5
-    
-    //問題の種別(全問 未回答 不正解)
-    public var kind: String = "全問"
     
     @IBAction func tapFiveOfAll() {
         count = 5
