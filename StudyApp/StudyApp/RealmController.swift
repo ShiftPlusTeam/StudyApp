@@ -62,8 +62,6 @@ class Question :Object{
 }
 
 
-
-
 //  Realmデータベースの資格テーブルを直接操作するクラス
 class RealmControllerLicense{
     
@@ -110,7 +108,7 @@ class RealmControllerQuestion{
     
     //RealmControllerQuestionのイニシャライザ　引数は資格ID
     init(_ licenseId :String) {
-        result = try! Realm().objects(Question.self).filter("lisenceId = \(licenseId)").sorted(byKeyPath: "no")
+        result = try! Realm().objects(Question.self).filter("licenseId = \(licenseId)").sorted(byKeyPath: "no")
     }
     
     //全問題をリスト型で返す
@@ -202,6 +200,14 @@ class RealmControllerQuestion{
         return searchResult
     }
     
+
+    //ここから先は用途未定
+    //未回答問題を指定された個数ランダムで返す
+    func getRandomResultNotDone(_ number :Int) -> List<Question> {
+        let searchResult = getRandomResult("done = false", number)
+        return searchResult
+    }
+    
     //問題番号と回答を引数にし、回答後、正解したかどうかを返す
     func answer(_ questionNo :Int8 , _ selectOption :String) -> String{
         let taegetQuestion = result.filter("No = \(questionNo)").first
@@ -214,14 +220,6 @@ class RealmControllerQuestion{
             taegetQuestion?.correct = true
             return "QuestuonNo:\(String(describing: taegetQuestion?.no)) Done:true Correct:true"
         }
-    }
-
-
-    //ここから先は用途未定
-    //未回答問題を指定された個数ランダムで返す
-    func getRandomResultNotDone(_ number :Int) -> List<Question> {
-        let searchResult = getRandomResult("done = false", number)
-        return searchResult
     }
     
     //未正解問題を指定された個数ランダムで返す
