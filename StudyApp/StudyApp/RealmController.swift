@@ -15,7 +15,7 @@ class License: Object  {
     //Name:資格名
     //Rate:正答率
     //Purshase:購入済みであるかどうか
-    dynamic var id :Int16 = 0
+    dynamic var id :Int8 = 0
     dynamic var name :String = ""
     dynamic var rate :Int8 = 0
     dynamic var purshase :Bool = false
@@ -78,13 +78,15 @@ class RealmControllerLicense{
         let searchResult = try! Realm().objects(License.self).filter(query)
         return List<License>(searchResult)
     }
-    
-    //レコード追加
-    func addLicense(_ licenseName :String) {
+
+    //CSVの１センテンスをパーズしてDBにレコードをインサートする
+    func addLicense(_ newlicenseCsvSent :String) {
         let myLisence = License()
+        let ally = newlicenseCsvSent.components(separatedBy: ",")
         
-        myLisence.name = licenseName
-        myLisence.id = (result.last?.id)! + 1
+        //ダウンキャストがうまくいかないとエラーが起こるので、場合分け必須
+        myLisence.name = ally[0]
+        myLisence.id = (ally[1] as! Int8)
         myLisence.rate = 0
         myLisence.purshase = false
         
