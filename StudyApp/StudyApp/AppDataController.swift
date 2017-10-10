@@ -41,9 +41,20 @@ class AppDataController {
     static func createQuestion() -> () {
         
         //RealmControllerQuestionのインスタンス生成
-        //とりあえずの実装なので改修予定 20170911
         let realmControllerQuestion = RealmControllerQuestion(id)
-        results = realmControllerQuestion.getRandomResult(count)
+        
+        if kind == "全問" {
+            results = realmControllerQuestion.getRandomResult(count)
+            
+        } else if kind == "未回答" {
+            results = realmControllerQuestion.getRandomResultNotDone(count)
+            
+        } else if kind == "未正解" {
+            results = realmControllerQuestion.getRandomResultNotCorrect(count)
+            
+        } else {
+            
+        }
         
     }
     
