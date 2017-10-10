@@ -53,6 +53,9 @@ playground.xcworkspace
 # Carthage/Checkouts
 
 Carthage/Build
+Carthage/
+
+*/.DS_Store
 
 # fastlane
 #
