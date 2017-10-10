@@ -209,6 +209,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaI-P2-y3K">
                                                 <rect key="frame" x="256" y="0.0" width="59" height="26.5"/>
                                                 <state key="normal" title="ALL"/>
+                                                <connections>
+                                                    <segue destination="X4j-aW-KTQ" kind="modal" id="vck-kv-P5a"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -220,7 +223,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bNt-v0-vg2" firstAttribute="top" secondItem="ZXI-qq-HQe" secondAttribute="bottom" constant="25" id="sAz-dR-a55"/>
+                            <constraint firstItem="bNt-v0-vg2" firstAttribute="top" secondItem="ZXI-qq-HQe" secondAttribute="bottom" constant="25" id="qxw-gF-lce"/>
                             <constraint firstItem="bNt-v0-vg2" firstAttribute="leading" secondItem="ubU-fa-ZW1" secondAttribute="leading" constant="5" id="sTb-In-fpc"/>
                             <constraint firstAttribute="trailing" secondItem="bNt-v0-vg2" secondAttribute="trailing" id="zwG-OJ-oAr"/>
                         </constraints>
@@ -246,7 +249,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66y-bY-apI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2756" y="987"/>
+            <point key="canvasLocation" x="2754.375" y="986.61971830985919"/>
+        </scene>
+        <!--CSV テスト画面-->
+        <scene sceneID="1pI-Nv-lDT">
+            <objects>
+                <viewController id="X4j-aW-KTQ" userLabel="CSV テスト画面" customClass="TestImportCsv" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9LR-FC-HJG"/>
+                        <viewControllerLayoutGuide type="bottom" id="TtS-jc-pjd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OJV-a8-hvX" userLabel="Import">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLU-Bc-2GF">
+                                <rect key="frame" x="91" y="334" width="138" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="資格選択画面に戻る"/>
+                                <connections>
+                                    <segue destination="vrr-fw-XrJ" kind="modal" id="xgM-hu-mAb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzJ-VE-jq2">
+                                <rect key="frame" x="115" y="170" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="IMPORT CSV"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="ImportButton" destination="JzJ-VE-jq2" id="SIf-Lw-0fo"/>
+                        <outlet property="ImportView" destination="OJV-a8-hvX" id="7wL-1T-9WF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m5P-YK-yU3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2754" y="1790"/>
         </scene>
         <!--問題-->
         <scene sceneID="DRb-WF-yZP">
@@ -563,5 +603,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="FuE-rf-SZv"/>
         <segue reference="xtC-j8-2V8"/>
+        <segue reference="xgM-hu-mAb"/>
     </inferredMetricsTieBreakers>
 </document>
