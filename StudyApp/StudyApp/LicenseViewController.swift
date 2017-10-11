@@ -62,9 +62,11 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.textLabel?.backgroundColor = UIColor.gray
         }
         
-        //プログレスバーの設定
-//        var progressBar = tableView.viewWithTag(1) as UIProgressView?
-//        progressBar.progress = object.rate
+        //プログレスバーの表示
+        let rate: Float = Float(object.rate / 100)
+        
+        let progressBar = tableView.viewWithTag(1) as! UIProgressView?
+        progressBar?.progress = rate
         
         return cell
     }
