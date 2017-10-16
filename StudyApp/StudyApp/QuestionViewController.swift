@@ -22,7 +22,18 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //各種表示の更新
+        noLabel.text = String(AppDataController.currentCount)
+        
+        let results = AppDataController.getCurrentQuestionData()
+        
+        questionLabel.text = results.problem
+        aSelect.titleLabel?.text = results.optionA
+        bSelect.titleLabel?.text = results.optionB
+        cSelect.titleLabel?.text = results.optionC
+        dSelect.titleLabel?.text = results.optionD
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,21 +43,24 @@ class QuestionViewController: UIViewController {
     
     //Aボタンをタップ
     @IBAction func selectAButton(_ sender: Any) {
-        
+        AppDataController.selectAnswer = "A"
     }
     
     //Bボタンをタップ
     @IBAction func selectBButton(_ sender: Any) {
+        AppDataController.selectAnswer = "B"
         
     }
     
     //Cボタンをタップ
     @IBAction func selectCButton(_ sender: Any) {
+        AppDataController.selectAnswer = "C"
         
     }
     
     //Dボタンをタップ
     @IBAction func selectDButton(_ sender: Any) {
+        AppDataController.selectAnswer = "D"
         
     }
     

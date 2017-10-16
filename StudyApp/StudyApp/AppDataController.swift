@@ -30,6 +30,8 @@ class AppDataController {
     static var kind: String = "全問"
     //ランダムか否か
     static var random: Bool = true
+    //選択したAnswer
+    static var selectAnswer: String = " "
     
     //現在の解いている問題数(現在何問目か)
     //0から始めること(インデックスに使うため)
