@@ -116,7 +116,7 @@
         <!--問題数選択画面-->
         <scene sceneID="DWK-aW-wfa">
             <objects>
-                <viewController id="rRX-2J-YYl" customClass="SelectAmountOfQuestionViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rRX-2J-YYl" customClass="SelectQuestionsViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZXI-qq-HQe"/>
                         <viewControllerLayoutGuide type="bottom" id="JpU-Rt-Dab"/>
@@ -145,16 +145,23 @@
                                                 <rect key="frame" x="128" y="0.0" width="59" height="26.5"/>
                                                 <state key="normal" title="10"/>
                                                 <connections>
+                                                    <action selector="tapTenOfAll" destination="rRX-2J-YYl" eventType="touchUpInside" id="3XL-Zd-Tbr"/>
                                                     <segue destination="jaU-b7-E77" kind="modal" id="D0t-OD-OdI"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGb-X0-YC6">
                                                 <rect key="frame" x="192" y="0.0" width="59" height="26.5"/>
                                                 <state key="normal" title="20"/>
+                                                <connections>
+                                                    <action selector="tapTwentyOfAll" destination="rRX-2J-YYl" eventType="touchUpInside" id="d9H-4w-Auy"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63b-ZP-HNN">
                                                 <rect key="frame" x="256" y="0.0" width="59" height="26.5"/>
                                                 <state key="normal" title="ALL"/>
+                                                <connections>
+                                                    <action selector="tapAllOfAll" destination="rRX-2J-YYl" eventType="touchUpInside" id="Oyv-QY-x7N"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -170,18 +177,30 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzW-If-0gb">
                                                 <rect key="frame" x="64" y="0.0" width="59" height="27"/>
                                                 <state key="normal" title="5"/>
+                                                <connections>
+                                                    <action selector="tapFiveOfAllYet" destination="rRX-2J-YYl" eventType="touchUpInside" id="mOn-tU-THK"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ak-t1-04A">
                                                 <rect key="frame" x="128" y="0.0" width="59" height="27"/>
                                                 <state key="normal" title="10"/>
+                                                <connections>
+                                                    <action selector="tapTenOfAllYet" destination="rRX-2J-YYl" eventType="touchUpInside" id="vll-pP-OgI"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obP-sD-1Tp">
                                                 <rect key="frame" x="192" y="0.0" width="59" height="27"/>
                                                 <state key="normal" title="20"/>
+                                                <connections>
+                                                    <action selector="tapTwentyOfAllYet" destination="rRX-2J-YYl" eventType="touchUpInside" id="DC6-jj-pGd"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRz-We-KQk">
                                                 <rect key="frame" x="256" y="0.0" width="59" height="27"/>
                                                 <state key="normal" title="ALL"/>
+                                                <connections>
+                                                    <action selector="tapAllOfAllYet" destination="rRX-2J-YYl" eventType="touchUpInside" id="jBh-lo-2GK"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -197,19 +216,29 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvH-gR-mPq">
                                                 <rect key="frame" x="64" y="0.0" width="59" height="26.5"/>
                                                 <state key="normal" title="5"/>
+                                                <connections>
+                                                    <action selector="tapFiveOfAllFalse" destination="rRX-2J-YYl" eventType="touchUpInside" id="9Hy-ZE-uoY"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVE-TW-myP">
                                                 <rect key="frame" x="128" y="0.0" width="59" height="26.5"/>
                                                 <state key="normal" title="10"/>
+                                                <connections>
+                                                    <action selector="tapTenOfAllFalse" destination="rRX-2J-YYl" eventType="touchUpInside" id="Ndo-eJ-pDz"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iY-fj-Th2">
                                                 <rect key="frame" x="192" y="0.0" width="59" height="26.5"/>
                                                 <state key="normal" title="20"/>
+                                                <connections>
+                                                    <action selector="tapTwentyOfAllFalse" destination="rRX-2J-YYl" eventType="touchUpInside" id="cHL-rm-ZuM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaI-P2-y3K">
                                                 <rect key="frame" x="256" y="0.0" width="59" height="26.5"/>
                                                 <state key="normal" title="ALL"/>
                                                 <connections>
+                                                    <action selector="tapAllOfAllFalse" destination="rRX-2J-YYl" eventType="touchUpInside" id="4Sx-3Q-bvC"/>
                                                     <segue destination="X4j-aW-KTQ" kind="modal" id="vck-kv-P5a"/>
                                                 </connections>
                                             </button>
@@ -233,7 +262,6 @@
                         <outlet property="AllOfAll" destination="63b-ZP-HNN" id="f5m-eq-gwe"/>
                         <outlet property="AllOfAllFalse" destination="kaI-P2-y3K" id="zm9-b3-cDp"/>
                         <outlet property="AllOfAllYet" destination="uRz-We-KQk" id="cJN-re-eKw"/>
-                        <outlet property="FiveOfALL" destination="I1q-Nd-1bS" id="3zK-FE-qUi"/>
                         <outlet property="FiveOfAll" destination="I1q-Nd-1bS" id="iZR-S1-40a"/>
                         <outlet property="FiveOfAllFalse" destination="hvH-gR-mPq" id="5dL-F7-kw6"/>
                         <outlet property="FiveOfAllYet" destination="mzW-If-0gb" id="IFB-b9-OJL"/>
@@ -617,6 +645,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="vck-kv-P5a"/>
         <segue reference="FuE-rf-SZv"/>
         <segue reference="xtC-j8-2V8"/>
         <segue reference="xgM-hu-mAb"/>

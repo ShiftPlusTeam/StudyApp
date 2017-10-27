@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImportCsvTest: UIViewController, UITableViewDelegate {
+class ImportCsvTest: UIViewController {
     
     
     @IBOutlet weak var `import`: UIButton!

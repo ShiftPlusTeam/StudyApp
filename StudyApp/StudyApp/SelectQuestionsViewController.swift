@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SelectAmountOfQuestionViewController: UIViewController, UITableViewDelegate {
+class SelectQuestionsViewController: UIViewController {
     
     @IBOutlet var SelectView: UIView!
 
@@ -23,7 +23,7 @@ class SelectAmountOfQuestionViewController: UIViewController, UITableViewDelegat
     }
     
     //全問
-    @IBOutlet weak var FiveOfAll: UIButton!
+//    @IBOutlet weak var FiveOfAll: UIButton!
     @IBOutlet weak var TenOfAll: UIButton!
     @IBOutlet weak var TwentyOfAll: UIButton!
     @IBOutlet weak var AllOfAll: UIButton!
@@ -40,10 +40,10 @@ class SelectAmountOfQuestionViewController: UIViewController, UITableViewDelegat
     @IBOutlet weak var TwentyOfAllFalse: UIButton!
     @IBOutlet weak var AllOfAllFalse: UIButton!//  ←ページ作成時にここでエラーが起きる
     
-    @IBAction func tapFiveOfAll() {
-        AppDataController.count = 5
-        AppDataController.kind = "全問"
-    }
+//    @IBAction func tapFiveOfAll() {
+//        AppDataController.count = 5
+//        AppDataController.kind = "全問"
+//    }
     
     @IBAction func tapTenOfAll() {
         AppDataController.count = 10
