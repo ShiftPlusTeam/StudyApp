@@ -295,7 +295,7 @@
         <!--問題-->
         <scene sceneID="DRb-WF-yZP">
             <objects>
-                <viewController id="MFa-sk-1cL" sceneMemberID="viewController">
+                <viewController id="MFa-sk-1cL" customClass="QuestionViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YO3-O4-fbL"/>
                         <viewControllerLayoutGuide type="bottom" id="Tg8-Td-7zm"/>
@@ -304,7 +304,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="問1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtK-wX-zDY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="問" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtK-wX-zDY">
                                 <rect key="frame" x="21" y="84" width="40" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="dpt-4L-rIb"/>
@@ -320,6 +320,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="278" height="61"/>
                                         <state key="normal" title="A"/>
                                         <connections>
+                                            <action selector="selectAButton:" destination="MFa-sk-1cL" eventType="touchUpInside" id="4TK-AS-nxZ"/>
                                             <segue destination="z4W-u9-78b" kind="modal" id="xtC-j8-2V8"/>
                                         </connections>
                                     </button>
@@ -327,6 +328,7 @@
                                         <rect key="frame" x="0.0" y="61" width="278" height="61"/>
                                         <state key="normal" title="B"/>
                                         <connections>
+                                            <action selector="selectBButton:" destination="MFa-sk-1cL" eventType="touchUpInside" id="7sb-Nd-fZu"/>
                                             <segue destination="z4W-u9-78b" kind="modal" id="2yI-fd-Igg"/>
                                         </connections>
                                     </button>
@@ -334,6 +336,7 @@
                                         <rect key="frame" x="0.0" y="122" width="278" height="60.5"/>
                                         <state key="normal" title="C"/>
                                         <connections>
+                                            <action selector="selectCButton:" destination="MFa-sk-1cL" eventType="touchUpInside" id="0oA-fZ-pLU"/>
                                             <segue destination="z4W-u9-78b" kind="modal" id="iRI-1o-taL"/>
                                         </connections>
                                     </button>
@@ -341,6 +344,7 @@
                                         <rect key="frame" x="0.0" y="182.5" width="278" height="61"/>
                                         <state key="normal" title="D"/>
                                         <connections>
+                                            <action selector="selectDButton:" destination="MFa-sk-1cL" eventType="touchUpInside" id="1dP-4o-pZz"/>
                                             <segue destination="z4W-u9-78b" kind="modal" id="X4N-Vr-lQd"/>
                                         </connections>
                                     </button>
@@ -373,6 +377,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="問題" id="fxr-2O-yOk"/>
+                    <connections>
+                        <outlet property="aSelect" destination="TfG-B1-07b" id="5ht-gr-N4o"/>
+                        <outlet property="bSelect" destination="o9c-SV-S1Q" id="FKI-zn-8B5"/>
+                        <outlet property="cSelect" destination="sdd-9c-IpA" id="BAS-LH-J45"/>
+                        <outlet property="dSelect" destination="sdd-9c-IpA" id="veA-93-fLJ"/>
+                        <outlet property="noLabel" destination="HtK-wX-zDY" id="QFD-lh-J7o"/>
+                        <outlet property="questionLabel" destination="kNj-Cg-BTv" id="l64-Lb-CTh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6rG-G3-XBF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
