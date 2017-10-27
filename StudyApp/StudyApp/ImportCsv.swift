@@ -57,12 +57,7 @@ class QuestionRealm :Object{
 
 class ImportLicense {
     
-    init () {
-        
-    }
-    
     let realm = try! Realm()
-    let result :Results<QuestionRealm>
     
     func LicenseToArray () {
         
@@ -72,7 +67,7 @@ class ImportLicense {
             do {
                 
                 //csvのファイルのデータを所得
-                let LicenseStr = String(contentsOfFile:csvPath, encoding:String.Encoding.utf8)
+                let LicenseStr = try! String(contentsOfFile:csvPath, encoding:String.Encoding.utf8)
                 
                 //csvファイルを改行区切りで配列に格納
                 let LicenseArr = LicenseStr.components(separatedBy: .newlines)
@@ -103,12 +98,7 @@ class ImportLicense {
 
 class ImportQuestion {
     
-    init () {
-        
-    }
-    
     let realm = try! Realm()
-    let result :Results<LicenseRealm>
     
     func QuestionToArray () {
         
@@ -117,7 +107,7 @@ class ImportQuestion {
             do {
                 
                 //csvのファイルのデータを所得
-                let QuestionStr = String(contentsOfFile:csvPath, encoding:String.Encoding.utf8)
+                let QuestionStr = try! String(contentsOfFile:csvPath, encoding:String.Encoding.utf8)
                 
                 //csvファイルを改行区切りで配列に格納
                 let QuestionArr = QuestionStr.components(separatedBy: .newlines)

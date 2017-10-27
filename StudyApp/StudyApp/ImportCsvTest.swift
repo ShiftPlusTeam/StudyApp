@@ -10,8 +10,8 @@ import UIKit
 
 class ImportCsvTest: UIViewController, UITableViewDelegate {
     
-    @IBOutlet var ImportView: UIView!
-    @IBOutlet weak var ImportButton: UIButton!
+    
+    @IBOutlet weak var `import`: UIButton!
     
     override func viewDidLoad() {
     super.viewDidLoad()
@@ -21,6 +21,12 @@ class ImportCsvTest: UIViewController, UITableViewDelegate {
     override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
+    }
+   
+    @IBAction func QuestionTest(_ sender: UIButton) {
+        print("QuestionTest")
+        let mytestImportQuestion = ImportQuestion()
+        mytestImportQuestion.QuestionToArray()
     }
     
 }

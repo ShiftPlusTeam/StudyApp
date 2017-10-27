@@ -104,7 +104,7 @@
                     <navigationItem key="navigationItem" title="ジャンル選択画面" id="aFy-9L-FCI">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="play" id="DkS-DN-gVh">
                             <connections>
-                                <segue destination="SvC-nB-eAv" kind="modal" id="pSt-Cu-CPI"/>
+                                <segue destination="SvC-nB-eAv" kind="modal" id="lID-Z0-FYS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -275,6 +275,9 @@
                                 <rect key="frame" x="115" y="170" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="IMPORT CSV"/>
+                                <connections>
+                                    <action selector="test:" destination="X4j-aW-KTQ" eventType="touchUpInside" id="Gxp-dy-h9Y"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -282,6 +285,7 @@
                     <connections>
                         <outlet property="ImportButton" destination="JzJ-VE-jq2" id="SIf-Lw-0fo"/>
                         <outlet property="ImportView" destination="OJV-a8-hvX" id="7wL-1T-9WF"/>
+                        <outlet property="import" destination="JzJ-VE-jq2" id="6xr-NR-Cyv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5P-YK-yU3" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -38,19 +38,19 @@ class SelectAmountOfQuestionViewController: UIViewController, UITableViewDelegat
     @IBOutlet weak var FiveOfAllFalse: UIButton!
     @IBOutlet weak var TenOfAllFalse: UIButton!
     @IBOutlet weak var TwentyOfAllFalse: UIButton!
-    @IBOutlet weak var AllOfAllFalse: UIButton!
+    @IBOutlet weak var AllOfAllFalse: UIButton!//  ←ページ作成時にここでエラーが起きる
     
     @IBAction func tapFiveOfAll() {
         AppDataController.count = 5
         AppDataController.kind = "全問"
     }
     
-    @IBAction func taptenOfAll() {
+    @IBAction func tapTenOfAll() {
         AppDataController.count = 10
         AppDataController.kind = "全問"
     }
     
-    @IBAction func taptwentyOfAll() {
+    @IBAction func tapTwentyOfAll() {
         AppDataController.count = 20
         AppDataController.kind = "全問 "
     }
@@ -65,12 +65,12 @@ class SelectAmountOfQuestionViewController: UIViewController, UITableViewDelegat
         AppDataController.kind = "未回答"
     }
     
-    @IBAction func taptenOfAllYet() {
+    @IBAction func tapTenOfAllYet() {
         AppDataController.count = 10
         AppDataController.kind = "未回答"
     }
     
-    @IBAction func taptwentyOfAllYet() {
+    @IBAction func tapTwentyOfAllYet() {
         AppDataController.count = 20
         AppDataController.kind = "未回答"
     }
@@ -85,12 +85,12 @@ class SelectAmountOfQuestionViewController: UIViewController, UITableViewDelegat
         AppDataController.kind = "不正解"
     }
     
-    @IBAction func taptenOfAllFalse() {
+    @IBAction func tapTenOfAllFalse() {
         AppDataController.count = 10
         AppDataController.kind = "不正解"
     }
     
-    @IBAction func taptwentyOfAllFalse() {
+    @IBAction func tapTwentyOfAllFalse() {
         AppDataController.count = 20
         AppDataController.kind = "不正解"
     }
