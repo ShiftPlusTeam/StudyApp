@@ -13,7 +13,7 @@ import RealmSwift
 //各画面で必要となるデータを扱うクラス
 class AppDataController {
     //イニシャライザ
-    init() {
+    private init() {
     }
     
     //問題一覧

@@ -19,7 +19,6 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var dSelect: UIButton!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,17 +62,5 @@ class QuestionViewController: UIViewController {
         AppDataController.selectAnswer = "D"
         
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
