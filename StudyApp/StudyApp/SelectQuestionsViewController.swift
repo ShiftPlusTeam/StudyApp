@@ -14,16 +14,14 @@ class SelectQuestionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     //全問
-//    @IBOutlet weak var FiveOfAll: UIButton!
+    @IBOutlet weak var FiveOfAll: UIButton!
     @IBOutlet weak var TenOfAll: UIButton!
     @IBOutlet weak var TwentyOfAll: UIButton!
     @IBOutlet weak var AllOfAll: UIButton!
@@ -38,12 +36,12 @@ class SelectQuestionsViewController: UIViewController {
     @IBOutlet weak var FiveOfAllFalse: UIButton!
     @IBOutlet weak var TenOfAllFalse: UIButton!
     @IBOutlet weak var TwentyOfAllFalse: UIButton!
-    @IBOutlet weak var AllOfAllFalse: UIButton!//  ←ページ作成時にここでエラーが起きる
+    @IBOutlet weak var AllOfAllFalse: UIButton!
     
-//    @IBAction func tapFiveOfAll() {
-//        AppDataController.count = 5
-//        AppDataController.kind = "全問"
-//    }
+    @IBAction func tapFiveOfAll() {
+        AppDataController.count = 5
+        AppDataController.kind = "全問"
+    }
     
     @IBAction func tapTenOfAll() {
         AppDataController.count = 10
@@ -102,3 +100,16 @@ class SelectQuestionsViewController: UIViewController {
 
 }
 
+@IBDesignable class RoundedButton: UIButton {
+    
+    @IBInspectable var cornerRadius: CGFloat = 0.0
+    @IBInspectable var borderWidth: CGFloat = 0.0
+    @IBInspectable var borderColor: UIColor = UIColor.clear
+    
+    override func draw(_ rect: CGRect) {
+        layer.cornerRadius = cornerRadius
+        layer.borderWidth = borderWidth
+        layer.borderColor = borderColor.cgColor
+        clipsToBounds = true
+    }
+}
