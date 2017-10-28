@@ -9,18 +9,19 @@
 import UIKit
 
 class ImportCsvTest: UIViewController {
+<<<<<<< HEAD
 
+=======
+>>>>>>> d1cf4d56f987437b6c920c991bc78e9d34dc3e49
     
     @IBOutlet weak var `import`: UIButton!
     
     override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
     }
    
     @IBAction func QuestionTest(_ sender: UIButton) {
