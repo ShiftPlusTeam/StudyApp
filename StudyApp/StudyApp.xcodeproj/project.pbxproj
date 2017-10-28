@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FD4284A1FA3983500CD6B26 /* GenreSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD428491FA3983500CD6B26 /* GenreSelectViewController.swift */; };
 		760EB0AE1F80787C009F32E5 /* license.csv in Resources */ = {isa = PBXBuildFile; fileRef = 760EB0AD1F80787C009F32E5 /* license.csv */; };
 		76201C2B1F491E8D001F8AD1 /* question.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76201C2A1F491E8D001F8AD1 /* question.csv */; };
 		76201C3E1F525078001F8AD1 /* ImportCsv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76201C3D1F525078001F8AD1 /* ImportCsv.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2FD428491FA3983500CD6B26 /* GenreSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreSelectViewController.swift; sourceTree = "<group>"; };
 		760EB0AD1F80787C009F32E5 /* license.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.csv; sourceTree = "<group>"; };
 		76201C2A1F491E8D001F8AD1 /* question.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = question.csv; sourceTree = "<group>"; };
 		76201C3D1F525078001F8AD1 /* ImportCsv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportCsv.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				76201C3D1F525078001F8AD1 /* ImportCsv.swift */,
 				767EDF231F8D08D400F67D44 /* ImportCsvTest.swift */,
 				7E7C706B1F6CE77F0050A618 /* LicenseViewController.swift */,
+				2FD428491FA3983500CD6B26 /* GenreSelectViewController.swift */,
 				76D018CB1F30360400B8EBF8 /* SelectQuestionsViewController.swift */,
 				7E81E6481F94F6A200634AC1 /* QuestionViewController.swift */,
 				760EB0AD1F80787C009F32E5 /* license.csv */,
@@ -196,6 +199,7 @@
 				7E8E61BE1F5A561400ACA547 /* RealmController.swift in Sources */,
 				7E81E6491F94F6A200634AC1 /* QuestionViewController.swift in Sources */,
 				76201C3E1F525078001F8AD1 /* ImportCsv.swift in Sources */,
+				2FD4284A1FA3983500CD6B26 /* GenreSelectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

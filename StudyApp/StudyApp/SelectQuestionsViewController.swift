@@ -11,9 +11,19 @@ import UIKit
 class SelectQuestionsViewController: UIViewController {
     
     @IBOutlet var SelectView: UIView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
     //全問
-    @IBOutlet weak var FiveOfAll: UIButton!
+//    @IBOutlet weak var FiveOfAll: UIButton!
     @IBOutlet weak var TenOfAll: UIButton!
     @IBOutlet weak var TwentyOfAll: UIButton!
     @IBOutlet weak var AllOfAll: UIButton!
@@ -28,20 +38,12 @@ class SelectQuestionsViewController: UIViewController {
     @IBOutlet weak var FiveOfAllFalse: UIButton!
     @IBOutlet weak var TenOfAllFalse: UIButton!
     @IBOutlet weak var TwentyOfAllFalse: UIButton!
-    @IBOutlet weak var AllOfAllFalse: UIButton!
+    @IBOutlet weak var AllOfAllFalse: UIButton!//  ←ページ作成時にここでエラーが起きる
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    @IBAction func tapFiveOfAll() {
-        AppDataController.count = 5
-        AppDataController.kind = "全問"
-    }
+//    @IBAction func tapFiveOfAll() {
+//        AppDataController.count = 5
+//        AppDataController.kind = "全問"
+//    }
     
     @IBAction func tapTenOfAll() {
         AppDataController.count = 10
@@ -100,83 +102,3 @@ class SelectQuestionsViewController: UIViewController {
 
 }
 
-/// 枠線付きのボタン
-@IBDesignable
-public class SK4BorderButton: UIButton {
-    
-    @IBInspectable var borderWidth: CGFloat = 1.0 {
-        didSet {
-            layer.borderWidth = borderWidth
-            setNeedsDisplay()
-        }
-    }
-    
-    @IBInspectable var cornerRadius: CGFloat = 4.0 {
-        didSet {
-            layer.cornerRadius = cornerRadius
-            setNeedsDisplay()
-        }
-    }
-    
-    override public var isEnabled: Bool {
-        didSet {
-            layer.borderColor = currentTitleColor.cgColor
-        }
-    }
-    
-    override public var isHighlighted: Bool {
-        didSet {
-            let col = currentTitleColor
-            let key = "borderColor"
-            
-            if isHighlighted {
-                layer.borderColor = col.withAlphaComponent(0.2).cgColor
-                layer.removeAnimation(forKey: key)
-                
-            } else {
-                layer.borderColor = col.cgColor
-                let anim = CABasicAnimation(keyPath: key)
-                anim.duration = 0.2
-                anim.fromValue = col.withAlphaComponent(0.2).cgColor
-                anim.toValue = col.cgColor
-                layer.add(anim, forKey: key)
-            }
-        }
-    }
-    
-    override public init(frame: CGRect) {
-        super.init(frame: frame)
-        setupBorder()
-    }
-    
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupBorder()
-    }
-    
-    override public func tintColorDidChange() {
-        super.tintColorDidChange()
-        layer.borderColor = currentTitleColor.cgColor
-    }
-    
-    public func setupBorder() {
-        layer.borderWidth = borderWidth
-        layer.cornerRadius = cornerRadius
-        layer.borderColor = currentTitleColor.cgColor
-        clipsToBounds = true
-    }
-}
-
-@IBDesignable class RoundedButton: UIButton {
-    
-    @IBInspectable var cornerRadius: CGFloat = 0.0
-    @IBInspectable var borderWidth: CGFloat = 0.0
-    @IBInspectable var borderColor: UIColor = UIColor.clear
-    
-    override func draw(_ rect: CGRect) {
-        layer.cornerRadius = cornerRadius
-        layer.borderWidth = borderWidth
-        layer.borderColor = borderColor.cgColor
-        clipsToBounds = true
-    }
-}
