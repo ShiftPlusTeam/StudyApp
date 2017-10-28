@@ -119,7 +119,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bNt-v0-vg2">
-                                <rect key="frame" x="5" y="109" width="315" height="120"/>
+                                <rect key="frame" x="5" y="89" width="315" height="120"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wQP-Fu-UdQ">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="26.5"/>
@@ -386,25 +386,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="問題数選択画面" id="XOd-Ch-z9B"/>
-<<<<<<< HEAD
-=======
-                    <connections>
-                        <outlet property="AllOfAll" destination="63b-ZP-HNN" id="f5m-eq-gwe"/>
-                        <outlet property="AllOfAllFalse" destination="kaI-P2-y3K" id="zm9-b3-cDp"/>
-                        <outlet property="AllOfAllYet" destination="uRz-We-KQk" id="cJN-re-eKw"/>
-                        <outlet property="FiveOfAll" destination="kt9-dx-DZe" id="bvx-tB-hRW"/>
-                        <outlet property="FiveOfAllFalse" destination="hvH-gR-mPq" id="5dL-F7-kw6"/>
-                        <outlet property="FiveOfAllYet" destination="mzW-If-0gb" id="IFB-b9-OJL"/>
-                        <outlet property="SelectView" destination="ubU-fa-ZW1" id="pSN-P1-9S1"/>
-                        <outlet property="TenOfAll" destination="V5u-Hh-dVc" id="Ocb-1O-2de"/>
-                        <outlet property="TenOfAllFalse" destination="eVE-TW-myP" id="oWu-rK-a82"/>
-                        <outlet property="TenOfAllYet" destination="2Ak-t1-04A" id="0SJ-Tc-7eS"/>
-                        <outlet property="TwentyOfAll" destination="uGb-X0-YC6" id="yZv-Ow-V6e"/>
-                        <outlet property="TwentyOfAllFalse" destination="8iY-fj-Th2" id="UTq-Jb-ACf"/>
-                        <outlet property="TwentyOfAllYet" destination="obP-sD-1Tp" id="paK-G1-6Mg"/>
-                        <outlet property="UI" destination="ubU-fa-ZW1" id="wU4-4e-ev6"/>
-                    </connections>
->>>>>>> d1cf4d56f987437b6c920c991bc78e9d34dc3e49
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66y-bY-apI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
