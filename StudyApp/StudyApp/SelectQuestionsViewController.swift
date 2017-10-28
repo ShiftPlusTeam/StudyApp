@@ -10,7 +10,7 @@ import UIKit
 
 class SelectQuestionsViewController: UIViewController {
     
-    @IBOutlet var SelectView: UIView!
+    //@IBOutlet var SelectView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,21 +24,23 @@ class SelectQuestionsViewController: UIViewController {
     
     //全問
 //    @IBOutlet weak var FiveOfAll: UIButton!
-    @IBOutlet weak var TenOfAll: UIButton!
-    @IBOutlet weak var TwentyOfAll: UIButton!
-    @IBOutlet weak var AllOfAll: UIButton!
+    //@IBOutlet weak var TenOfAll: UIButton!
+    //@IBOutlet weak var TwentyOfAll: UIButton!
+    //@IBOutlet weak var AllOfAll: UIButton!
     
     //未回答
-    @IBOutlet weak var FiveOfAllYet: UIButton!
-    @IBOutlet weak var TenOfAllYet: UIButton!
-    @IBOutlet weak var TwentyOfAllYet: UIButton!
-    @IBOutlet weak var AllOfAllYet: UIButton!
+    //@IBOutlet weak var FiveOfAllYet: UIButton!
+    //@IBOutlet weak var TenOfAllYet: UIButton!
+    //@IBOutlet weak var TwentyOfAllYet: UIButton!
+    //@IBOutlet weak var AllOfAllYet: UIButton!
     
     //不正解
-    @IBOutlet weak var FiveOfAllFalse: UIButton!
-    @IBOutlet weak var TenOfAllFalse: UIButton!
-    @IBOutlet weak var TwentyOfAllFalse: UIButton!
-    @IBOutlet weak var AllOfAllFalse: UIButton!//  ←ページ作成時にここでエラーが起きる
+    //@IBOutlet weak var FiveOfAllFalse: UIButton!
+    //@IBOutlet weak var TenOfAllFalse: UIButton!
+    
+    //@IBOutlet weak var TwentyOfAllFalse: UIButton!
+    
+    //@IBOutlet weak var AllOfAllFalse: UIButton!//  ←ページ作成時にここでエラーが起きる
     
 //    @IBAction func tapFiveOfAll() {
 //        AppDataController.count = 5

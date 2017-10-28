@@ -11,17 +11,17 @@ import Foundation
 class GenreSelectViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //暫定ジャンルリスト
-    var genreList = ["GenreA","GenreB"]
+    var genreList = ["GenreA","GenreB"]//:List<result>()
     
     //関連付けされたテーブルビュー
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         genreList.append("Genre1")
         genreList.append("Genre2")
         print("\(genreList)")
-        super.viewDidLoad()
-        
+
     }
     
     override func didReceiveMemoryWarning() {

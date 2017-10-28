@@ -64,7 +64,7 @@
         <!--ジャンル選択画面-->
         <scene sceneID="ct8-73-0Ti">
             <objects>
-                <viewController id="Bg5-z8-mnW" userLabel="ジャンル選択画面" customClass="GenreSelectViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bg5-z8-mnW" userLabel="ジャンル選択画面" customClass="GenreSelectViewController" customModule="StudyApp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bdP-KX-9N5"/>
                         <viewControllerLayoutGuide type="bottom" id="yrn-73-NHg"/>
@@ -251,22 +251,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="問題数選択画面" id="XOd-Ch-z9B"/>
-                    <connections>
-                        <outlet property="AllOfAll" destination="63b-ZP-HNN" id="f5m-eq-gwe"/>
-                        <outlet property="AllOfAllFalse" destination="kaI-P2-y3K" id="zm9-b3-cDp"/>
-                        <outlet property="AllOfAllYet" destination="uRz-We-KQk" id="cJN-re-eKw"/>
-                        <outlet property="FiveOfAll" destination="I1q-Nd-1bS" id="iZR-S1-40a"/>
-                        <outlet property="FiveOfAllFalse" destination="hvH-gR-mPq" id="5dL-F7-kw6"/>
-                        <outlet property="FiveOfAllYet" destination="mzW-If-0gb" id="IFB-b9-OJL"/>
-                        <outlet property="SelectView" destination="ubU-fa-ZW1" id="pSN-P1-9S1"/>
-                        <outlet property="TenOfAll" destination="V5u-Hh-dVc" id="Ocb-1O-2de"/>
-                        <outlet property="TenOfAllFalse" destination="eVE-TW-myP" id="oWu-rK-a82"/>
-                        <outlet property="TenOfAllYet" destination="2Ak-t1-04A" id="0SJ-Tc-7eS"/>
-                        <outlet property="TwentyOfAll" destination="uGb-X0-YC6" id="yZv-Ow-V6e"/>
-                        <outlet property="TwentyOfAllFalse" destination="8iY-fj-Th2" id="UTq-Jb-ACf"/>
-                        <outlet property="TwentyOfAllYet" destination="obP-sD-1Tp" id="paK-G1-6Mg"/>
-                        <outlet property="UI" destination="ubU-fa-ZW1" id="wU4-4e-ev6"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66y-bY-apI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -289,25 +273,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="資格選択画面に戻る"/>
                                 <connections>
-                                    <segue destination="vrr-fw-XrJ" kind="modal" id="xgM-hu-mAb"/>
+                                    <segue destination="2Wh-NJ-2fO" kind="modal" id="Vz5-G7-fkv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzJ-VE-jq2">
                                 <rect key="frame" x="115" y="170" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="IMPORT CSV"/>
-                                <connections>
-                                    <action selector="test:" destination="X4j-aW-KTQ" eventType="touchUpInside" id="Gxp-dy-h9Y"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="ImportButton" destination="JzJ-VE-jq2" id="SIf-Lw-0fo"/>
-                        <outlet property="ImportView" destination="OJV-a8-hvX" id="7wL-1T-9WF"/>
-                        <outlet property="import" destination="JzJ-VE-jq2" id="6xr-NR-Cyv"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5P-YK-yU3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -638,9 +614,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gWn-AX-YzH"/>
         <segue reference="FuE-rf-SZv"/>
         <segue reference="xtC-j8-2V8"/>
-        <segue reference="xgM-hu-mAb"/>
     </inferredMetricsTieBreakers>
 </document>
