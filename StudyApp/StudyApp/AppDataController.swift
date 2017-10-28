@@ -33,9 +33,13 @@ class AppDataController {
     //選択したAnswer
     static var selectAnswer: String = " "
     
-    //現在の解いている問題数(現在何問目か)
+    //現在の問題数(現在何問目か)
     //0から始めること(インデックスに使うため)
     static var currentCount: Int = 0
+    
+    //現在の正解数
+    //成績の出力時に使用
+    static var currentCorrect: Int = 0
     
     //所定の条件のもとで問題を作成する
     //各種フィールド値をセットしたら、このメソッドを実行する想定
