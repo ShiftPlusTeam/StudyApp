@@ -137,30 +137,80 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1q-Nd-1bS" customClass="CustomButton" customModule="ShikakuApp">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBQ-Ul-Nd3" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                                 <rect key="frame" x="64" y="0.0" width="59" height="26.5"/>
                                                 <state key="normal" title="5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapFiveOfAll" destination="rRX-2J-YYl" eventType="touchUpInside" id="0Hd-Yb-wLd"/>
+                                                    <segue destination="jaU-b7-E77" kind="modal" id="IGh-0a-8qa"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5u-Hh-dVc">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5u-Hh-dVc" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                                 <rect key="frame" x="128" y="0.0" width="59" height="26.5"/>
                                                 <state key="normal" title="10"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapTenOfAll" destination="rRX-2J-YYl" eventType="touchUpInside" id="3XL-Zd-Tbr"/>
                                                     <segue destination="jaU-b7-E77" kind="modal" id="D0t-OD-OdI"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGb-X0-YC6">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGb-X0-YC6" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                                 <rect key="frame" x="192" y="0.0" width="59" height="26.5"/>
                                                 <state key="normal" title="20"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapTwentyOfAll" destination="rRX-2J-YYl" eventType="touchUpInside" id="d9H-4w-Auy"/>
+                                                    <segue destination="jaU-b7-E77" kind="modal" id="So2-hy-UvM"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63b-ZP-HNN">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63b-ZP-HNN" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                                 <rect key="frame" x="256" y="0.0" width="59" height="26.5"/>
                                                 <state key="normal" title="ALL"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapAllOfAll" destination="rRX-2J-YYl" eventType="touchUpInside" id="Oyv-QY-x7N"/>
+                                                    <segue destination="jaU-b7-E77" kind="modal" id="Rvx-gs-hbu"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -174,32 +224,80 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzW-If-0gb">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzW-If-0gb" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                                 <rect key="frame" x="64" y="0.0" width="59" height="27"/>
                                                 <state key="normal" title="5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapFiveOfAllYet" destination="rRX-2J-YYl" eventType="touchUpInside" id="mOn-tU-THK"/>
+                                                    <segue destination="jaU-b7-E77" kind="modal" id="UFO-6b-ntc"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ak-t1-04A">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ak-t1-04A" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                                 <rect key="frame" x="128" y="0.0" width="59" height="27"/>
                                                 <state key="normal" title="10"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapTenOfAllYet" destination="rRX-2J-YYl" eventType="touchUpInside" id="vll-pP-OgI"/>
+                                                    <segue destination="jaU-b7-E77" kind="modal" id="q9v-2F-GQi"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obP-sD-1Tp">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obP-sD-1Tp" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                                 <rect key="frame" x="192" y="0.0" width="59" height="27"/>
                                                 <state key="normal" title="20"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapTwentyOfAllYet" destination="rRX-2J-YYl" eventType="touchUpInside" id="DC6-jj-pGd"/>
+                                                    <segue destination="jaU-b7-E77" kind="modal" id="nVE-xZ-yaf"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRz-We-KQk">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRz-We-KQk" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                                 <rect key="frame" x="256" y="0.0" width="59" height="27"/>
                                                 <state key="normal" title="ALL"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapAllOfAllYet" destination="rRX-2J-YYl" eventType="touchUpInside" id="jBh-lo-2GK"/>
+                                                    <segue destination="jaU-b7-E77" kind="modal" id="gkg-Rv-3AB"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -213,33 +311,80 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvH-gR-mPq">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvH-gR-mPq" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                                 <rect key="frame" x="64" y="0.0" width="59" height="26.5"/>
                                                 <state key="normal" title="5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapFiveOfAllFalse" destination="rRX-2J-YYl" eventType="touchUpInside" id="9Hy-ZE-uoY"/>
+                                                    <segue destination="jaU-b7-E77" kind="modal" id="sQe-76-ffY"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVE-TW-myP">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVE-TW-myP" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                                 <rect key="frame" x="128" y="0.0" width="59" height="26.5"/>
                                                 <state key="normal" title="10"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapTenOfAllFalse" destination="rRX-2J-YYl" eventType="touchUpInside" id="Ndo-eJ-pDz"/>
+                                                    <segue destination="jaU-b7-E77" kind="modal" id="7eB-I8-hpH"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iY-fj-Th2">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iY-fj-Th2" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                                 <rect key="frame" x="192" y="0.0" width="59" height="26.5"/>
                                                 <state key="normal" title="20"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapTwentyOfAllFalse" destination="rRX-2J-YYl" eventType="touchUpInside" id="cHL-rm-ZuM"/>
+                                                    <segue destination="jaU-b7-E77" kind="modal" id="ZRX-B1-FDg"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaI-P2-y3K">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaI-P2-y3K" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                                 <rect key="frame" x="256" y="0.0" width="59" height="26.5"/>
                                                 <state key="normal" title="ALL"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapAllOfAllFalse" destination="rRX-2J-YYl" eventType="touchUpInside" id="4Sx-3Q-bvC"/>
-                                                    <segue destination="X4j-aW-KTQ" kind="modal" id="vck-kv-P5a"/>
+                                                    <segue destination="jaU-b7-E77" kind="modal" id="ybL-P5-MiK"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -262,7 +407,7 @@
                         <outlet property="AllOfAll" destination="63b-ZP-HNN" id="f5m-eq-gwe"/>
                         <outlet property="AllOfAllFalse" destination="kaI-P2-y3K" id="zm9-b3-cDp"/>
                         <outlet property="AllOfAllYet" destination="uRz-We-KQk" id="cJN-re-eKw"/>
-                        <outlet property="FiveOfAll" destination="I1q-Nd-1bS" id="iZR-S1-40a"/>
+                        <outlet property="FiveOfAll" destination="nBQ-Ul-Nd3" id="MNb-7v-q1u"/>
                         <outlet property="FiveOfAllFalse" destination="hvH-gR-mPq" id="5dL-F7-kw6"/>
                         <outlet property="FiveOfAllYet" destination="mzW-If-0gb" id="IFB-b9-OJL"/>
                         <outlet property="SelectView" destination="ubU-fa-ZW1" id="pSN-P1-9S1"/>
@@ -282,7 +427,7 @@
         <!--CSV テスト画面-->
         <scene sceneID="1pI-Nv-lDT">
             <objects>
-                <viewController id="X4j-aW-KTQ" userLabel="CSV テスト画面" customClass="TestImportCsv" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="X4j-aW-KTQ" userLabel="CSV テスト画面" customClass="ImportCsvTest" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9LR-FC-HJG"/>
                         <viewControllerLayoutGuide type="bottom" id="TtS-jc-pjd"/>
@@ -304,16 +449,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="IMPORT CSV"/>
                                 <connections>
-                                    <action selector="test:" destination="X4j-aW-KTQ" eventType="touchUpInside" id="Gxp-dy-h9Y"/>
+                                    <action selector="QuestionTest:" destination="X4j-aW-KTQ" eventType="touchUpInside" id="JZs-Et-S1h"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="ImportButton" destination="JzJ-VE-jq2" id="SIf-Lw-0fo"/>
                         <outlet property="ImportView" destination="OJV-a8-hvX" id="7wL-1T-9WF"/>
-                        <outlet property="import" destination="JzJ-VE-jq2" id="6xr-NR-Cyv"/>
+                        <outlet property="import" destination="JzJ-VE-jq2" id="JgB-AV-fjh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5P-YK-yU3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -645,9 +789,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vck-kv-P5a"/>
         <segue reference="FuE-rf-SZv"/>
         <segue reference="xtC-j8-2V8"/>
+        <segue reference="ZRX-B1-FDg"/>
         <segue reference="xgM-hu-mAb"/>
     </inferredMetricsTieBreakers>
 </document>
