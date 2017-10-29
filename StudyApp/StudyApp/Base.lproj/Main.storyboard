@@ -437,7 +437,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="問" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtK-wX-zDY">
-                                <rect key="frame" x="21" y="84" width="40" height="20.5"/>
+                                <rect key="frame" x="21" y="104" width="40" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="dpt-4L-rIb"/>
                                 </constraints>
@@ -446,10 +446,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VS3-j8-a7h">
-                                <rect key="frame" x="21" y="319.5" width="278" height="243.5"/>
+                                <rect key="frame" x="21" y="339.5" width="278" height="223.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfG-B1-07b" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="278" height="61"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="278" height="56"/>
                                         <state key="normal" title="A"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -468,7 +468,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9c-SV-S1Q" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="61" width="278" height="61"/>
+                                        <rect key="frame" x="0.0" y="56" width="278" height="56"/>
                                         <state key="normal" title="B"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -487,7 +487,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JS-NA-s4v" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="122" width="278" height="60.5"/>
+                                        <rect key="frame" x="0.0" y="112" width="278" height="55.5"/>
                                         <state key="normal" title="C"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -506,7 +506,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdd-9c-IpA" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="182.5" width="278" height="61"/>
+                                        <rect key="frame" x="0.0" y="167.5" width="278" height="56"/>
                                         <state key="normal" title="D"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -527,7 +527,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNj-Cg-BTv">
-                                <rect key="frame" x="21" y="114.5" width="278" height="200"/>
+                                <rect key="frame" x="21" y="134.5" width="278" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="fmN-8z-zp9"/>
                                 </constraints>
