@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -733,7 +733,7 @@
         <!--結果-->
         <scene sceneID="3Y7-Ic-2WT">
             <objects>
-                <viewController id="Jit-pq-dqR" sceneMemberID="viewController">
+                <viewController id="Jit-pq-dqR" customClass="RecordViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hBq-6b-FbU"/>
                         <viewControllerLayoutGuide type="bottom" id="OhV-6r-Zhd"/>
@@ -742,7 +742,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 / 10 問" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MW-1p-oVh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="5 / 10 問" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MW-1p-oVh">
                                 <rect key="frame" x="26" y="351" width="268" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Kqb-lx-Cpo"/>
@@ -751,23 +751,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ここにグラフを書いてね" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w83-C5-l1S">
-                                <rect key="frame" x="65" y="139" width="191" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="w83-C5-l1S" firstAttribute="top" secondItem="8MW-1p-oVh" secondAttribute="bottom" constant="40" id="Cqm-fd-buf"/>
-                            <constraint firstItem="OhV-6r-Zhd" firstAttribute="top" secondItem="w83-C5-l1S" secondAttribute="bottom" constant="106" id="Jq8-l2-JYq"/>
-                            <constraint firstItem="w83-C5-l1S" firstAttribute="centerX" secondItem="8MW-1p-oVh" secondAttribute="centerX" id="Yus-OY-M2Z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8MW-1p-oVh" secondAttribute="trailing" constant="10" id="kEe-Pr-t33"/>
                             <constraint firstItem="8MW-1p-oVh" firstAttribute="leading" secondItem="CGR-KC-YtU" secondAttribute="leadingMargin" constant="10" id="nLD-Ja-FRs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="結果" id="I2i-w2-8xo"/>
+                    <connections>
+                        <outlet property="recordLabel" destination="8MW-1p-oVh" id="BTr-8E-MeB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilH-k7-mYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
