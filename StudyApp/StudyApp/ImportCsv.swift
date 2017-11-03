@@ -21,11 +21,11 @@ class LicenseRealm: Object  {
     @objc dynamic var name :String = ""
     @objc dynamic var rate :Int = 0
     @objc dynamic var purshase :Bool = false
-
+    
 }
 
 class QuestionRealm :Object{
-        
+    
     //問題一覧
     //No:問題番号
     //LicenseId:資格ID
@@ -39,7 +39,7 @@ class QuestionRealm :Object{
     //Answer:正解の選択肢
     //Correct:過去に正解したかどうか
     //Done:過去に回答したかどうか
-        
+    
     @objc dynamic var no :String = ""
     @objc dynamic var licenseId :String = ""
     @objc dynamic var genre :String = ""
@@ -76,17 +76,17 @@ class ImportLicense {
                 for LicenseRow in LicenseArr {
                     
                     func addLicense(_ newlicenseCsvSent :String) {
-                        let License = LicenseRealm()
+                        let myLicense = License()
                         let ally = newlicenseCsvSent.components(separatedBy: ",")
                         
-                        License.name = ally[0]
-                        License.id = ally[1]
-                        License.rate = 0
-                        License.purshase = false
+                        myLicense.name = ally[0]
+                        myLicense.id = ally[1]
+                        myLicense.rate = 0
+                        myLicense.purshase = false
                         
                         try! realm.write {
                             
-                            realm.add(License)
+                            realm.add(myLicense)
                             
                         }
                     }
@@ -114,26 +114,26 @@ class ImportQuestion {
                 
                 for QuestionRow in QuestionArr {
                     func addQuestion(_ newQuestionCsvSent :String) {
-                        let Question = QuestionRealm()
+                        let myQuestion = Question()
                         let ally = newQuestionCsvSent.components(separatedBy: ",")
                         
                         //ダウンキャストがうまくいかないとエラーが起こるので、場合分け必須
-                        Question.no = ally[0]
-                        Question.licenseId = ally[1]
-                        Question.genre = ally[2]
-                        Question.problem = ally[3]
-                        Question.comment = ally[4]
-                        Question.optionA = ally[5]
-                        Question.optionB = ally[6]
-                        Question.optionC = ally[7]
-                        Question.optionD = ally[8]
-                        Question.answer = ally[9]
-                        Question.correct = false
-                        Question.done = false
+                        myQuestion.no = ally[0]
+                        myQuestion.licenseId = ally[1]
+                        myQuestion.genre = ally[2]
+                        myQuestion.problem = ally[3]
+                        myQuestion.comment = ally[4]
+                        myQuestion.optionA = ally[5]
+                        myQuestion.optionB = ally[6]
+                        myQuestion.optionC = ally[7]
+                        myQuestion.optionD = ally[8]
+                        myQuestion.answer = ally[9]
+                        myQuestion.correct = false
+                        myQuestion.done = false
                         
                         try! realm.write {
                             
-                            realm.add(Question)
+                            realm.add(myQuestion)
                             
                         }
                     }

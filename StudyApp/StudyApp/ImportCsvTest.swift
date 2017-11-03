@@ -10,8 +10,6 @@ import UIKit
 
 class ImportCsvTest: UIViewController {
     
-    @IBOutlet weak var `import`: UIButton!
-    
     override func viewDidLoad() {
     super.viewDidLoad()
     }
@@ -20,10 +18,16 @@ class ImportCsvTest: UIViewController {
     super.didReceiveMemoryWarning()
     }
    
-    @IBAction func QuestionTest(_ sender: UIButton) {
+    @IBAction func ImportTest(_ sender: UIButton) {
+        
         print("QuestionTest")
-        let mytestImportQuestion = ImportQuestion()
-        mytestImportQuestion.QuestionToArray()
+        let QuestionTest = ImportQuestion()
+        QuestionTest.QuestionToArray()
+        
+        print("LicenseTest")
+        let LicenseTest = ImportLicense()
+        LicenseTest.LicenseToArray()
+        
     }
     
 }
