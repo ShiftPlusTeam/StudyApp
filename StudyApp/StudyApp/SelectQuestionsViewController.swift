@@ -20,11 +20,6 @@ class SelectQuestionsViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    @IBOutlet weak var FiveOfAllFalse: UIButton!
-    @IBOutlet weak var TenOfAllFalse: UIButton!
-    @IBOutlet weak var TwentyOfAllFalse: UIButton!
-    @IBOutlet weak var AllOfAllFalse: UIButton!
-    
     @IBAction func tapFiveOfAll() {
         AppDataController.count = 5
         AppDataController.kind = "全問"
