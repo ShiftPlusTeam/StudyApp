@@ -10,8 +10,8 @@
 		2FD4284A1FA3983500CD6B26 /* GenreSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD428491FA3983500CD6B26 /* GenreSelectViewController.swift */; };
 		760EB0AE1F80787C009F32E5 /* license.csv in Resources */ = {isa = PBXBuildFile; fileRef = 760EB0AD1F80787C009F32E5 /* license.csv */; };
 		76201C2B1F491E8D001F8AD1 /* question.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76201C2A1F491E8D001F8AD1 /* question.csv */; };
-		76201C3E1F525078001F8AD1 /* ImportCsv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76201C3D1F525078001F8AD1 /* ImportCsv.swift */; };
-		767EDF241F8D08D400F67D44 /* ImportCsvTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EDF231F8D08D400F67D44 /* ImportCsvTest.swift */; };
+		76201C3E1F525078001F8AD1 /* ImportCsvController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76201C3D1F525078001F8AD1 /* ImportCsvController.swift */; };
+		767EDF241F8D08D400F67D44 /* ImportCsvViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EDF231F8D08D400F67D44 /* ImportCsvViewController.swift */; };
 		76D018CA1F30360400B8EBF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D018C91F30360400B8EBF8 /* AppDelegate.swift */; };
 		76D018CC1F30360400B8EBF8 /* SelectQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D018CB1F30360400B8EBF8 /* SelectQuestionsViewController.swift */; };
 		76D018CF1F30360400B8EBF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76D018CD1F30360400B8EBF8 /* Main.storyboard */; };
@@ -26,7 +26,7 @@
 		7E7C706C1F6CE77F0050A618 /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7C706B1F6CE77F0050A618 /* LicenseViewController.swift */; };
 		7E81E6491F94F6A200634AC1 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E81E6481F94F6A200634AC1 /* QuestionViewController.swift */; };
 		7E8E61BE1F5A561400ACA547 /* RealmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8E61BD1F5A561400ACA547 /* RealmController.swift */; };
-		E1228C6D1FA41B5E00063E08 /* Commentary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1228C6C1FA41B5E00063E08 /* Commentary.swift */; };
+		E1228C6D1FA41B5E00063E08 /* CommentaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1228C6C1FA41B5E00063E08 /* CommentaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,8 +48,8 @@
 		2FD428491FA3983500CD6B26 /* GenreSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreSelectViewController.swift; sourceTree = "<group>"; };
 		760EB0AD1F80787C009F32E5 /* license.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.csv; sourceTree = "<group>"; };
 		76201C2A1F491E8D001F8AD1 /* question.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = question.csv; sourceTree = "<group>"; };
-		76201C3D1F525078001F8AD1 /* ImportCsv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportCsv.swift; sourceTree = "<group>"; };
-		767EDF231F8D08D400F67D44 /* ImportCsvTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportCsvTest.swift; sourceTree = "<group>"; };
+		76201C3D1F525078001F8AD1 /* ImportCsvController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportCsvController.swift; sourceTree = "<group>"; };
+		767EDF231F8D08D400F67D44 /* ImportCsvViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportCsvViewController.swift; sourceTree = "<group>"; };
 		76D018C61F30360400B8EBF8 /* StudyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76D018C91F30360400B8EBF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76D018CB1F30360400B8EBF8 /* SelectQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestionsViewController.swift; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		7E7C706B1F6CE77F0050A618 /* LicenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
 		7E81E6481F94F6A200634AC1 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		7E8E61BD1F5A561400ACA547 /* RealmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmController.swift; sourceTree = "<group>"; };
-		E1228C6C1FA41B5E00063E08 /* Commentary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commentary.swift; sourceTree = "<group>"; };
+		E1228C6C1FA41B5E00063E08 /* CommentaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +80,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76683AA61FAD7112006FE550 /* ViewController.swift */ = {
+			isa = PBXGroup;
+			children = (
+				767EDF231F8D08D400F67D44 /* ImportCsvViewController.swift */,
+				7E7C706B1F6CE77F0050A618 /* LicenseViewController.swift */,
+				2FD428491FA3983500CD6B26 /* GenreSelectViewController.swift */,
+				76D018CB1F30360400B8EBF8 /* SelectQuestionsViewController.swift */,
+				7E81E6481F94F6A200634AC1 /* QuestionViewController.swift */,
+				E1228C6C1FA41B5E00063E08 /* CommentaryViewController.swift */,
+				7E455E411FA476C7005C6B6B /* RecordViewController.swift */,
+			);
+			path = ViewController.swift;
+			sourceTree = "<group>";
+		};
+		76683AA71FAD716E006FE550 /* Controller.swift */ = {
+			isa = PBXGroup;
+			children = (
+				76201C3D1F525078001F8AD1 /* ImportCsvController.swift */,
+				7E58BAF11F38ADFC0031F082 /* AppDataController.swift */,
+				7E8E61BD1F5A561400ACA547 /* RealmController.swift */,
+			);
+			path = Controller.swift;
+			sourceTree = "<group>";
+		};
+		76683AA81FAD71BC006FE550 /* csv */ = {
+			isa = PBXGroup;
+			children = (
+				760EB0AD1F80787C009F32E5 /* license.csv */,
+				76201C2A1F491E8D001F8AD1 /* question.csv */,
+			);
+			path = csv;
+			sourceTree = "<group>";
+		};
 		76D018BD1F30360400B8EBF8 = {
 			isa = PBXGroup;
 			children = (
@@ -101,21 +134,12 @@
 		76D018C81F30360400B8EBF8 /* StudyApp */ = {
 			isa = PBXGroup;
 			children = (
-				E1228C6C1FA41B5E00063E08 /* Commentary.swift */,
 				76D018CD1F30360400B8EBF8 /* Main.storyboard */,
 				76D018D21F30360400B8EBF8 /* LaunchScreen.storyboard */,
 				76D018C91F30360400B8EBF8 /* AppDelegate.swift */,
-				7E58BAF11F38ADFC0031F082 /* AppDataController.swift */,
-				7E8E61BD1F5A561400ACA547 /* RealmController.swift */,
-				76201C3D1F525078001F8AD1 /* ImportCsv.swift */,
-				767EDF231F8D08D400F67D44 /* ImportCsvTest.swift */,
-				7E7C706B1F6CE77F0050A618 /* LicenseViewController.swift */,
-				2FD428491FA3983500CD6B26 /* GenreSelectViewController.swift */,
-				76D018CB1F30360400B8EBF8 /* SelectQuestionsViewController.swift */,
-				7E81E6481F94F6A200634AC1 /* QuestionViewController.swift */,
-				7E455E411FA476C7005C6B6B /* RecordViewController.swift */,
-				760EB0AD1F80787C009F32E5 /* license.csv */,
-				76201C2A1F491E8D001F8AD1 /* question.csv */,
+				76683AA61FAD7112006FE550 /* ViewController.swift */,
+				76683AA71FAD716E006FE550 /* Controller.swift */,
+				76683AA81FAD71BC006FE550 /* csv */,
 				76D018D51F30360400B8EBF8 /* Info.plist */,
 				76D018D01F30360400B8EBF8 /* Assets.xcassets */,
 			);
@@ -150,7 +174,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "ShiftPlus+";
 				TargetAttributes = {
 					76D018C51F30360400B8EBF8 = {
@@ -197,16 +221,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				767EDF241F8D08D400F67D44 /* ImportCsvTest.swift in Sources */,
+				767EDF241F8D08D400F67D44 /* ImportCsvViewController.swift in Sources */,
 				7E7C706C1F6CE77F0050A618 /* LicenseViewController.swift in Sources */,
 				76D018CC1F30360400B8EBF8 /* SelectQuestionsViewController.swift in Sources */,
 				7E58BAF21F38ADFC0031F082 /* AppDataController.swift in Sources */,
 				76D018CA1F30360400B8EBF8 /* AppDelegate.swift in Sources */,
 				7E455E421FA476C7005C6B6B /* RecordViewController.swift in Sources */,
 				7E8E61BE1F5A561400ACA547 /* RealmController.swift in Sources */,
-				E1228C6D1FA41B5E00063E08 /* Commentary.swift in Sources */,
+				E1228C6D1FA41B5E00063E08 /* CommentaryViewController.swift in Sources */,
 				7E81E6491F94F6A200634AC1 /* QuestionViewController.swift in Sources */,
-				76201C3E1F525078001F8AD1 /* ImportCsv.swift in Sources */,
+				76201C3E1F525078001F8AD1 /* ImportCsvController.swift in Sources */,
 				2FD4284A1FA3983500CD6B26 /* GenreSelectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,7 +267,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -251,7 +277,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -293,7 +323,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -301,7 +333,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImportCsvTest: UIViewController {
+class ImportCsvViewController: UIViewController {
     
     override func viewDidLoad() {
     super.viewDidLoad()
