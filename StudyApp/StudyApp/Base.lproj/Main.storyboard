@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2Wh-NJ-2fO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2Wh-NJ-2fO">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -616,7 +616,7 @@
         <!--解説-->
         <scene sceneID="anM-vY-n5T">
             <objects>
-                <viewController id="MsY-uC-8MG" sceneMemberID="viewController">
+                <viewController id="MsY-uC-8MG" customClass="CommentaryViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CeG-mt-sOw"/>
                         <viewControllerLayoutGuide type="bottom" id="eig-Tj-0mw"/>
@@ -625,7 +625,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⭕️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmQ-9G-ijC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="◯×画像差し込み(未実装)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmQ-9G-ijC">
                                 <rect key="frame" x="21" y="104" width="278" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="CF3-du-1YS"/>
@@ -634,8 +634,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正解：A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UP9-Tz-3LL">
-                                <rect key="frame" x="21" y="149" width="278" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="正解" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UP9-Tz-3LL">
+                                <rect key="frame" x="21" y="149" width="50" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="aox-N8-dkT"/>
                                 </constraints>
@@ -643,8 +643,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="解説： 解説文の表示" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMF-I8-UeE">
-                                <rect key="frame" x="21" y="194" width="278" height="350"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOd-bI-EHs">
+                                <rect key="frame" x="70" y="152" width="229" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pAn-CA-hqZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMF-I8-UeE">
+                                <rect key="frame" x="26" y="238" width="278" height="309"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="350" id="HF4-YX-i6c"/>
                                 </constraints>
@@ -652,12 +661,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="❌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxU-8d-q54">
-                                <rect key="frame" x="21" y="104" width="288" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="解説：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tv3-jx-Eln">
+                                <rect key="frame" x="21" y="197" width="52" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="b1U-9f-jQu"/>
+                                    <constraint firstAttribute="height" constant="40" id="YcD-aB-GbI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -667,14 +676,11 @@
                             <constraint firstItem="pMF-I8-UeE" firstAttribute="leading" secondItem="aFU-l8-aI4" secondAttribute="leadingMargin" constant="5" id="FDV-VJ-7mZ"/>
                             <constraint firstItem="GmQ-9G-ijC" firstAttribute="top" secondItem="CeG-mt-sOw" secondAttribute="bottom" constant="40" id="G8Q-3t-Qsf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GmQ-9G-ijC" secondAttribute="trailing" constant="5" id="GEU-5y-Yf8"/>
-                            <constraint firstItem="sxU-8d-q54" firstAttribute="trailing" secondItem="aFU-l8-aI4" secondAttribute="trailingMargin" constant="5" id="GbI-QV-fni"/>
-                            <constraint firstItem="sxU-8d-q54" firstAttribute="top" secondItem="CeG-mt-sOw" secondAttribute="bottom" constant="40" id="SQ2-pL-L6w"/>
                             <constraint firstItem="UP9-Tz-3LL" firstAttribute="top" secondItem="GmQ-9G-ijC" secondAttribute="bottom" constant="5" id="Wn6-Kq-eyF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pMF-I8-UeE" secondAttribute="trailing" constant="5" id="a8w-eC-gGn"/>
                             <constraint firstItem="pMF-I8-UeE" firstAttribute="top" secondItem="UP9-Tz-3LL" secondAttribute="bottom" constant="5" id="bOq-TA-4nQ"/>
                             <constraint firstItem="UP9-Tz-3LL" firstAttribute="leading" secondItem="aFU-l8-aI4" secondAttribute="leadingMargin" constant="5" id="mc4-XP-52N"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UP9-Tz-3LL" secondAttribute="trailing" constant="5" id="nYP-Kd-j8k"/>
-                            <constraint firstItem="sxU-8d-q54" firstAttribute="leading" secondItem="aFU-l8-aI4" secondAttribute="leadingMargin" constant="5" id="vdY-3k-Xom"/>
                             <constraint firstItem="GmQ-9G-ijC" firstAttribute="leading" secondItem="aFU-l8-aI4" secondAttribute="leadingMargin" constant="5" id="yrp-f9-MJG"/>
                         </constraints>
                     </view>
@@ -685,10 +691,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerjudge" destination="GmQ-9G-ijC" id="t6y-c4-YHZ"/>
+                        <outlet property="commentlabel" destination="pMF-I8-UeE" id="keO-58-Lkd"/>
+                        <outlet property="correctlabel" destination="wOd-bI-EHs" id="0jR-j7-g0i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xH-yi-DP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3349" y="1380"/>
+            <point key="canvasLocation" x="3348.75" y="1379.5774647887324"/>
         </scene>
         <!--結果-->
         <scene sceneID="3Y7-Ic-2WT">
