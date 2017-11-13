@@ -22,12 +22,13 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //tableView.dataSource = self
+        //tableView.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
     
     //セルに表示する行数を返す
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

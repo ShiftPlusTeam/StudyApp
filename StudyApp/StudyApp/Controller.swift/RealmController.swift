@@ -13,7 +13,8 @@ import RealmSwift
 class RealmControllerLicense{
     
     let realm = try! Realm()
-    let result = try! Realm().objects(License.self).sorted(byKeyPath: "Id")
+    let result = try! Realm().objects(License.self)
+    //.sorted(byKeyPath: "Id")
     
     //全資格を返す
     func getResult() -> List<License>{
