@@ -20,13 +20,15 @@ class ImportCsvViewController: UIViewController {
    
     @IBAction func ImportTest(_ sender: UIButton) {
         
-        print("QuestionTest")
+        print("question.csvの取り込み開始")
         let QuestionTest = ImportQuestion()
         QuestionTest.QuestionToArray()
+        //print("question.csvの取り込み完了")
         
-        print("LicenseTest")
+        print("license.csvの取り込み開始")
         let LicenseTest = ImportLicense()
         LicenseTest.LicenseToArray()
+        //print("license.csvの取り込み完了")
         
     }
     

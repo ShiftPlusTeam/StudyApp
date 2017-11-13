@@ -69,36 +69,43 @@ class ImportLicense {
     func LicenseToArray () {
         
         //csvのファイルパスを取得
-        if let csvPath = Bundle.main.path(forResource: "License", ofType: "csv") {
+        if let csvPath = Bundle.main.path(forResource: "license", ofType: "csv") {
+            //            print(csvPath)
             
             do {
-                
                 //csvのファイルのデータを所得
                 let LicenseStr = try! String(contentsOfFile:csvPath, encoding:String.Encoding.utf8)
-                
+                //                print(LicenseStr)
                 //csvファイルを改行区切りで配列に格納
                 let LicenseArr = LicenseStr.components(separatedBy: .newlines)
-                //print(csvArr)
+                //                print(LicenseArr)
                 
                 for LicenseRow in LicenseArr {
                     
-                    func addLicense(_ newlicenseCsvSent :String) {
-                        let myLicense = License()
-                        let ally = newlicenseCsvSent.components(separatedBy: ",")
+                    //func addLicense(_ newlicenseCsvSent :String) {
+                    let myLicense = License()
+                    let ally = LicenseRow.components(separatedBy: ",")
+                    
+                    myLicense.name = ally[0]
+                    myLicense.id = ally[1]
+                    myLicense.rate = 0
+                    myLicense.purshase = false
+                    
+                    print(myLicense.name)
+                    print(myLicense.id)
+                    print(myLicense.rate)
+                    print(myLicense.purshase)
+                    
+                    try! realm.write {
                         
-                        myLicense.name = ally[0]
-                        myLicense.id = ally[1]
-                        myLicense.rate = 0
-                        myLicense.purshase = false
+                        realm.add(myLicense)
                         
-                        try! realm.write {
-                            
-                            realm.add(myLicense)
-                            
-                        }
                     }
+                    //}
                 }
             }
+        } else {
+            print("CSVファイルパスの取得失敗")
         }
     }
 }
@@ -111,41 +118,62 @@ class ImportQuestion {
         
         //csvのファイルパスを取得
         if let csvPath = Bundle.main.path(forResource: "question", ofType: "csv") {
+            //            print(csvPath)
+            
             do {
-                
                 //csvのファイルのデータを所得
                 let QuestionStr = try! String(contentsOfFile:csvPath, encoding:String.Encoding.utf8)
+                //                print(QuestionStr)
                 
                 //csvファイルを改行区切りで配列に格納
                 let QuestionArr = QuestionStr.components(separatedBy: .newlines)
+                //                print(QuestionArr)
+                
                 
                 for QuestionRow in QuestionArr {
-                    func addQuestion(_ newQuestionCsvSent :String) {
-                        let myQuestion = Question()
-                        let ally = newQuestionCsvSent.components(separatedBy: ",")
+                    
+                    //func addQuestion(_ newQuestionCsvSent :String) {
+                    let myQuestion = Question()
+                    let ally = QuestionRow.components(separatedBy: ",")
+                    
+                    //ダウンキャストがうまくいかないとエラーが起こるので、場合分け必須
+                    myQuestion.no = ally[0]
+                    print(myQuestion.no)
+                    myQuestion.licenseId = ally[1]
+                    print(myQuestion.licenseId)
+                    myQuestion.genre = ally[2]
+                    print(myQuestion.genre)
+                    myQuestion.problem = ally[3]
+                    print(myQuestion.problem)
+                    myQuestion.comment = ally[4]
+                    print(myQuestion.comment)
+                    myQuestion.optionA = ally[5]
+                    print(myQuestion.optionA)
+                    myQuestion.optionB = ally[6]
+                    print(myQuestion.optionB)
+                    myQuestion.optionC = ally[7]
+                    print(myQuestion.optionC)
+                    myQuestion.optionD = ally[8]
+                    print(myQuestion.optionD)
+                    myQuestion.answer = ally[9]
+                    print(myQuestion.answer)
+                    myQuestion.correct = false
+                    print(myQuestion.correct)
+                    myQuestion.done = false
+                    print(myQuestion.done)
+                    
+                    //CSV１レコード文の取得が完了
+                    print("------------------------------")
+                    
+                    try! realm.write {
+                        realm.add(myQuestion)
                         
-                        //ダウンキャストがうまくいかないとエラーが起こるので、場合分け必須
-                        myQuestion.no = ally[0]
-                        myQuestion.licenseId = ally[1]
-                        myQuestion.genre = ally[2]
-                        myQuestion.problem = ally[3]
-                        myQuestion.comment = ally[4]
-                        myQuestion.optionA = ally[5]
-                        myQuestion.optionB = ally[6]
-                        myQuestion.optionC = ally[7]
-                        myQuestion.optionD = ally[8]
-                        myQuestion.answer = ally[9]
-                        myQuestion.correct = false
-                        myQuestion.done = false
-                        
-                        try! realm.write {
-                            
-                            realm.add(myQuestion)
-                            
-                        }
                     }
+                    //}
                 }
             }
+        } else {
+            print("CSVファイルパスの取得失敗")
         }
-}
+    }
 }
