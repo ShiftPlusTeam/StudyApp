@@ -86,22 +86,28 @@ class ImportLicense {
                     let myLicense = License()
                     let ally = LicenseRow.components(separatedBy: ",")
                     
-                    myLicense.name = ally[0]
-                    myLicense.id = ally[1]
-                    myLicense.rate = 0
-                    myLicense.purshase = false
-                    
-                    print(myLicense.name)
-                    print(myLicense.id)
-                    print(myLicense.rate)
-                    print(myLicense.purshase)
-                    
-                    try! realm.write {
+                    //allyの要素数を確認
+                    if ally.count >= 9 {
                         
-                        realm.add(myLicense)
+                        myLicense.name = ally[0]
+                        print(myLicense.name)
+                        myLicense.id = ally[1]
+                        print(myLicense.id)
+                        myLicense.rate = 0
+                        print(myLicense.rate)
+                        myLicense.purshase = false
+                        print(myLicense.purshase)
                         
+                        //CSV１レコード文の取得が完了
+                        print("------------------------------")
+                        print(myLicense)
+                        print("------------------------------")
+                        
+                        
+                        try! realm.write {
+                            realm.add(myLicense)
+                        }
                     }
-                    //}
                 }
             }
         } else {
@@ -136,40 +142,44 @@ class ImportQuestion {
                     let myQuestion = Question()
                     let ally = QuestionRow.components(separatedBy: ",")
                     
-                    //ダウンキャストがうまくいかないとエラーが起こるので、場合分け必須
-                    myQuestion.no = ally[0]
-                    print(myQuestion.no)
-                    myQuestion.licenseId = ally[1]
-                    print(myQuestion.licenseId)
-                    myQuestion.genre = ally[2]
-                    print(myQuestion.genre)
-                    myQuestion.problem = ally[3]
-                    print(myQuestion.problem)
-                    myQuestion.comment = ally[4]
-                    print(myQuestion.comment)
-                    myQuestion.optionA = ally[5]
-                    print(myQuestion.optionA)
-                    myQuestion.optionB = ally[6]
-                    print(myQuestion.optionB)
-                    myQuestion.optionC = ally[7]
-                    print(myQuestion.optionC)
-                    myQuestion.optionD = ally[8]
-                    print(myQuestion.optionD)
-                    myQuestion.answer = ally[9]
-                    print(myQuestion.answer)
-                    myQuestion.correct = false
-                    print(myQuestion.correct)
-                    myQuestion.done = false
-                    print(myQuestion.done)
-                    
-                    //CSV１レコード文の取得が完了
-                    print("------------------------------")
-                    
-                    try! realm.write {
-                        realm.add(myQuestion)
+                    //allyの要素数を確認
+                    if ally.count >= 9 {
                         
+                        //ダウンキャストがうまくいかないとエラーが起こるので、場合分け必須
+                        myQuestion.no = ally[0]
+                        print(myQuestion.no)
+                        myQuestion.licenseId = ally[1]
+                        print(myQuestion.licenseId)
+                        myQuestion.genre = ally[2]
+                        print(myQuestion.genre)
+                        myQuestion.problem = ally[3]
+                        print(myQuestion.problem)
+                        myQuestion.comment = ally[4]
+                        print(myQuestion.comment)
+                        myQuestion.optionA = ally[5]
+                        print(myQuestion.optionA)
+                        myQuestion.optionB = ally[6]
+                        print(myQuestion.optionB)
+                        myQuestion.optionC = ally[7]
+                        print(myQuestion.optionC)
+                        myQuestion.optionD = ally[8]
+                        print(myQuestion.optionD)
+                        myQuestion.answer = ally[9]
+                        print(myQuestion.answer)
+                        myQuestion.correct = false
+                        print(myQuestion.correct)
+                        myQuestion.done = false
+                        print(myQuestion.done)
+                        
+                        //CSV１レコード文の取得が完了
+                        print("------------------------------")
+                        print(myQuestion)
+                        print("------------------------------")
+                        
+                        try! realm.write {
+                            realm.add(myQuestion)
+                        }
                     }
-                    //}
                 }
             }
         } else {

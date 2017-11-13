@@ -42,6 +42,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vrr-fw-XrJ" id="BVI-oI-fDK"/>
+                                    <outlet property="delegate" destination="vrr-fw-XrJ" id="MFh-YQ-dxs"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -739,6 +743,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="R36-S5-8dN"/>
         <segue reference="yX6-QJ-5zx"/>
         <segue reference="rMn-bG-ekt"/>
         <segue reference="yBP-VI-VQP"/>
