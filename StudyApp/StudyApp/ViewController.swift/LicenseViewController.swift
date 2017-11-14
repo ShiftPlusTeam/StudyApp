@@ -82,11 +82,19 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         let results = realmControllerLicense.getResult()
         let object = results[indexPath.row]
         
-//        AppDataController.id = object.id
-//        AppDataController.name = object.name
+        //AppDataControllerの更新
+        AppDataController.id = object.id
+        print(AppDataController.id)
+        AppDataController.name = object.name
+        print(AppDataController.name)
+        
+        //ジャンル選択画面への画面遷移の実行
+        let storyboard: UIStoryboard = self.storyboard!
+        let nextView = storyboard.instantiateViewController(withIdentifier: "genre")
+        self.present(nextView, animated: true, completion: nil)
         
         //遷移先の画面がある程度完成してから着手
-        //self.present(SecondViewController(), animated: true, completion: nil)
+        //self.present(GenreSelectViewController(), animated: true, completion: nil)
         
         let cell = tableView.cellForRow(at: indexPath)
         
