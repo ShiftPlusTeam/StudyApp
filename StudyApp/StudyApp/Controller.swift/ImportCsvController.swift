@@ -87,7 +87,7 @@ class ImportLicense {
                     let ally = LicenseRow.components(separatedBy: ",")
                     
                     //allyの要素数を確認
-                    if ally.count >= 9 {
+                    if ally.count >= 4 {
                         
                         myLicense.name = ally[0]
                         print(myLicense.name)

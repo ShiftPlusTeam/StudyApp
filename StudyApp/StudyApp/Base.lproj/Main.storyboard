@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2Wh-NJ-2fO">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,19 +19,18 @@
                         <viewControllerLayoutGuide type="bottom" id="SID-aY-lLv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YkB-dA-0oR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fp6-Fj-lSu">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fp6-Fj-lSu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LicenseCell" id="mkn-Go-4N7">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mkn-Go-4N7" id="DbA-yR-TAM">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="czu-J9-qE0">
@@ -49,6 +48,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SID-aY-lLv" firstAttribute="top" secondItem="Fp6-Fj-lSu" secondAttribute="bottom" id="25h-cK-AnU"/>
+                            <constraint firstAttribute="trailing" secondItem="Fp6-Fj-lSu" secondAttribute="trailing" id="Dj4-wQ-USI"/>
+                            <constraint firstItem="Fp6-Fj-lSu" firstAttribute="top" secondItem="YkB-dA-0oR" secondAttribute="top" id="TBF-Gl-ol5"/>
+                            <constraint firstItem="Fp6-Fj-lSu" firstAttribute="leading" secondItem="YkB-dA-0oR" secondAttribute="leading" id="Tmg-mk-aYG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="資格選択画面" id="X4Y-pk-pw6">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="4bk-Qj-Ujv">
@@ -75,7 +80,7 @@
                         <viewControllerLayoutGuide type="bottom" id="yrn-73-NHg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mYQ-6w-mUA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AlI-tQ-jrJ">
@@ -120,23 +125,23 @@
                         <viewControllerLayoutGuide type="bottom" id="JpU-Rt-Dab"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ubU-fa-ZW1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bNt-v0-vg2">
-                                <rect key="frame" x="10" y="89" width="300" height="120"/>
+                                <rect key="frame" x="10" y="45" width="355" height="120"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wQP-Fu-UdQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="26.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全問" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgr-kD-p4h">
-                                                <rect key="frame" x="0.0" y="0.0" width="56" height="26.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="67" height="26.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kt9-dx-DZe" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                                <rect key="frame" x="61" y="0.0" width="56" height="26.5"/>
+                                                <rect key="frame" x="72" y="0.0" width="67" height="26.5"/>
                                                 <state key="normal" title="5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -155,7 +160,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5u-Hh-dVc" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                                <rect key="frame" x="122" y="0.0" width="56" height="26.5"/>
+                                                <rect key="frame" x="144" y="0.0" width="67" height="26.5"/>
                                                 <state key="normal" title="10"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -174,7 +179,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGb-X0-YC6" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                                <rect key="frame" x="183" y="0.0" width="56" height="26.5"/>
+                                                <rect key="frame" x="216" y="0.0" width="67" height="26.5"/>
                                                 <state key="normal" title="20"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -193,7 +198,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63b-ZP-HNN" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                                <rect key="frame" x="244" y="0.0" width="56" height="26.5"/>
+                                                <rect key="frame" x="288" y="0.0" width="67" height="26.5"/>
                                                 <state key="normal" title="ALL"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -214,16 +219,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="D7M-Lb-F4V">
-                                        <rect key="frame" x="0.0" y="46.5" width="300" height="27"/>
+                                        <rect key="frame" x="0.0" y="46.5" width="355" height="27"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未回答" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mid-I4-79x">
-                                                <rect key="frame" x="0.0" y="0.0" width="56" height="27"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="67" height="27"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzW-If-0gb" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                                <rect key="frame" x="61" y="0.0" width="56" height="27"/>
+                                                <rect key="frame" x="72" y="0.0" width="67" height="27"/>
                                                 <state key="normal" title="5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -242,7 +247,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ak-t1-04A" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                                <rect key="frame" x="122" y="0.0" width="56" height="27"/>
+                                                <rect key="frame" x="144" y="0.0" width="67" height="27"/>
                                                 <state key="normal" title="10"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -261,7 +266,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obP-sD-1Tp" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                                <rect key="frame" x="183" y="0.0" width="56" height="27"/>
+                                                <rect key="frame" x="216" y="0.0" width="67" height="27"/>
                                                 <state key="normal" title="20"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -280,7 +285,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRz-We-KQk" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                                <rect key="frame" x="244" y="0.0" width="56" height="27"/>
+                                                <rect key="frame" x="288" y="0.0" width="67" height="27"/>
                                                 <state key="normal" title="ALL"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -301,16 +306,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JIk-v8-kfH">
-                                        <rect key="frame" x="0.0" y="93.5" width="300" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="93.5" width="355" height="26.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不正解" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzn-EZ-neh">
-                                                <rect key="frame" x="0.0" y="0.0" width="56" height="26.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="67" height="26.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvH-gR-mPq" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                                <rect key="frame" x="61" y="0.0" width="56" height="26.5"/>
+                                                <rect key="frame" x="72" y="0.0" width="67" height="26.5"/>
                                                 <state key="normal" title="5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -329,7 +334,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVE-TW-myP" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                                <rect key="frame" x="122" y="0.0" width="56" height="26.5"/>
+                                                <rect key="frame" x="144" y="0.0" width="67" height="26.5"/>
                                                 <state key="normal" title="10"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -348,7 +353,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iY-fj-Th2" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                                <rect key="frame" x="183" y="0.0" width="56" height="26.5"/>
+                                                <rect key="frame" x="216" y="0.0" width="67" height="26.5"/>
                                                 <state key="normal" title="20"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -367,7 +372,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaI-P2-y3K" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                                <rect key="frame" x="244" y="0.0" width="56" height="26.5"/>
+                                                <rect key="frame" x="288" y="0.0" width="67" height="26.5"/>
                                                 <state key="normal" title="ALL"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -434,7 +439,7 @@
                         <viewControllerLayoutGuide type="bottom" id="TtS-jc-pjd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OJV-a8-hvX" userLabel="Import">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzJ-VE-jq2">
@@ -471,20 +476,20 @@
                         <viewControllerLayoutGuide type="bottom" id="Tg8-Td-7zm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PyD-1J-BSy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="問" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtK-wX-zDY">
-                                <rect key="frame" x="26" y="84" width="38" height="34"/>
+                                <rect key="frame" x="26" y="40" width="93" height="177"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VS3-j8-a7h">
-                                <rect key="frame" x="26" y="344" width="268" height="204"/>
+                                <rect key="frame" x="26" y="300" width="323" height="347"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfG-B1-07b" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="268" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="83"/>
                                         <state key="normal" title="A"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -503,7 +508,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9c-SV-S1Q" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="52.5" width="268" height="47"/>
+                                        <rect key="frame" x="0.0" y="88" width="323" height="83"/>
                                         <state key="normal" title="B"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -522,7 +527,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JS-NA-s4v" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="104.5" width="268" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="176" width="323" height="83"/>
                                         <state key="normal" title="C"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -541,7 +546,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdd-9c-IpA" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="157" width="268" height="47"/>
+                                        <rect key="frame" x="0.0" y="264" width="323" height="83"/>
                                         <state key="normal" title="D"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -562,7 +567,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNj-Cg-BTv">
-                                <rect key="frame" x="26" y="124" width="268" height="194"/>
+                                <rect key="frame" x="26" y="80" width="323" height="337"/>
                                 <string key="text" base64-UTF8="YES">
 44Op44OZ44OrDeODqeODmeODqw3jg6njg5njg6sN44Op44OZ44OrERERDeODqeODmeODqw
 </string>
@@ -607,7 +612,7 @@
                 <navigationController id="2Wh-NJ-2fO" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="sEx-Sl-hbO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hgh-u6-RXe">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -627,11 +632,11 @@
                         <viewControllerLayoutGuide type="bottom" id="eig-Tj-0mw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aFU-l8-aI4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="◯×画像差し込み(未実装)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmQ-9G-ijC">
-                                <rect key="frame" x="21" y="104" width="278" height="40"/>
+                                <rect key="frame" x="21" y="60" width="333" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="CF3-du-1YS"/>
                                 </constraints>
@@ -715,11 +720,11 @@
                         <viewControllerLayoutGuide type="bottom" id="OhV-6r-Zhd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CGR-KC-YtU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 / 10 問" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MW-1p-oVh">
-                                <rect key="frame" x="26" y="364" width="268" height="44"/>
+                                <rect key="frame" x="26" y="320" width="323" height="187"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -747,6 +752,6 @@
         <segue reference="SOb-lb-NcF"/>
         <segue reference="Qxm-BI-UlZ"/>
         <segue reference="DSk-I6-qzR"/>
-        <segue reference="XKz-E1-Tuj"/>
+        <segue reference="yBP-VI-VQP"/>
     </inferredMetricsTieBreakers>
 </document>

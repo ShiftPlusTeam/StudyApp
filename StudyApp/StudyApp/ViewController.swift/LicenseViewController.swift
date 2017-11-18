@@ -37,7 +37,7 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         let results = realmControllerLicense.getResult()
         
         let count: Int = results.count
-        print(count)
+        //print(count)
         
         return count
     }
@@ -56,7 +56,7 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         // セルに表示する値を設定する
         cell.textLabel?.text = object.name
-        print(object.name)
+        //print(object.name)
         
         //未購入の場合はセルをグレーアウト
         if !(object.purshase) {
@@ -67,6 +67,7 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         let rate: Float = Float(object.rate / 100)
         
         let progressBar = tableView.viewWithTag(1) as! UIProgressView?
+        print(rate)
         progressBar?.progress = rate
         
         return cell
@@ -84,9 +85,9 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         //AppDataControllerの更新
         AppDataController.id = object.id
-        print(AppDataController.id)
+        //print(AppDataController.id)
         AppDataController.name = object.name
-        print(AppDataController.name)
+        //print(AppDataController.name)
         
         //ジャンル選択画面への画面遷移の実行
         let storyboard: UIStoryboard = self.storyboard!
