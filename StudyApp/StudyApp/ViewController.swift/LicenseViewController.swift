@@ -42,6 +42,10 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         return count
     }
     
+    //セルの高さの変更
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
     
     //セルに値を設定するデータソースメソッド
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,6 +55,7 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         // セルを取得する
         let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "LicenseCell")
+        
         
         let object = results[indexPath.row]
         
@@ -66,7 +71,7 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         //プログレスバーの表示
         let rate: Float = Float(object.rate / 100)
         
-        let progressBar = tableView.viewWithTag(1) as! UIProgressView?
+        var progressBar = cell.viewWithTag(1) as! UIProgressView?
         print(rate)
         progressBar?.progress = rate
         

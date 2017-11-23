@@ -26,6 +26,8 @@
 		7E7C706C1F6CE77F0050A618 /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7C706B1F6CE77F0050A618 /* LicenseViewController.swift */; };
 		7E81E6491F94F6A200634AC1 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E81E6481F94F6A200634AC1 /* QuestionViewController.swift */; };
 		7E8E61BE1F5A561400ACA547 /* RealmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8E61BD1F5A561400ACA547 /* RealmController.swift */; };
+		7EEC0B0A1FC1664700E6AD5E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC0B081FC1664700E6AD5E /* CustomTableViewCell.swift */; };
+		7EEC0B0B1FC1664700E6AD5E /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EEC0B091FC1664700E6AD5E /* CustomTableViewCell.xib */; };
 		E1228C6D1FA41B5E00063E08 /* CommentaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1228C6C1FA41B5E00063E08 /* CommentaryViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,8 @@
 		7E7C706B1F6CE77F0050A618 /* LicenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
 		7E81E6481F94F6A200634AC1 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		7E8E61BD1F5A561400ACA547 /* RealmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmController.swift; sourceTree = "<group>"; };
+		7EEC0B081FC1664700E6AD5E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		7EEC0B091FC1664700E6AD5E /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		E1228C6C1FA41B5E00063E08 /* CommentaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +94,8 @@
 				7E81E6481F94F6A200634AC1 /* QuestionViewController.swift */,
 				E1228C6C1FA41B5E00063E08 /* CommentaryViewController.swift */,
 				7E455E411FA476C7005C6B6B /* RecordViewController.swift */,
+				7EEC0B081FC1664700E6AD5E /* CustomTableViewCell.swift */,
+				7EEC0B091FC1664700E6AD5E /* CustomTableViewCell.xib */,
 			);
 			path = ViewController.swift;
 			sourceTree = "<group>";
@@ -208,6 +214,7 @@
 			files = (
 				760EB0AE1F80787C009F32E5 /* license.csv in Resources */,
 				76D018D41F30360400B8EBF8 /* LaunchScreen.storyboard in Resources */,
+				7EEC0B0B1FC1664700E6AD5E /* CustomTableViewCell.xib in Resources */,
 				76D018D11F30360400B8EBF8 /* Assets.xcassets in Resources */,
 				76201C2B1F491E8D001F8AD1 /* question.csv in Resources */,
 				76D018CF1F30360400B8EBF8 /* Main.storyboard in Resources */,
@@ -227,6 +234,7 @@
 				7E58BAF21F38ADFC0031F082 /* AppDataController.swift in Sources */,
 				76D018CA1F30360400B8EBF8 /* AppDelegate.swift in Sources */,
 				7E455E421FA476C7005C6B6B /* RecordViewController.swift in Sources */,
+				7EEC0B0A1FC1664700E6AD5E /* CustomTableViewCell.swift in Sources */,
 				7E8E61BE1F5A561400ACA547 /* RealmController.swift in Sources */,
 				E1228C6D1FA41B5E00063E08 /* CommentaryViewController.swift in Sources */,
 				7E81E6491F94F6A200634AC1 /* QuestionViewController.swift in Sources */,
