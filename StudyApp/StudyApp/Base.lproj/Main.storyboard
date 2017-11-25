@@ -680,6 +680,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1y-SW-Q1r">
+                                <rect key="frame" x="321" y="22" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="次へ"/>
+                                <connections>
+                                    <action selector="nextbutton:" destination="MsY-uC-8MG" eventType="touchUpInside" id="1uj-Y5-lSN"/>
+                                    <segue destination="Jit-pq-dqR" kind="show" identifier="goRecord" id="x3P-fo-Cwc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -695,21 +704,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="解説" id="XoF-vz-cwO">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="play" id="tFI-wG-BMK">
-                            <connections>
-                                <segue destination="Jit-pq-dqR" kind="push" id="Rf6-ZM-hwR"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="play" id="tFI-wG-BMK"/>
                     </navigationItem>
                     <connections>
                         <outlet property="answerjudge" destination="GmQ-9G-ijC" id="t6y-c4-YHZ"/>
                         <outlet property="commentlabel" destination="pMF-I8-UeE" id="keO-58-Lkd"/>
                         <outlet property="correctlabel" destination="wOd-bI-EHs" id="0jR-j7-g0i"/>
+                        <outlet property="next" destination="T1y-SW-Q1r" id="HBO-9L-V10"/>
+                        <outlet property="nextbutton" destination="T1y-SW-Q1r" id="jEK-sg-ICn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xH-yi-DP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3348.75" y="1379.5774647887324"/>
+            <point key="canvasLocation" x="3348" y="1379.4602698650676"/>
         </scene>
         <!--結果-->
         <scene sceneID="3Y7-Ic-2WT">
@@ -749,7 +756,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SOb-lb-NcF"/>
+        <segue reference="lvC-zt-NUh"/>
         <segue reference="Qxm-BI-UlZ"/>
         <segue reference="DSk-I6-qzR"/>
         <segue reference="yBP-VI-VQP"/>
