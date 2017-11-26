@@ -12,13 +12,14 @@ import Realm
 
 class CommentaryViewController: UIViewController{
     
+    //正解
     @IBOutlet weak var correctlabel: UILabel!
-    @IBOutlet weak var optionlabel: UILabel!
+    //解説
     @IBOutlet weak var commentlabel: UILabel!
-    
-    //「Assets.xcassets」に入っている画像を定義する。
+    //解答が正解か不正解かの画像を表示
     @IBOutlet weak var imageView: UIImageView!
     
+    //「Assets.xcassets」に入っている画像を定義する。
     var maruimage: UIImage!
     var batsuimage: UIImage!
     
@@ -36,12 +37,11 @@ class CommentaryViewController: UIViewController{
         let answer = AppDataController.selectAnswer
         
         //各種表示の更新
-        optionlabel.text = answer
         commentlabel.text = results.comment
         correctlabel.text = results.answer
         
         //正誤判定
-        if answer == results.answer{
+        if answer == correctlabel.text{
             imageView.image = maruimage;
         }else{
             imageView.image = batsuimage;
