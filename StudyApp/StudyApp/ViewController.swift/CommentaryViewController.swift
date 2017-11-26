@@ -17,8 +17,9 @@ class CommentaryViewController: UIViewController{
     @IBOutlet weak var commentlabel: UILabel!
     
     //画像表示させる用(未実装)
-    @IBOutlet weak var answerjudge: UILabel!
+
     
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

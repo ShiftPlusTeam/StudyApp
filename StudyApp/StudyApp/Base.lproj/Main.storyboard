@@ -635,16 +635,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="◯×画像差し込み(未実装)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmQ-9G-ijC">
-                                <rect key="frame" x="21" y="60" width="333" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="CF3-du-1YS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="正解" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UP9-Tz-3LL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="正解" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UP9-Tz-3LL">
                                 <rect key="frame" x="21" y="149" width="50" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="aox-N8-dkT"/>
@@ -662,7 +653,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMF-I8-UeE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMF-I8-UeE">
                                 <rect key="frame" x="26" y="238" width="278" height="309"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="350" id="HF4-YX-i6c"/>
@@ -689,29 +680,30 @@
                                     <segue destination="Jit-pq-dqR" kind="show" identifier="goRecord" id="x3P-fo-Cwc"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FCG-0e-3CH">
+                                <rect key="frame" x="64" y="65" width="240" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pMF-I8-UeE" firstAttribute="leading" secondItem="aFU-l8-aI4" secondAttribute="leadingMargin" constant="5" id="FDV-VJ-7mZ"/>
-                            <constraint firstItem="GmQ-9G-ijC" firstAttribute="top" secondItem="CeG-mt-sOw" secondAttribute="bottom" constant="40" id="G8Q-3t-Qsf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GmQ-9G-ijC" secondAttribute="trailing" constant="5" id="GEU-5y-Yf8"/>
-                            <constraint firstItem="UP9-Tz-3LL" firstAttribute="top" secondItem="GmQ-9G-ijC" secondAttribute="bottom" constant="5" id="Wn6-Kq-eyF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pMF-I8-UeE" secondAttribute="trailing" constant="5" id="a8w-eC-gGn"/>
                             <constraint firstItem="pMF-I8-UeE" firstAttribute="top" secondItem="UP9-Tz-3LL" secondAttribute="bottom" constant="5" id="bOq-TA-4nQ"/>
                             <constraint firstItem="UP9-Tz-3LL" firstAttribute="leading" secondItem="aFU-l8-aI4" secondAttribute="leadingMargin" constant="5" id="mc4-XP-52N"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UP9-Tz-3LL" secondAttribute="trailing" constant="5" id="nYP-Kd-j8k"/>
-                            <constraint firstItem="GmQ-9G-ijC" firstAttribute="leading" secondItem="aFU-l8-aI4" secondAttribute="leadingMargin" constant="5" id="yrp-f9-MJG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="解説" id="XoF-vz-cwO">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="play" id="tFI-wG-BMK"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="answerjudge" destination="GmQ-9G-ijC" id="t6y-c4-YHZ"/>
                         <outlet property="commentlabel" destination="pMF-I8-UeE" id="keO-58-Lkd"/>
                         <outlet property="correctlabel" destination="wOd-bI-EHs" id="0jR-j7-g0i"/>
+                        <outlet property="imageView" destination="FCG-0e-3CH" id="fGV-ND-Gdc"/>
                         <outlet property="next" destination="T1y-SW-Q1r" id="HBO-9L-V10"/>
                         <outlet property="nextbutton" destination="T1y-SW-Q1r" id="jEK-sg-ICn"/>
+                        <outlet property="photo" destination="FCG-0e-3CH" id="5Ym-8n-M9o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xH-yi-DP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
