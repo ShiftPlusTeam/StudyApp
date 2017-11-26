@@ -97,8 +97,6 @@
 				76D018CB1F30360400B8EBF8 /* SelectQuestionsViewController.swift */,
 				7E81E6481F94F6A200634AC1 /* QuestionViewController.swift */,
 				E1228C6C1FA41B5E00063E08 /* CommentaryViewController.swift */,
-				E1ED3DDE1FCAC02900ABF46C /* mark_maru.png */,
-				E1ED3DDC1FCABE5200ABF46C /* mark_batsu.png */,
 				7E455E411FA476C7005C6B6B /* RecordViewController.swift */,
 				7EEC0B081FC1664700E6AD5E /* CustomTableViewCell.swift */,
 				7EEC0B091FC1664700E6AD5E /* CustomTableViewCell.xib */,
@@ -154,6 +152,8 @@
 				76683AA81FAD71BC006FE550 /* csv */,
 				76D018D51F30360400B8EBF8 /* Info.plist */,
 				76D018D01F30360400B8EBF8 /* Assets.xcassets */,
+				E1ED3DDE1FCAC02900ABF46C /* mark_maru.png */,
+				E1ED3DDC1FCABE5200ABF46C /* mark_batsu.png */,
 			);
 			path = StudyApp;
 			sourceTree = "<group>";
