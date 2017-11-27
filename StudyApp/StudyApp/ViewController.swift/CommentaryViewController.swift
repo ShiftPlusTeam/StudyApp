@@ -8,7 +8,7 @@
 
 
 import UIKit
-import Realm
+import RealmSwift
 
 class CommentaryViewController: UIViewController{
     
@@ -62,7 +62,8 @@ class CommentaryViewController: UIViewController{
     //選択した問題数に達した場合、結果画面へ。達していない場合は、次の問いへ
     //「次へ」ボタンを押下後、問題数選択画面で選択した値と現在の回答数がイコールか判断
     @IBAction func nextbutton(_ sender: UIButton) {
-    if selectcount == answercount {
+        
+        if selectcount == answercount {
         
         //イコールの場合、結果画面へ遷移する。↓参照元
         //<https://i-app-tec.com/ios/tap_gesture.html>
@@ -75,5 +76,15 @@ class CommentaryViewController: UIViewController{
         self.dismiss(animated: true, completion: nil)
     
             }
+        
+        // Realm更新（未実装）
+       // let realm = try! Realm()
+       // let result = try! Realm().objects(License.self)
+        
+       // try! realm.write {
+       //     nextbutton = newValue.Realm
+            
+        
+        
         }
     }
