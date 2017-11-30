@@ -36,6 +36,10 @@ class GenreSelectViewController: UIViewController, UITableViewDelegate, UITableV
         return count
     }
     
+    //セルの高さの変更
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
     
     //セルに値を設定するデータソースメソッド
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

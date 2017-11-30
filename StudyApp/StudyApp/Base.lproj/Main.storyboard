@@ -74,7 +74,7 @@
         <!--ジャンル選択画面-->
         <scene sceneID="ct8-73-0Ti">
             <objects>
-                <viewController storyboardIdentifier="genre" id="Bg5-z8-mnW" userLabel="ジャンル選択画面" customClass="GenreSelectViewController" customModule="StudyApp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="genre" id="Bg5-z8-mnW" userLabel="ジャンル選択画面" customClass="GenreSelectViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bdP-KX-9N5"/>
                         <viewControllerLayoutGuide type="bottom" id="yrn-73-NHg"/>
@@ -97,6 +97,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Bg5-z8-mnW" id="Q63-aS-N78"/>
+                                    <outlet property="delegate" destination="Bg5-z8-mnW" id="ctB-Oh-lYp"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -748,6 +752,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="XgG-hA-iem"/>
         <segue reference="lvC-zt-NUh"/>
         <segue reference="Qxm-BI-UlZ"/>
         <segue reference="DSk-I6-qzR"/>
