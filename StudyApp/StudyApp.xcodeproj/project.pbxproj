@@ -29,6 +29,8 @@
 		7EEC0B0A1FC1664700E6AD5E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC0B081FC1664700E6AD5E /* CustomTableViewCell.swift */; };
 		7EEC0B0B1FC1664700E6AD5E /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EEC0B091FC1664700E6AD5E /* CustomTableViewCell.xib */; };
 		E1228C6D1FA41B5E00063E08 /* CommentaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1228C6C1FA41B5E00063E08 /* CommentaryViewController.swift */; };
+		E1ED3DDD1FCABE5200ABF46C /* mark_batsu.png in Resources */ = {isa = PBXBuildFile; fileRef = E1ED3DDC1FCABE5200ABF46C /* mark_batsu.png */; };
+		E1ED3DDF1FCAC02900ABF46C /* mark_maru.png in Resources */ = {isa = PBXBuildFile; fileRef = E1ED3DDE1FCAC02900ABF46C /* mark_maru.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,6 +71,8 @@
 		7EEC0B081FC1664700E6AD5E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		7EEC0B091FC1664700E6AD5E /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		E1228C6C1FA41B5E00063E08 /* CommentaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentaryViewController.swift; sourceTree = "<group>"; };
+		E1ED3DDC1FCABE5200ABF46C /* mark_batsu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mark_batsu.png; sourceTree = "<group>"; };
+		E1ED3DDE1FCAC02900ABF46C /* mark_maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mark_maru.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,8 @@
 				76683AA81FAD71BC006FE550 /* csv */,
 				76D018D51F30360400B8EBF8 /* Info.plist */,
 				76D018D01F30360400B8EBF8 /* Assets.xcassets */,
+				E1ED3DDE1FCAC02900ABF46C /* mark_maru.png */,
+				E1ED3DDC1FCABE5200ABF46C /* mark_batsu.png */,
 			);
 			path = StudyApp;
 			sourceTree = "<group>";
@@ -218,6 +224,8 @@
 				76D018D11F30360400B8EBF8 /* Assets.xcassets in Resources */,
 				76201C2B1F491E8D001F8AD1 /* question.csv in Resources */,
 				76D018CF1F30360400B8EBF8 /* Main.storyboard in Resources */,
+				E1ED3DDD1FCABE5200ABF46C /* mark_batsu.png in Resources */,
+				E1ED3DDF1FCAC02900ABF46C /* mark_maru.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
