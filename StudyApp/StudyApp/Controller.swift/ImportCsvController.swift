@@ -52,7 +52,7 @@ class Question :Object{
     @objc dynamic var done :Bool = false
     
     //回答が正解かどうかを返すメソッド
-    func getAnswes(_ selectedOption :String) -> Bool {
+    func getAnswers(_ selectedOption :String) -> Bool {
         if selectedOption == answer {
             return true
         } else {

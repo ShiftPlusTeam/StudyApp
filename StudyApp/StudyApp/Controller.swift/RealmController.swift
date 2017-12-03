@@ -23,11 +23,11 @@ class RealmControllerLicense{
     
     //条件に合致した資格を返す
     func getResult(_ query :String) -> List<License> {
-        let searchResult = try! Realm().objects(License.self).filter(query)
+        let searchResult = result.filter(query)
         return List<License>(searchResult)
     }
 
-    //CSVの１センテンスをパーズしてDBにレコードをインサートする
+    //CSVの１センテンスをパーズしてRealmにレコードをインサートする
     func addLicense(_ newlicenseCsvSent :String) {
         let myLisence = License()
         let ally = newlicenseCsvSent.components(separatedBy: ",")
@@ -173,7 +173,7 @@ class RealmControllerQuestion{
     //問題番号と回答を引数にし、回答後、正解したかどうかを返す
     func answer(_ questionNo :Int8 , _ selectOption :String) -> String{
         let taegetQuestion = result.filter("No = \(questionNo)").first
-        let answerResult = taegetQuestion?.getAnswes(selectOption)
+        let answerResult = taegetQuestion?.getAnswers(selectOption)
         if answerResult == false {
             taegetQuestion?.done = true
             return "QuestuonNo:\(String(describing: taegetQuestion?.no)) Done:true Correct:false"
