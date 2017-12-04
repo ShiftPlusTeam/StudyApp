@@ -7,7 +7,7 @@
 //
 //
 //✔︎資格の一覧が表示される。
-//・資格を選択後「ジャンル選択画面」へ画面遷移する。
+//✔︎資格を選択後「ジャンル選択画面」へ画面遷移する。
 //✔︎資格の右の欄に解答済みと未回答の比率が表示される。
 //✔︎未購入は、グレーアウトされて表示される。
 //・資格名をバーに入れると検索が可能
@@ -22,12 +22,24 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //StoryBoard上で下記は実装しているため、コメントアウト
         //tableView.dataSource = self
         //tableView.delegate = self
+        
+        // xibファイルの登録
+        // UINib関数を使って、作成したカスタムセルを取得する
+        let xib = UINib(nibName: "CustomTableViewCell", bundle: nil)
+        // 上で取得したカスタムセルを TableViewに登録する
+        self.tableView.register(xib, forCellReuseIdentifier: "customCell")
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
     //セルに表示する行数を返す
@@ -54,28 +66,29 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         let results = realmControllerLicense.getResult()
         
         // セルを取得する
-        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "LicenseCell")
-        
+        //カスタムセルを取得するため書き直し
+        //let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "LicenseCell")
+        let customCell = self.tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
         
         let object = results[indexPath.row]
         
         // セルに表示する値を設定する
-        cell.textLabel?.text = object.name
+        customCell.customLabel.text = object.name
         //print(object.name)
         
         //未購入の場合はセルをグレーアウト
         if !(object.purshase) {
-            cell.textLabel?.backgroundColor = UIColor.gray
+            customCell.backgroundColor = UIColor.lightGray
         }
         
         //プログレスバーの表示
         let rate: Float = Float(object.rate / 100)
         
-        var progressBar = cell.viewWithTag(1) as! UIProgressView?
+        // var progressBar = cell.viewWithTag(1) as! UIProgressView?
         print(rate)
-        progressBar?.progress = rate
+        customCell.customBar.progress = rate
         
-        return cell
+        return customCell
     }
     
     

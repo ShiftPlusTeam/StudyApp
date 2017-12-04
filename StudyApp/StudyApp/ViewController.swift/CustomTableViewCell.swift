@@ -9,7 +9,12 @@
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
-
+    
+    //カスタムセルで定義したオブジェクトを関連づける
+    @IBOutlet weak var customLabel: UILabel!
+    @IBOutlet weak var customBar: UIProgressView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
