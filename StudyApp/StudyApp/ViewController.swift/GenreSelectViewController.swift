@@ -10,15 +10,20 @@ import UIKit
 import Foundation
 class GenreSelectViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    //暫定ジャンルリスト
-    var genreList = ["GenreA","GenreB"]
-    
     //関連付けされたテーブルビュー
     @IBOutlet weak var tableView: UITableView!
+    var genreList = Array<String>()
     
     override func viewDidLoad() {
-        genreList.append("Genre1")
-        genreList.append("Genre2")
+        //ここでRealmControllerQuestionのgetGenreを呼び出したいのだが、すでに前のページでインスタンスを作ってしまっている件（Realmのインスタンスをそう何個もホイホイ作りたくない）
+        //できれば、AppdataControllerで一個のRealmControllerインスタンスを作ってもらうか、RealmcontrollerクラスをStatic化したい
+        //一応以ここから
+        let realmController = RealmControllerQuestion(AppDataController.id)
+        let genles = realmController.getGenres()
+        for i in 0..<(genles.count) {
+            genreList.append(genles[i])
+        }
+        //ここまでの方法でジャンル一覧は持ってこれるはず
         print("\(genreList)")
         super.viewDidLoad()
         
@@ -60,6 +65,18 @@ class GenreSelectViewController: UIViewController, UITableViewDelegate, UITableV
     //セルがタップされた時に呼び出されるデリゲートメソッド
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("タップサイン_\(genreList[indexPath.row])")
+        
+        AppDataController.genre = [genreList[indexPath.row]]
+        //AppDataController.genreId = [genreIdList[indexPath.row]]
+        //↑AppDataControllerにgenreId作って
+        
+        //次頁、問題表示画面へ遷移
+        tableView.deselectRow(at: indexPath, animated: true)
+        let storyboard: UIStoryboard = self.storyboard!
+        let nextView = storyboard.instantiateViewController(withIdentifier: "SelectQuestion")
+        
+        self.navigationController?.pushViewController(nextView, animated: true)
+        
     }
     
     

@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import UIKit
 
 //  Realmデータベースの資格テーブルを直接操作するクラス
 class RealmControllerLicense{
@@ -54,13 +55,36 @@ class RealmControllerLicense{
 //  Realmデータベースの問題テーブルを直接操作するクラス
 class RealmControllerQuestion{
     let realm = try! Realm()
-    let result :Results<Question>
+    var result :Results<Question>
+    var licenseId = String()
+    let genres = List<String>()
     
     //RealmControllerQuestionのイニシャライザ　引数は資格ID
-    init(_ licenseId :String) {
+    init(_ recLicenseId :String) {
+        licenseId = recLicenseId
         result = try! Realm().objects(Question.self).filter("licenseId = \(licenseId)").sorted(byKeyPath: "no")
+        
+        for i in 0..<(result.count) {
+            if (genres.index(of: result[i].genre) == nil){
+                genres.append(result[i].genre)
+            }
+        }
     }
 
+    //ジャンル一覧を返す。
+    func getGenres() -> List<String> {
+        return genres
+    }
+    
+    //全問題をジャンルで絞る
+    func squeezeGenre(_ genre :String){
+        result = try! Realm().objects(Question.self).filter("genre = \(genre)")
+    }
+    
+    //全問題をもう一度確認して絞り込みを解除
+    func unSqueeze() {
+        result = try! Realm().objects(Question.self).filter("licenseId = \(licenseId)").sorted(byKeyPath: "no")
+    }
     
     //全問題から指定した個数分ランダムソートで返す
     func getRandomResult(_ number :Int) -> List<Question> {

@@ -123,7 +123,7 @@
         <!--問題数選択画面-->
         <scene sceneID="DWK-aW-wfa">
             <objects>
-                <viewController id="rRX-2J-YYl" customClass="SelectQuestionsViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectQuestion" id="rRX-2J-YYl" customClass="SelectQuestionsViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZXI-qq-HQe"/>
                         <viewControllerLayoutGuide type="bottom" id="JpU-Rt-Dab"/>
@@ -133,7 +133,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bNt-v0-vg2">
-                                <rect key="frame" x="10" y="45" width="355" height="120"/>
+                                <rect key="frame" x="10" y="89" width="355" height="120"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wQP-Fu-UdQ">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="26.5"/>
@@ -484,16 +484,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="問" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtK-wX-zDY">
-                                <rect key="frame" x="26" y="40" width="93" height="177"/>
+                                <rect key="frame" x="26" y="84" width="93" height="133"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VS3-j8-a7h">
-                                <rect key="frame" x="26" y="300" width="323" height="347"/>
+                                <rect key="frame" x="26" y="344" width="323" height="303"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfG-B1-07b" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="323" height="83"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="72"/>
                                         <state key="normal" title="A"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -512,7 +512,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9c-SV-S1Q" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="88" width="323" height="83"/>
+                                        <rect key="frame" x="0.0" y="77" width="323" height="72"/>
                                         <state key="normal" title="B"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -531,7 +531,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JS-NA-s4v" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="176" width="323" height="83"/>
+                                        <rect key="frame" x="0.0" y="154" width="323" height="72"/>
                                         <state key="normal" title="C"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -550,7 +550,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdd-9c-IpA" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="264" width="323" height="83"/>
+                                        <rect key="frame" x="0.0" y="231" width="323" height="72"/>
                                         <state key="normal" title="D"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -571,7 +571,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNj-Cg-BTv">
-                                <rect key="frame" x="26" y="80" width="323" height="337"/>
+                                <rect key="frame" x="26" y="124" width="323" height="293"/>
                                 <string key="text" base64-UTF8="YES">
 44Op44OZ44OrDeODqeODmeODqw3jg6njg5njg6sN44Op44OZ44OrERERDeODqeODmeODqw
 </string>
@@ -727,7 +727,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 / 10 問" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MW-1p-oVh">
-                                <rect key="frame" x="26" y="320" width="323" height="187"/>
+                                <rect key="frame" x="26" y="364" width="323" height="143"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -755,6 +755,6 @@
         <segue reference="lvC-zt-NUh"/>
         <segue reference="Qxm-BI-UlZ"/>
         <segue reference="DSk-I6-qzR"/>
-        <segue reference="yBP-VI-VQP"/>
+        <segue reference="XKz-E1-Tuj"/>
     </inferredMetricsTieBreakers>
 </document>
