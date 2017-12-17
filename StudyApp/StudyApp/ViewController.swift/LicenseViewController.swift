@@ -103,9 +103,9 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         //AppDataControllerの更新
         AppDataController.id = object.id
-        //print(AppDataController.id)
+        print(AppDataController.id)
         AppDataController.name = object.name
-        //print(AppDataController.name)
+        print(AppDataController.name)
         
         //ジャンル選択画面への画面遷移の実行
         let storyboard: UIStoryboard = self.storyboard!

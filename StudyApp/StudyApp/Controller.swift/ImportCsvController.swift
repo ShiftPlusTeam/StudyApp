@@ -89,10 +89,10 @@ class ImportLicense {
                     //allyの要素数を確認
                     if ally.count >= 4 {
                         
-                        myLicense.name = ally[0]
-                        print(myLicense.name)
-                        myLicense.id = ally[1]
+                        myLicense.id = ally[0]
                         print(myLicense.id)
+                        myLicense.name = ally[1]
+                        print(myLicense.name)
                         myLicense.rate = 0
                         print(myLicense.rate)
                         myLicense.purshase = false
@@ -143,28 +143,30 @@ class ImportQuestion {
                     let ally = QuestionRow.components(separatedBy: ",")
                     
                     //allyの要素数を確認
-                    if ally.count >= 9 {
+                    if ally.count >= 10 {
                         
                         //ダウンキャストがうまくいかないとエラーが起こるので、場合分け必須
-                        myQuestion.no = ally[0]
+                        myQuestion.id = ally[0]
+                        print(myQuestion.id)
+                        myQuestion.no = ally[1]
                         print(myQuestion.no)
-                        myQuestion.licenseId = ally[1]
+                        myQuestion.licenseId = ally[2]
                         print(myQuestion.licenseId)
-                        myQuestion.genre = ally[2]
+                        myQuestion.genre = ally[3]
                         print(myQuestion.genre)
-                        myQuestion.problem = ally[3]
+                        myQuestion.problem = ally[4]
                         print(myQuestion.problem)
-                        myQuestion.comment = ally[4]
+                        myQuestion.comment = ally[5]
                         print(myQuestion.comment)
-                        myQuestion.optionA = ally[5]
+                        myQuestion.optionA = ally[6]
                         print(myQuestion.optionA)
-                        myQuestion.optionB = ally[6]
+                        myQuestion.optionB = ally[7]
                         print(myQuestion.optionB)
-                        myQuestion.optionC = ally[7]
+                        myQuestion.optionC = ally[8]
                         print(myQuestion.optionC)
-                        myQuestion.optionD = ally[8]
+                        myQuestion.optionD = ally[9]
                         print(myQuestion.optionD)
-                        myQuestion.answer = ally[9]
+                        myQuestion.answer = ally[10]
                         print(myQuestion.answer)
                         myQuestion.correct = false
                         print(myQuestion.correct)
