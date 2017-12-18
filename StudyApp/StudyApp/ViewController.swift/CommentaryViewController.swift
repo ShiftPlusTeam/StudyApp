@@ -54,7 +54,7 @@ class CommentaryViewController: UIViewController{
     }
     
     //解答数を定義する
-    let answercount = AppDataController.currentCount
+    var answercount = AppDataController.currentCount
     //問題数選択画面で選択した値を定義する
     let selectcount = AppDataController.count
  
@@ -70,21 +70,23 @@ class CommentaryViewController: UIViewController{
         performSegue(withIdentifier: "goRecord",sender: nil)
         
     } else {
-        
-        //イコールではない場合、前の画面へ戻る。↓参照元
+            //イコールではない場合、前の画面へ戻る。↓参照元
         //<http://appleharikyu.jp/iphone/?p=1074>
         self.dismiss(animated: true, completion: nil)
-    
+            
+              //インクリメントを実装
+            answercount += 1
+        
             }
         
-        // Realm更新（未実装）
-       // let realm = try! Realm()
-       // let result = try! Realm().objects(License.self)
         
-       // try! realm.write {
-       //     nextbutton = newValue.Realm
-            
+        // Realm更新
         
+       let realm = try! Realm()
+       let result = try! Realm().objects(License.self)
+        
+       try! realm.write {
         
         }
     }
+}
