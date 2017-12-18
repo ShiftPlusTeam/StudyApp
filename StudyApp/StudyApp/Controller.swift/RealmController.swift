@@ -62,7 +62,8 @@ class RealmControllerQuestion{
     //RealmControllerQuestionのイニシャライザ　引数は資格ID
     init(_ recLicenseId :String) {
         licenseId = recLicenseId
-        result = try! Realm().objects(Question.self).filter("licenseId = \(licenseId)").sorted(byKeyPath: "no")
+        print("\(recLicenseId)")
+        result = try! Realm().objects(Question.self).filter("licenseId = \(recLicenseId)").sorted(byKeyPath: "no")
         
         for i in 0..<(result.count) {
             if (genres.index(of: result[i].genre) == nil){

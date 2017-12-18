@@ -18,11 +18,14 @@ class GenreSelectViewController: UIViewController, UITableViewDelegate, UITableV
         //ここでRealmControllerQuestionのgetGenreを呼び出したいのだが、すでに前のページでインスタンスを作ってしまっている件（Realmのインスタンスをそう何個もホイホイ作りたくない）
         //できれば、AppdataControllerで一個のRealmControllerインスタンスを作ってもらうか、RealmcontrollerクラスをStatic化したい
         //一応以ここから
+        print("\(AppDataController.id)")
         let realmController = RealmControllerQuestion(AppDataController.id)
         let genles = realmController.getGenres()
         for i in 0..<(genles.count) {
             genreList.append(genles[i])
         }
+        genreList.append("Genre1")
+        genreList.append("Genre2")
         //ここまでの方法でジャンル一覧は持ってこれるはず
         print("\(genreList)")
         super.viewDidLoad()
