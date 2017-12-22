@@ -75,10 +75,13 @@ class GenreSelectViewController: UIViewController, UITableViewDelegate, UITableV
         
         //次頁、問題表示画面へ遷移
         tableView.deselectRow(at: indexPath, animated: true)
-        let storyboard: UIStoryboard = self.storyboard!
-        let nextView = storyboard.instantiateViewController(withIdentifier: "SelectQuestion")
+        performSegue(withIdentifier: "goSelect",sender: nil)
+
+//        let storyboard: UIStoryboard = self.storyboard!
+//        let nextView = storyboard.instantiateViewController(withIdentifier: "SelectQuestion")
+//        self.present(nextView, animated: true, completion: nil)
         
-        self.navigationController?.pushViewController(nextView, animated: true)
+//        self.navigationController?.pushViewController(nextView, animated: true)
         
     }
     

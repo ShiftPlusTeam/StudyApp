@@ -108,14 +108,16 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         print(AppDataController.name)
         
         //ジャンル選択画面への画面遷移の実行
-        let storyboard: UIStoryboard = self.storyboard!
-        let nextView = storyboard.instantiateViewController(withIdentifier: "genre")
-        self.present(nextView, animated: true, completion: nil)
+        performSegue(withIdentifier: "goGenre",sender: nil)
+        
+//        let storyboard: UIStoryboard = self.storyboard!
+//        let nextView = storyboard.instantiateViewController(withIdentifier: "genre")
+//        self.present(nextView, animated: true, completion: nil)
         
         //遷移先の画面がある程度完成してから着手
         //self.present(GenreSelectViewController(), animated: true, completion: nil)
         
-        let cell = tableView.cellForRow(at: indexPath)
+        //let cell = tableView.cellForRow(at: indexPath)
         
         
     }

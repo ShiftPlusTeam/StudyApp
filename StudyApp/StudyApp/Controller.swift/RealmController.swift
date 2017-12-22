@@ -1,4 +1,4 @@
-//
+    //
 //  RealmController.swift
 //  testRealm
 //
@@ -63,7 +63,10 @@ class RealmControllerQuestion{
     init(_ recLicenseId :String) {
         licenseId = recLicenseId
         print("\(recLicenseId)")
-        result = try! Realm().objects(Question.self).filter("licenseId = \(recLicenseId)").sorted(byKeyPath: "no")
+        
+        //次のステップ実行時にエラーとなる
+        result = try! Realm().objects(Question.self)
+//            .filter("licenseId = \(recLicenseId)").sorted(byKeyPath: "no")
         
         for i in 0..<(result.count) {
             if (genres.index(of: result[i].genre) == nil){
@@ -109,7 +112,7 @@ class RealmControllerQuestion{
         
         //randomResultにsearchResultを書き写す(countを超えた場合はそこまで返す)
         for i in 0..<(number) {
-            if i > count {
+            if i >= count {
                 break
             }
             randomResult.append(searchResult[numbList[i]])
@@ -184,7 +187,7 @@ class RealmControllerQuestion{
         
         //randomResultにsearchResultを書き写す(countを超えた場合はそこまで返す)
         for i in 0..<(number) {
-            if i > count {
+            if i >= count {
                 break
             }
             randomResult.append(searchResult[numbList[i]])

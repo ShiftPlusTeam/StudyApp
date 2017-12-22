@@ -69,6 +69,7 @@ class AppDataController {
         
         //現在の問題を取得する
         //強制的なアンラップ
+        
         let result = results![currentCount]
         
         return result

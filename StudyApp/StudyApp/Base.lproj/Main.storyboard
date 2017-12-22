@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2Wh-NJ-2fO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2Wh-NJ-2fO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -56,6 +56,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="資格選択画面" id="X4Y-pk-pw6">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="kDJ-0e-ZfH">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VqW-Za-LFg">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="テスト"/>
+                                <connections>
+                                    <segue destination="X4j-aW-KTQ" kind="show" action="showDetailViewController:sender:" id="UG1-Lc-ip5"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="4bk-Qj-Ujv">
                             <connections>
                                 <segue destination="Bg5-z8-mnW" kind="push" id="R36-S5-8dN"/>
@@ -64,7 +74,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Fp6-Fj-lSu" id="MRe-Xt-xtp"/>
-                        <segue destination="Bg5-z8-mnW" kind="push" id="DSk-I6-qzR"/>
+                        <segue destination="Bg5-z8-mnW" kind="show" identifier="goGenre" id="DSk-I6-qzR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1AY-50-oku" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -108,12 +118,13 @@
                     <navigationItem key="navigationItem" title="ジャンル選択画面" id="mye-tV-1Ze">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="play" id="ITz-Bo-Ql3">
                             <connections>
-                                <segue destination="rRX-2J-YYl" kind="push" id="XgG-hA-iem"/>
+                                <segue destination="rRX-2J-YYl" kind="show" id="XgG-hA-iem"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="AlI-tQ-jrJ" id="4fi-pP-Doh"/>
+                        <segue destination="rRX-2J-YYl" kind="show" identifier="goSelect" id="eOZ-BZ-SCq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rf3-l1-nqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -133,7 +144,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bNt-v0-vg2">
-                                <rect key="frame" x="10" y="89" width="355" height="120"/>
+                                <rect key="frame" x="10" y="45" width="355" height="120"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wQP-Fu-UdQ">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="26.5"/>
@@ -160,7 +171,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapFiveOfAll" destination="rRX-2J-YYl" eventType="touchUpInside" id="iuG-p6-BKh"/>
-                                                    <segue destination="MFa-sk-1cL" kind="push" id="rMn-bG-ekt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5u-Hh-dVc" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
@@ -179,7 +189,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapTenOfAll" destination="rRX-2J-YYl" eventType="touchUpInside" id="3XL-Zd-Tbr"/>
-                                                    <segue destination="MFa-sk-1cL" kind="push" id="Qxm-BI-UlZ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGb-X0-YC6" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
@@ -198,7 +207,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapTwentyOfAll" destination="rRX-2J-YYl" eventType="touchUpInside" id="d9H-4w-Auy"/>
-                                                    <segue destination="MFa-sk-1cL" kind="push" id="O8e-fB-R3e"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63b-ZP-HNN" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
@@ -217,7 +225,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapAllOfAll" destination="rRX-2J-YYl" eventType="touchUpInside" id="Oyv-QY-x7N"/>
-                                                    <segue destination="MFa-sk-1cL" kind="push" id="Ncn-GM-U7s"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -247,7 +254,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapFiveOfAllYet" destination="rRX-2J-YYl" eventType="touchUpInside" id="mOn-tU-THK"/>
-                                                    <segue destination="MFa-sk-1cL" kind="push" id="puU-wQ-yTC"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ak-t1-04A" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
@@ -266,7 +272,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapTenOfAllYet" destination="rRX-2J-YYl" eventType="touchUpInside" id="vll-pP-OgI"/>
-                                                    <segue destination="MFa-sk-1cL" kind="push" id="vlX-bx-ZtF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obP-sD-1Tp" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
@@ -285,7 +290,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapTwentyOfAllYet" destination="rRX-2J-YYl" eventType="touchUpInside" id="DC6-jj-pGd"/>
-                                                    <segue destination="MFa-sk-1cL" kind="push" id="x3X-qx-LtH"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRz-We-KQk" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
@@ -304,7 +308,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapAllOfAllYet" destination="rRX-2J-YYl" eventType="touchUpInside" id="jBh-lo-2GK"/>
-                                                    <segue destination="MFa-sk-1cL" kind="push" id="Sme-Nz-2Od"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -334,7 +337,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapFiveOfAllFalse" destination="rRX-2J-YYl" eventType="touchUpInside" id="9Hy-ZE-uoY"/>
-                                                    <segue destination="MFa-sk-1cL" kind="push" id="PQ9-jl-aao"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVE-TW-myP" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
@@ -353,7 +355,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapTenOfAllFalse" destination="rRX-2J-YYl" eventType="touchUpInside" id="Ndo-eJ-pDz"/>
-                                                    <segue destination="MFa-sk-1cL" kind="push" id="ard-3T-T8q"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iY-fj-Th2" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
@@ -372,7 +373,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapTwentyOfAllFalse" destination="rRX-2J-YYl" eventType="touchUpInside" id="cHL-rm-ZuM"/>
-                                                    <segue destination="MFa-sk-1cL" kind="push" id="bZK-uV-73K"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaI-P2-y3K" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
@@ -391,7 +391,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapAllOfAllFalse" destination="rRX-2J-YYl" eventType="touchUpInside" id="4Sx-3Q-bvC"/>
-                                                    <segue destination="MFa-sk-1cL" kind="push" id="Qr8-Ph-EBv"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -401,25 +400,6 @@
                                     <constraint firstAttribute="height" constant="120" id="3yq-il-don"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUa-92-Hgi" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                <rect key="frame" x="131" y="365" width="59" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="test"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="X4j-aW-KTQ" kind="push" id="d5N-lY-PMc"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -429,6 +409,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="問題数選択画面" id="XOd-Ch-z9B"/>
+                    <connections>
+                        <segue destination="MFa-sk-1cL" kind="show" identifier="goQuestion" id="fq8-jv-XdG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66y-bY-apI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -469,12 +452,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5P-YK-yU3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1359" y="2249"/>
+            <point key="canvasLocation" x="-295" y="2131"/>
         </scene>
         <!--問題-->
         <scene sceneID="DRb-WF-yZP">
             <objects>
-                <viewController id="MFa-sk-1cL" customClass="QuestionViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="question" id="MFa-sk-1cL" customClass="QuestionViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YO3-O4-fbL"/>
                         <viewControllerLayoutGuide type="bottom" id="Tg8-Td-7zm"/>
@@ -484,16 +467,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="問" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtK-wX-zDY">
-                                <rect key="frame" x="26" y="84" width="93" height="133"/>
+                                <rect key="frame" x="26" y="40" width="93" height="177"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VS3-j8-a7h">
-                                <rect key="frame" x="26" y="344" width="323" height="303"/>
+                                <rect key="frame" x="26" y="300" width="323" height="347"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfG-B1-07b" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="323" height="72"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="83"/>
                                         <state key="normal" title="A"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -508,11 +491,10 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="selectAButton:" destination="MFa-sk-1cL" eventType="touchUpInside" id="4TK-AS-nxZ"/>
-                                            <segue destination="MsY-uC-8MG" kind="push" id="dlE-wZ-hyu"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9c-SV-S1Q" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="77" width="323" height="72"/>
+                                        <rect key="frame" x="0.0" y="88" width="323" height="83"/>
                                         <state key="normal" title="B"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -527,11 +509,10 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="selectBButton:" destination="MFa-sk-1cL" eventType="touchUpInside" id="7sb-Nd-fZu"/>
-                                            <segue destination="MsY-uC-8MG" kind="push" id="SOb-lb-NcF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JS-NA-s4v" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="154" width="323" height="72"/>
+                                        <rect key="frame" x="0.0" y="176" width="323" height="83"/>
                                         <state key="normal" title="C"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -546,11 +527,10 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="selectCButton:" destination="MFa-sk-1cL" eventType="touchUpInside" id="0oA-fZ-pLU"/>
-                                            <segue destination="MsY-uC-8MG" kind="push" id="yX6-QJ-5zx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdd-9c-IpA" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="231" width="323" height="72"/>
+                                        <rect key="frame" x="0.0" y="264" width="323" height="83"/>
                                         <state key="normal" title="D"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -565,13 +545,12 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="selectDButton:" destination="MFa-sk-1cL" eventType="touchUpInside" id="1dP-4o-pZz"/>
-                                            <segue destination="MsY-uC-8MG" kind="push" id="lvC-zt-NUh"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNj-Cg-BTv">
-                                <rect key="frame" x="26" y="124" width="323" height="293"/>
+                                <rect key="frame" x="26" y="80" width="323" height="337"/>
                                 <string key="text" base64-UTF8="YES">
 44Op44OZ44OrDeODqeODmeODqw3jg6njg5njg6sN44Op44OZ44OrERERDeODqeODmeODqw
 </string>
@@ -600,10 +579,11 @@
                     <connections>
                         <outlet property="aSelect" destination="TfG-B1-07b" id="5ht-gr-N4o"/>
                         <outlet property="bSelect" destination="o9c-SV-S1Q" id="FKI-zn-8B5"/>
-                        <outlet property="cSelect" destination="sdd-9c-IpA" id="BAS-LH-J45"/>
+                        <outlet property="cSelect" destination="0JS-NA-s4v" id="Qwf-Kk-asE"/>
                         <outlet property="dSelect" destination="sdd-9c-IpA" id="veA-93-fLJ"/>
                         <outlet property="noLabel" destination="HtK-wX-zDY" id="QFD-lh-J7o"/>
                         <outlet property="questionLabel" destination="kNj-Cg-BTv" id="l64-Lb-CTh"/>
+                        <segue destination="MsY-uC-8MG" kind="show" identifier="goComment" id="b98-Da-3hy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6rG-G3-XBF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -630,7 +610,7 @@
         <!--解説-->
         <scene sceneID="anM-vY-n5T">
             <objects>
-                <viewController id="MsY-uC-8MG" customClass="CommentaryViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="answer" id="MsY-uC-8MG" customClass="CommentaryViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CeG-mt-sOw"/>
                         <viewControllerLayoutGuide type="bottom" id="eig-Tj-0mw"/>
@@ -675,19 +655,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1y-SW-Q1r">
-                                <rect key="frame" x="321" y="22" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="次へ"/>
-                                <connections>
-                                    <action selector="nextbutton:" destination="MsY-uC-8MG" eventType="touchUpInside" id="1uj-Y5-lSN"/>
-                                    <segue destination="Jit-pq-dqR" kind="show" identifier="goRecord" id="x3P-fo-Cwc"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FCG-0e-3CH">
                                 <rect key="frame" x="64" y="65" width="240" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1y-SW-Q1r">
+                                <rect key="frame" x="312" y="492" width="37" height="11"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="次へ"/>
+                                <connections>
+                                    <action selector="nextbutton:" destination="MsY-uC-8MG" eventType="touchUpInside" id="1uj-Y5-lSN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -705,9 +684,8 @@
                         <outlet property="commentlabel" destination="pMF-I8-UeE" id="keO-58-Lkd"/>
                         <outlet property="correctlabel" destination="wOd-bI-EHs" id="0jR-j7-g0i"/>
                         <outlet property="imageView" destination="FCG-0e-3CH" id="fGV-ND-Gdc"/>
-                        <outlet property="next" destination="T1y-SW-Q1r" id="HBO-9L-V10"/>
-                        <outlet property="nextbutton" destination="T1y-SW-Q1r" id="jEK-sg-ICn"/>
-                        <outlet property="photo" destination="FCG-0e-3CH" id="5Ym-8n-M9o"/>
+                        <segue destination="Jit-pq-dqR" kind="show" identifier="goRecord" id="1Xy-Jy-Vod"/>
+                        <segue destination="MFa-sk-1cL" kind="show" identifier="backQuestion" id="JeE-8R-E32"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xH-yi-DP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -717,7 +695,7 @@
         <!--結果-->
         <scene sceneID="3Y7-Ic-2WT">
             <objects>
-                <viewController id="Jit-pq-dqR" customClass="RecordViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="record" id="Jit-pq-dqR" customClass="RecordViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hBq-6b-FbU"/>
                         <viewControllerLayoutGuide type="bottom" id="OhV-6r-Zhd"/>
@@ -727,14 +705,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 / 10 問" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MW-1p-oVh">
-                                <rect key="frame" x="26" y="364" width="323" height="143"/>
+                                <rect key="frame" x="26" y="320" width="323" height="187"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loR-RP-C3G">
+                                <rect key="frame" x="118" y="584" width="139" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="ホーム画面に戻る"/>
+                                <connections>
+                                    <segue destination="vrr-fw-XrJ" kind="show" id="2Ze-os-eeD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="OhV-6r-Zhd" firstAttribute="top" secondItem="loR-RP-C3G" secondAttribute="bottom" constant="50" id="6av-qQ-O4p"/>
+                            <constraint firstItem="loR-RP-C3G" firstAttribute="centerX" secondItem="CGR-KC-YtU" secondAttribute="centerX" id="YSQ-ez-32U"/>
                             <constraint firstItem="8MW-1p-oVh" firstAttribute="top" secondItem="hBq-6b-FbU" secondAttribute="bottom" constant="300" id="aLS-Je-ktN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8MW-1p-oVh" secondAttribute="trailing" constant="10" id="kEe-Pr-t33"/>
                             <constraint firstItem="8MW-1p-oVh" firstAttribute="leading" secondItem="CGR-KC-YtU" secondAttribute="leadingMargin" constant="10" id="nLD-Ja-FRs"/>
@@ -748,13 +736,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilH-k7-mYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4245" y="1380"/>
+            <point key="canvasLocation" x="4244" y="1379.4602698650676"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lvC-zt-NUh"/>
-        <segue reference="Qxm-BI-UlZ"/>
-        <segue reference="DSk-I6-qzR"/>
-        <segue reference="XKz-E1-Tuj"/>
+        <segue reference="JeE-8R-E32"/>
+        <segue reference="eOZ-BZ-SCq"/>
+        <segue reference="R36-S5-8dN"/>
+        <segue reference="2Ze-os-eeD"/>
     </inferredMetricsTieBreakers>
 </document>

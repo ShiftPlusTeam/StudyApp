@@ -40,27 +40,42 @@ class QuestionViewController: UIViewController {
         
     }
     
+    //次画面への遷移を実行する
+    func nextPage() {
+//        realmデータをセット
+//        AppDataController.createQuestion()
+        
+        //次画面への遷移
+        performSegue(withIdentifier: "goComment",sender: nil)
+//        let storyboard: UIStoryboard = self.storyboard!
+//        let nextView = storyboard.instantiateViewController(withIdentifier: "answer")
+//        self.present(nextView, animated: true, completion: nil)
+    }
+    
     //Aボタンをタップ
     @IBAction func selectAButton(_ sender: Any) {
         AppDataController.selectAnswer = "A"
+        nextPage()
     }
     
     //Bボタンをタップ
     @IBAction func selectBButton(_ sender: Any) {
         AppDataController.selectAnswer = "B"
+        nextPage()
         
     }
     
     //Cボタンをタップ
     @IBAction func selectCButton(_ sender: Any) {
         AppDataController.selectAnswer = "C"
+        nextPage()
         
     }
     
     //Dボタンをタップ
     @IBAction func selectDButton(_ sender: Any) {
         AppDataController.selectAnswer = "D"
-        
+        nextPage()
     }
 
 }
