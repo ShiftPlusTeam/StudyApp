@@ -53,6 +53,7 @@ class CommentaryViewController: UIViewController{
         
     }
     
+<<<<<<< HEAD
     //ここから下のわけがわからない実装は何？？？？？？？？
     //なぜ一度変数を置き換える？？？？？？
     
@@ -62,12 +63,21 @@ class CommentaryViewController: UIViewController{
     //    let selectcount = AppDataController.count
     
     
+=======
+    //解答数を定義する
+    var answercount = AppDataController.currentCount
+    //問題数選択画面で選択した値を定義する
+    let selectcount = AppDataController.count
+ 
+        
+>>>>>>> b04bf48299384163c2a1438ef19ce01b41ca0362
     //選択した問題数に達した場合、結果画面へ。達していない場合は、次の問いへ
     //「次へ」ボタンを押下後、問題数選択画面で選択した値と現在の回答数がイコールか判断
     @IBAction func nextbutton(_ sender: UIButton) {
         //ここでcurrentCountをインクリメント
         AppDataController.incrementCurrentCount()
         
+<<<<<<< HEAD
         if AppDataController.count <= AppDataController.currentCount {
             
             //次画面への遷移
@@ -94,7 +104,31 @@ class CommentaryViewController: UIViewController{
         // try! realm.write {
         //     nextbutton = newValue.Realm
         
+=======
+        if selectcount == answercount {
         
+        //イコールの場合、結果画面へ遷移する。↓参照元
+        //<https://i-app-tec.com/ios/tap_gesture.html>
+        performSegue(withIdentifier: "goRecord",sender: nil)
+        
+    } else {
+            //イコールではない場合、前の画面へ戻る。↓参照元
+        //<http://appleharikyu.jp/iphone/?p=1074>
+        self.dismiss(animated: true, completion: nil)
+            
+              //インクリメントを実装
+            answercount += 1
+        
+            }
+        
+        
+        // Realm更新
+        
+       let realm = try! Realm()
+       let result = try! Realm().objects(License.self)
+>>>>>>> b04bf48299384163c2a1438ef19ce01b41ca0362
+        
+       try! realm.write {
         
     }
 }
