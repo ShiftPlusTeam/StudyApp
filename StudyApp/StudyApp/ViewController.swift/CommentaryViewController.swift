@@ -34,6 +34,8 @@ class CommentaryViewController: UIViewController{
         let results = AppDataController.getCurrentQuestionData()
         
         //回答した選択肢を定義
+        //以下で一度変数を置き換えた意味はなんでしょうか？？？？？？？？
+        //わかりにくくなるだけだと思うんだが、、、
         let answer = AppDataController.selectAnswer
         
         //各種表示の更新
@@ -41,6 +43,8 @@ class CommentaryViewController: UIViewController{
         correctlabel.text = results.answer
         
         //正誤判定
+        //なんで以下の実装では突然、;入れてるの？コピペ？？？？？コーディングは統一してくれ見にくい！！！！！！！
+        //この画面に遷移した時に全て✖︎で表示される→原因調査よろしくお願い（勉強のためにね）
         if answer == correctlabel.text{
             imageView.image = maruimage;
         }else{

@@ -23,15 +23,28 @@ class QuestionViewController: UIViewController {
         super.viewDidLoad()
         
         //各種表示の更新
-        noLabel.text = String(AppDataController.currentCount)
+        noLabel.text = String(AppDataController.currentCount + 1) + "問目"
         
         let results = AppDataController.getCurrentQuestionData()
         
+        
         questionLabel.text = results.problem
-        aSelect.titleLabel?.text = results.optionA
-        bSelect.titleLabel?.text = results.optionB
-        cSelect.titleLabel?.text = results.optionC
-        dSelect.titleLabel?.text = results.optionD
+        //複数行に分けて表示する実装
+        aSelect.setTitle(results.optionA, for: .normal)
+        aSelect.titleLabel!.lineBreakMode = NSLineBreakMode.byWordWrapping
+        aSelect.titleLabel!.numberOfLines = 3
+        
+        bSelect.setTitle(results.optionB, for: .normal)
+        bSelect.titleLabel!.lineBreakMode = NSLineBreakMode.byWordWrapping
+        bSelect.titleLabel!.numberOfLines = 3
+        
+        cSelect.setTitle(results.optionC, for: .normal)
+        cSelect.titleLabel!.lineBreakMode = NSLineBreakMode.byWordWrapping
+        cSelect.titleLabel!.numberOfLines = 3
+        
+        dSelect.setTitle(results.optionD, for: .normal)
+        dSelect.titleLabel!.lineBreakMode = NSLineBreakMode.byWordWrapping
+        dSelect.titleLabel?.numberOfLines = 3
         
     }
 

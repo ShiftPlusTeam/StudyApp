@@ -108,6 +108,7 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         print(AppDataController.name)
         
         //ジャンル選択画面への画面遷移の実行
+        //画面遷移方法の変更→NavigationContorollerが表示されなかったため(Pushで遷移しないとだめと思われれる)
         performSegue(withIdentifier: "goGenre",sender: nil)
         
 //        let storyboard: UIStoryboard = self.storyboard!

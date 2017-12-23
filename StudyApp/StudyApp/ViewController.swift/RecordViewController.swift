@@ -84,7 +84,10 @@ class RecordViewController: UIViewController {
         
         //成績グラフのレンダリング
         let pieChartView = PieChartView()
-        pieChartView.frame = CGRect(x:0, y:0, width: view.frame.size.width, height: 400)
+        pieChartView.frame = CGRect(x:0, y:100, width: view.frame.size.width, height: 200)
+        
+        //以下は現状は固定値となっているが書き換えの必要があるし
+        //書き換え可能に実装を変更する必要がある
         pieChartView.segments = [
             Segment(color: UIColor.green, value: 100),
             Segment(color: UIColor.lightGray, value: 10)

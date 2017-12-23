@@ -475,9 +475,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VS3-j8-a7h">
                                 <rect key="frame" x="26" y="300" width="323" height="347"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfG-B1-07b" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfG-B1-07b" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="323" height="83"/>
-                                        <state key="normal" title="A"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="A">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="15"/>
@@ -493,9 +496,12 @@
                                             <action selector="selectAButton:" destination="MFa-sk-1cL" eventType="touchUpInside" id="4TK-AS-nxZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9c-SV-S1Q" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9c-SV-S1Q" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="88" width="323" height="83"/>
-                                        <state key="normal" title="B"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="B">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="15"/>
@@ -511,9 +517,12 @@
                                             <action selector="selectBButton:" destination="MFa-sk-1cL" eventType="touchUpInside" id="7sb-Nd-fZu"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JS-NA-s4v" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JS-NA-s4v" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="176" width="323" height="83"/>
-                                        <state key="normal" title="C"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="C">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="15"/>
@@ -529,9 +538,12 @@
                                             <action selector="selectCButton:" destination="MFa-sk-1cL" eventType="touchUpInside" id="0oA-fZ-pLU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdd-9c-IpA" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdd-9c-IpA" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="264" width="323" height="83"/>
-                                        <state key="normal" title="D"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="D">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="15"/>
@@ -740,6 +752,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="b98-Da-3hy"/>
         <segue reference="JeE-8R-E32"/>
         <segue reference="eOZ-BZ-SCq"/>
         <segue reference="R36-S5-8dN"/>
