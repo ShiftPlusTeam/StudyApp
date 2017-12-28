@@ -88,9 +88,21 @@ class RecordViewController: UIViewController {
         
         //以下は現状は固定値となっているが書き換えの必要があるし
         //書き換え可能に実装を変更する必要がある
+        var correctRate: CGFloat
+        var incorrectRate: CGFloat
+        
+        //正解数が0だった場合にはDivision0で予期せぬエラーになるためif文追加
+        if AppDataController.currentCorrect == 0 {
+            correctRate = 0
+            incorrectRate = 100
+        } else {
+            correctRate = CGFloat(AppDataController.currentCorrect / AppDataController.count * 100)
+            incorrectRate = 100 - correctRate
+        }
+        
         pieChartView.segments = [
-            Segment(color: UIColor.green, value: 100),
-            Segment(color: UIColor.lightGray, value: 10)
+            Segment(color: UIColor.green, value: CGFloat(correctRate)),
+            Segment(color: UIColor.lightGray, value: CGFloat(incorrectRate))
         ]
         view.addSubview(pieChartView)
     }

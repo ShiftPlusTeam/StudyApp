@@ -30,19 +30,19 @@ class QuestionViewController: UIViewController {
         
         questionLabel.text = results.problem
         //複数行に分けて表示する実装
-        aSelect.setTitle(results.optionA, for: .normal)
+        aSelect.setTitle("A: " + results.optionA, for: .normal)
         aSelect.titleLabel!.lineBreakMode = NSLineBreakMode.byWordWrapping
         aSelect.titleLabel!.numberOfLines = 3
         
-        bSelect.setTitle(results.optionB, for: .normal)
+        bSelect.setTitle("B: " + results.optionB, for: .normal)
         bSelect.titleLabel!.lineBreakMode = NSLineBreakMode.byWordWrapping
         bSelect.titleLabel!.numberOfLines = 3
         
-        cSelect.setTitle(results.optionC, for: .normal)
+        cSelect.setTitle("C: " + results.optionC, for: .normal)
         cSelect.titleLabel!.lineBreakMode = NSLineBreakMode.byWordWrapping
         cSelect.titleLabel!.numberOfLines = 3
         
-        dSelect.setTitle(results.optionD, for: .normal)
+        dSelect.setTitle("D: " + results.optionD, for: .normal)
         dSelect.titleLabel!.lineBreakMode = NSLineBreakMode.byWordWrapping
         dSelect.titleLabel?.numberOfLines = 3
         

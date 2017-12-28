@@ -10,7 +10,7 @@
 //✔︎資格を選択後「ジャンル選択画面」へ画面遷移する。
 //✔︎資格の右の欄に解答済みと未回答の比率が表示される。
 //✔︎未購入は、グレーアウトされて表示される。
-//・資格名をバーに入れると検索が可能
+//・資格名をバーに入れると検索が可能←これいる？？
 
 import UIKit
 
@@ -23,8 +23,8 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         
         //StoryBoard上で下記は実装しているため、コメントアウト
-        //tableView.dataSource = self
-        //tableView.delegate = self
+//        tableView.dataSource = self
+//        tableView.delegate = self
         
         // xibファイルの登録
         // UINib関数を使って、作成したカスタムセルを取得する
