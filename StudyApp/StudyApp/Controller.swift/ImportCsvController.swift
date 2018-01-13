@@ -103,7 +103,7 @@ class ImportLicense {
                         print("------------------------------")
                         
                         try! realm.write {
-                            realm.add(myLicense)
+                            realm.add(myLicense, update: true)
                         }
                     }
                 }
@@ -176,7 +176,7 @@ class ImportQuestion {
                         print("------------------------------")
                         
                         try! realm.write {
-                            realm.add(myQuestion)
+                            realm.add(myQuestion, update: true)
                         }
                     }
                 }
