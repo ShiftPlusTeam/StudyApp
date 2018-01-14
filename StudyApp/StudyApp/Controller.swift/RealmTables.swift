@@ -12,7 +12,7 @@ import RealmSwift
 
 class License: Object  {
     //資格一覧テーブル
-    //id:問題ID:主キー//◾️◾️◾️桁数要相談◾️◾️◾️
+    //id:資格ID:主キー//◾️◾️◾️桁数要相談◾️◾️◾️
     //name:資格名
     //rate:その資格の問題全体における正答率
     //purshase:その資格の問題情報を購入済みであるかどうか

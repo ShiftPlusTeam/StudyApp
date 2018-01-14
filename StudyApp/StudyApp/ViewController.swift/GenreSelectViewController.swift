@@ -24,8 +24,8 @@ class GenreSelectViewController: UIViewController, UITableViewDelegate, UITableV
         for i in 0..<(genles.count) {
             genreList.append(genles[i])
         }
-        genreList.append("Genre1")
-        genreList.append("Genre2")
+//        genreList.append("Genre1")
+//        genreList.append("Genre2")
         //ここまでの方法でジャンル一覧は持ってこれるはず
         print("\(genreList)")
         super.viewDidLoad()
