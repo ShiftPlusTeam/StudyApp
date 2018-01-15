@@ -48,6 +48,8 @@ class ImportCsvViewController: UIViewController {
     
     @IBAction func Reset(_ sender: UIButton) {
         
+        let DeleteLicense = RealmControllerLicense()
+        DeleteLicense.allDelete()
         
     }
     

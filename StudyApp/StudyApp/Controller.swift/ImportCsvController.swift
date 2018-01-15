@@ -179,7 +179,7 @@ class UpdateLicense {
                 }
             }
         } else {
-            print("CSVファイルパスの取得失敗")
+            print("資格更新失敗")
         }
     }
 }
@@ -236,7 +236,7 @@ class UpdateQuestion {
                 }
             }
         } else {
-            print("CSVファイルパスの取得失敗")
+            print("問題更新失敗")
         }
     }
 }
