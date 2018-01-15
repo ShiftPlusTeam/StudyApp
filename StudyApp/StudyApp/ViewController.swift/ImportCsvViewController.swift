@@ -39,10 +39,16 @@ class ImportCsvViewController: UIViewController {
         QuestionTest.QuestionToArray()
         //print("question.csvの更新完了")
         
-        print("license.csvの取り込み開始")
-        let LicenseTest = UpdateLicense()
-        LicenseTest.LicenseToArray()
-        //print("license.csvの更新完了")
+//        print("license.csvの取り込み開始")
+//        let LicenseTest = UpdateLicense()
+//        LicenseTest.LicenseToArray()
+//        print("license.csvの更新完了")
         
     }
+    
+    @IBAction func Reset(_ sender: UIButton) {
+        
+        
+    }
+    
 }

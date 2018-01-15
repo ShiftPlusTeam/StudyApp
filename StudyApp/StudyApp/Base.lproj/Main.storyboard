@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--資格選択画面-->
+        <!--資格選択-->
         <scene sceneID="uv2-7f-51N">
             <objects>
                 <viewController id="vrr-fw-XrJ" customClass="LicenseViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,17 +55,7 @@
                             <constraint firstAttribute="trailing" secondItem="Fp6-Fj-lSu" secondAttribute="trailing" id="toq-3N-V5O"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="資格選択画面" id="X4Y-pk-pw6">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="kDJ-0e-ZfH">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VqW-Za-LFg">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="テスト"/>
-                                <connections>
-                                    <segue destination="X4j-aW-KTQ" kind="show" action="showDetailViewController:sender:" id="UG1-Lc-ip5"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="資格選択" id="X4Y-pk-pw6">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="4bk-Qj-Ujv">
                             <connections>
                                 <segue destination="Bg5-z8-mnW" kind="push" id="R36-S5-8dN"/>
@@ -120,13 +110,7 @@
                             <constraint firstItem="AlI-tQ-jrJ" firstAttribute="leading" secondItem="mYQ-6w-mUA" secondAttribute="leading" id="ql9-En-ut4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ジャンル選択画面" id="mye-tV-1Ze">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="play" id="ITz-Bo-Ql3">
-                            <connections>
-                                <segue destination="rRX-2J-YYl" kind="show" id="XgG-hA-iem"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="ジャンル選択" id="mye-tV-1Ze"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="AlI-tQ-jrJ" id="4fi-pP-Doh"/>
@@ -137,7 +121,7 @@
             </objects>
             <point key="canvasLocation" x="544" y="1380"/>
         </scene>
-        <!--問題数選択画面-->
+        <!--問題数選択-->
         <scene sceneID="DWK-aW-wfa">
             <objects>
                 <viewController storyboardIdentifier="SelectQuestion" id="rRX-2J-YYl" customClass="SelectQuestionsViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -414,7 +398,7 @@
                             <constraint firstItem="bNt-v0-vg2" firstAttribute="top" secondItem="ZXI-qq-HQe" secondAttribute="bottom" constant="25" id="qxw-gF-lce"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="問題数選択画面" id="XOd-Ch-z9B"/>
+                    <navigationItem key="navigationItem" title="問題数選択" id="XOd-Ch-z9B"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <segue destination="MFa-sk-1cL" kind="show" identifier="goQuestion" id="fq8-jv-XdG"/>
@@ -437,7 +421,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzJ-VE-jq2" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                <rect key="frame" x="116" y="164" width="143" height="30"/>
+                                <rect key="frame" x="112.5" y="164" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9ai-s2-csv"/>
+                                    <constraint firstAttribute="width" constant="150" id="tfO-Ex-r3J"/>
+                                </constraints>
                                 <state key="normal" title="IMPORT CSV"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -454,9 +442,57 @@
                                     <action selector="ImportTest:" destination="X4j-aW-KTQ" eventType="touchUpInside" id="Ke1-B6-NRf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLQ-Y0-6bW" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
+                                <rect key="frame" x="112.5" y="244" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="2v3-eK-28R"/>
+                                    <constraint firstAttribute="height" constant="50" id="gAe-ZN-UR4"/>
+                                </constraints>
+                                <state key="normal" title="UPDATE REALM"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="UpdateTest:" destination="X4j-aW-KTQ" eventType="touchUpInside" id="pDE-qU-e5r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11Y-oC-Zee" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
+                                <rect key="frame" x="112.5" y="324" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="YwU-EJ-HVF"/>
+                                    <constraint firstAttribute="height" constant="50" id="oql-BG-Ek0"/>
+                                </constraints>
+                                <state key="normal" title="RESET REALM"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="Reset:" destination="X4j-aW-KTQ" eventType="touchUpInside" id="Anc-Ul-ixf"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLU-Bc-2GF" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
-                                <rect key="frame" x="116" y="294" width="143" height="30"/>
-                                <state key="normal" title="資格選択画面に戻る"/>
+                                <rect key="frame" x="112" y="404" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Rel-9J-Rpt"/>
+                                    <constraint firstAttribute="height" constant="50" id="Ut8-z4-h1J"/>
+                                </constraints>
+                                <state key="normal" title="資格選択画面へ"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -475,20 +511,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JzJ-VE-jq2" firstAttribute="leading" secondItem="OJV-a8-hvX" secondAttribute="leadingMargin" constant="100" id="6h3-zR-kVs"/>
-                            <constraint firstItem="aLU-Bc-2GF" firstAttribute="leading" secondItem="OJV-a8-hvX" secondAttribute="leadingMargin" constant="100" id="7tO-e2-arT"/>
+                            <constraint firstItem="JzJ-VE-jq2" firstAttribute="centerX" secondItem="OJV-a8-hvX" secondAttribute="centerX" id="096-Os-MFe"/>
                             <constraint firstItem="JzJ-VE-jq2" firstAttribute="top" secondItem="9LR-FC-HJG" secondAttribute="bottom" constant="100" id="Dqq-86-QdZ"/>
-                            <constraint firstItem="aLU-Bc-2GF" firstAttribute="top" secondItem="JzJ-VE-jq2" secondAttribute="bottom" constant="100" id="K9v-3g-kmw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="aLU-Bc-2GF" secondAttribute="trailing" constant="100" id="Nol-Ug-tsZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JzJ-VE-jq2" secondAttribute="trailing" constant="100" id="uNb-wE-7nT"/>
+                            <constraint firstItem="aLU-Bc-2GF" firstAttribute="centerX" secondItem="OJV-a8-hvX" secondAttribute="centerX" id="ULm-Bo-LLQ"/>
+                            <constraint firstItem="11Y-oC-Zee" firstAttribute="top" secondItem="qLQ-Y0-6bW" secondAttribute="bottom" constant="30" id="Usg-Hq-Y8R"/>
+                            <constraint firstItem="aLU-Bc-2GF" firstAttribute="top" secondItem="11Y-oC-Zee" secondAttribute="bottom" constant="30" id="Vhj-I6-lRL"/>
+                            <constraint firstItem="qLQ-Y0-6bW" firstAttribute="top" secondItem="JzJ-VE-jq2" secondAttribute="bottom" constant="30" id="Wch-d9-BbK"/>
+                            <constraint firstItem="11Y-oC-Zee" firstAttribute="centerX" secondItem="OJV-a8-hvX" secondAttribute="centerX" id="gQF-eH-aQx"/>
+                            <constraint firstItem="qLQ-Y0-6bW" firstAttribute="centerX" secondItem="OJV-a8-hvX" secondAttribute="centerX" id="hx3-dB-5VN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="CSVTest" id="liu-cl-uBh"/>
+                    <navigationItem key="navigationItem" title="DB操作" id="liu-cl-uBh"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5P-YK-yU3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-295" y="2131"/>
+            <point key="canvasLocation" x="-1063" y="1379"/>
         </scene>
         <!--問題-->
         <scene sceneID="DRb-WF-yZP">
@@ -515,9 +553,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VS3-j8-a7h">
                                 <rect key="frame" x="26" y="347" width="323" height="300"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfG-B1-07b" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
+                                    <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfG-B1-07b" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="323" height="71.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="0.0"/>
                                         <state key="normal" title="A">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -539,6 +578,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9c-SV-S1Q" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="76.5" width="323" height="71"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="0.0"/>
                                         <state key="normal" title="B">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -560,6 +600,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JS-NA-s4v" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="152.5" width="323" height="71.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="0.0"/>
                                         <state key="normal" title="C">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -581,6 +622,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdd-9c-IpA" customClass="RoundedButton" customModule="StudyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="229" width="323" height="71"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="0.0"/>
                                         <state key="normal" title="D">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -654,12 +696,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="vrr-fw-XrJ" kind="relationship" relationship="rootViewController" id="XKz-E1-Tuj"/>
+                        <segue destination="X4j-aW-KTQ" kind="relationship" relationship="rootViewController" id="z2j-tg-KWv"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PeF-rl-Xng" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1196" y="1380"/>
+            <point key="canvasLocation" x="-1844" y="1379"/>
         </scene>
         <!--解説-->
         <scene sceneID="anM-vY-n5T">
@@ -817,8 +859,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="fq8-jv-XdG"/>
-        <segue reference="eOZ-BZ-SCq"/>
         <segue reference="DSk-I6-qzR"/>
-        <segue reference="2Ze-os-eeD"/>
+        <segue reference="yBP-VI-VQP"/>
     </inferredMetricsTieBreakers>
 </document>

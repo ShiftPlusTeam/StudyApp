@@ -16,6 +16,8 @@ class ImportLicense {
     
     func LicenseToArray () {
         
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
         //csvのファイルパスを取得
         if let csvPath = Bundle.main.path(forResource: "license", ofType: "csv") {
             //            print(csvPath)
@@ -161,11 +163,6 @@ class UpdateLicense {
                     //allyの要素数を確認
                     if ally.count >= 4 {
                         
-                        myLicense.id = ally[0]
-                        print(myLicense.id)
-                        myLicense.name = ally[1]
-                        print(myLicense.name)
-                        
                         //CSV１レコード文の取得が完了
                         print("------------------------------")
                         print(myLicense)
@@ -213,30 +210,6 @@ class UpdateQuestion {
                     
                     //allyの要素数を確認
                     if ally.count >= 10 {
-                        
-                        //ダウンキャストがうまくいかないとエラーが起こるので、場合分け必須
-                        myQuestion.id = ally[0]
-                        print(myQuestion.id)
-                        myQuestion.no = ally[1]
-                        print(myQuestion.no)
-                        myQuestion.licenseId = ally[2]
-                        print(myQuestion.licenseId)
-                        myQuestion.genre = ally[3]
-                        print(myQuestion.genre)
-                        myQuestion.problem = ally[4]
-                        print(myQuestion.problem)
-                        myQuestion.comment = ally[5]
-                        print(myQuestion.comment)
-                        myQuestion.optionA = ally[6]
-                        print(myQuestion.optionA)
-                        myQuestion.optionB = ally[7]
-                        print(myQuestion.optionB)
-                        myQuestion.optionC = ally[8]
-                        print(myQuestion.optionC)
-                        myQuestion.optionD = ally[9]
-                        print(myQuestion.optionD)
-                        myQuestion.answer = ally[10]
-                        print(myQuestion.answer)
                         
                         //CSV１レコード文の取得が完了
                         print("------------------------------")
