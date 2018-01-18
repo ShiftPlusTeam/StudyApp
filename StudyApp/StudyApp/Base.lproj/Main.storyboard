@@ -834,6 +834,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="ホーム画面に戻る"/>
                                 <connections>
+                                    <action selector="backHome:" destination="Jit-pq-dqR" eventType="touchUpInside" id="p99-bC-DOw"/>
                                     <segue destination="vrr-fw-XrJ" kind="show" id="2Ze-os-eeD"/>
                                 </connections>
                             </button>
@@ -860,6 +861,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="fq8-jv-XdG"/>
         <segue reference="DSk-I6-qzR"/>
-        <segue reference="yBP-VI-VQP"/>
+        <segue reference="2Ze-os-eeD"/>
     </inferredMetricsTieBreakers>
 </document>
