@@ -212,29 +212,27 @@ class RealmControllerQuestion{
         }
     }
     
-
+//    CSVの１センテンスをパーズしてDBにレコードをインサートする
+//    func addQestion(_ newQesCsvSent :String) {
+//        let myQes = Question()
+//        let ally = newQesCsvSent.components(separatedBy: ",")
+//
+//        ダウンキャストがうまくいかないとエラーが起こるので、場合分け必須
+//        myQes.no = ally[0]
+//        myQes.licenseId = ally[1]
+//        myQes.genre = ally[2]
+//        myQes.problem = ally[3]
+//        myQes.comment = ally[4]
+//        myQes.optionA = ally[5]
+//        myQes.optionB = ally[6]
+//        myQes.optionC = ally[7]
+//        myQes.optionD = ally[8]
+//        myQes.answer = ally[9]
+//        myQes.correct = false
+//        myQes.done = false
+//        try! realm.write {
+//            realm.add(myQes)
+//        }
+//    }
     
-    
-    //CSVの１センテンスをパーズしてDBにレコードをインサートする
-    func addQestion(_ newQesCsvSent :String) {
-        let myQes = Question()
-        let ally = newQesCsvSent.components(separatedBy: ",")
-        
-        //ダウンキャストがうまくいかないとエラーが起こるので、場合分け必須
-        myQes.no = ally[0]
-        myQes.licenseId = ally[1]
-        myQes.genre = ally[2]
-        myQes.problem = ally[3]
-        myQes.comment = ally[4]
-        myQes.optionA = ally[5]
-        myQes.optionB = ally[6]
-        myQes.optionC = ally[7]
-        myQes.optionD = ally[8]
-        myQes.answer = ally[9]
-        myQes.correct = false
-        myQes.done = false
-        try! realm.write {
-            realm.add(myQes)
-        }
-    }
 }

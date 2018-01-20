@@ -217,7 +217,7 @@ class UpdateQuestion {
                         print("------------------------------")
                         
                         try! realm.write {
-                            let Question: [String: Any] = ["id": ally[0],
+                            let myQuestion: [String: Any] = ["id": ally[0],
                                                            "no": ally[1],
                                                            "licenseId": ally[2],
                                                            "genre": ally[3],
@@ -229,7 +229,7 @@ class UpdateQuestion {
                                                            "optionD": ally[9],
                                                            "answer": ally[10]]
                             realm.create(Object.self,
-                                         value: Question,
+                                         value: myQuestion,
                                          update: true)
                         }
                     }
