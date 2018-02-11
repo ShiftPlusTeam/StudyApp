@@ -62,11 +62,10 @@ class RealmControllerQuestion{
     //RealmControllerQuestionのイニシャライザ　引数は資格ID
     init(_ recLicenseId :String) {
         licenseId = recLicenseId
-        print("\(recLicenseId)")
+        print("recLicensId == '\(recLicenseId)'")
         
         //次のステップ実行時にエラーとなる
-        result = try! Realm().objects(Question.self)
-//            .filter("licenseId = \(recLicenseId)").sorted(byKeyPath: "no")
+        result = try! Realm().objects(Question.self).filter("licenseId == '\(recLicenseId)'").sorted(byKeyPath: "no")
         
         for i in 0..<(result.count) {
             if (genres.index(of: result[i].genre) == nil){
@@ -82,12 +81,12 @@ class RealmControllerQuestion{
     
     //全問題をジャンルで絞る
     func squeezeGenre(_ genre :String){
-        result = try! Realm().objects(Question.self).filter("genre = \(genre)")
+        result = try! Realm().objects(Question.self).filter("genre == '\(genre)'")
     }
     
     //全問題をもう一度確認して絞り込みを解除
     func unSqueeze() {
-        result = try! Realm().objects(Question.self).filter("licenseId = \(licenseId)").sorted(byKeyPath: "no")
+        result = try! Realm().objects(Question.self).filter("licenseId == '\(licenseId)'").sorted(byKeyPath: "no")
     }
     
     //全問題から指定した個数分ランダムソートで返す
@@ -123,13 +122,13 @@ class RealmControllerQuestion{
     
     //未回答問題を指定された個数ランダムで返す
     func getRandomResultNotDone(_ number :Int) -> List<Question> {
-        let searchResult = getRandomResult("done = false", number)
+        let searchResult = getRandomResult("done == 'false'", number)
         return searchResult
     }
     
     //未正解問題を指定された個数ランダムで返す
     func getRandomResultNotCorrect(_ number :Int) -> List<Question>{
-        let searchResult = getRandomResult("correct = false", number)
+        let searchResult = getRandomResult("correct == 'false'", number)
         return searchResult
     }
     
@@ -154,11 +153,11 @@ class RealmControllerQuestion{
     func  getConditionallyResult(_ number :Int, _ notDone :Bool, _ notCorrect :Bool) -> List<Question> {
         var searchResult = List<Question>()
         if notDone && notCorrect {//未回答&&未正解(未回答問題は全て未正解)
-            searchResult = getRandomResult("done = false" , number)
+            searchResult = getRandomResult("done == 'false'" , number)
         }else if !notDone && notCorrect {//回答済&&未正解
-            searchResult = getRandomResult("done = true AND correct = false", number)
+            searchResult = getRandomResult("done == 'true' AND correct == 'false'", number)
         }else if !notDone && !notCorrect {//回答済&&正解済
-            searchResult = getRandomResult("done = true AND correct = true", number)
+            searchResult = getRandomResult("done == 'true' AND correct == 'true'", number)
         }else {
             searchResult = getRandomResult(number)
         }
@@ -200,7 +199,7 @@ class RealmControllerQuestion{
     
     //問題番号と回答を引数にし、回答後、正解したかどうかを返す
     func answer(_ questionNo :Int8 , _ selectOption :String) -> String{
-        let taegetQuestion = result.filter("No = \(questionNo)").first
+        let taegetQuestion = result.filter("No == '\(questionNo)'").first
         let answerResult = taegetQuestion?.getAnswers(selectOption)
         if answerResult == false {
             taegetQuestion?.done = true
