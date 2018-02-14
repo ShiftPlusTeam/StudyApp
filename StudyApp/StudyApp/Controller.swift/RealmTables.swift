@@ -71,6 +71,20 @@ class Question :Object{
             return false
         }
     }
+    
+    //問題の解答履歴、正当履歴を更新する
+    func histUpdate(_ recDone :Bool , _ recCorrect :Bool) -> Bool{
+        do {
+            try! realm?.write {
+                done = recDone
+                correct = recCorrect
+                print("レコード履歴更新：done = \(done) correct =\(correct)")
+            }
+        } catch {
+            return false
+        }
+        return true
+    }
 }
 
 

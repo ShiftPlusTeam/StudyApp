@@ -63,8 +63,7 @@ class RealmControllerQuestion{
     init(_ recLicenseId :String) {
         licenseId = recLicenseId
         print("recLicensId == '\(recLicenseId)'")
-        
-        //次のステップ実行時にエラーとなる
+    
         result = try! Realm().objects(Question.self).filter("licenseId == '\(recLicenseId)'").sorted(byKeyPath: "no")
         
         for i in 0..<(result.count) {
@@ -82,6 +81,7 @@ class RealmControllerQuestion{
     //全問題をジャンルで絞る
     func squeezeGenre(_ genre :String){
         result = try! Realm().objects(Question.self).filter("genre == '\(genre)'")
+        print("ジャンルで絞る：\(genre)")
     }
     
     //全問題をもう一度確認して絞り込みを解除
@@ -122,15 +122,18 @@ class RealmControllerQuestion{
     
     //未回答問題を指定された個数ランダムで返す
     func getRandomResultNotDone(_ number :Int) -> List<Question> {
-        let searchResult = getRandomResult("done == 'false'", number)
+        
+        let searchResult = getRandomResult("done == false", number)
         return searchResult
     }
     
     //未正解問題を指定された個数ランダムで返す
     func getRandomResultNotCorrect(_ number :Int) -> List<Question>{
-        let searchResult = getRandomResult("correct == 'false'", number)
+        let searchResult = getRandomResult("correct == false", number)
         return searchResult
     }
+    
+
     
     
     
@@ -153,11 +156,11 @@ class RealmControllerQuestion{
     func  getConditionallyResult(_ number :Int, _ notDone :Bool, _ notCorrect :Bool) -> List<Question> {
         var searchResult = List<Question>()
         if notDone && notCorrect {//未回答&&未正解(未回答問題は全て未正解)
-            searchResult = getRandomResult("done == 'false'" , number)
+            searchResult = getRandomResult("done == false" , number)
         }else if !notDone && notCorrect {//回答済&&未正解
-            searchResult = getRandomResult("done == 'true' AND correct == 'false'", number)
+            searchResult = getRandomResult("done == true AND correct == false", number)
         }else if !notDone && !notCorrect {//回答済&&正解済
-            searchResult = getRandomResult("done == 'true' AND correct == 'true'", number)
+            searchResult = getRandomResult("done == true AND correct == true", number)
         }else {
             searchResult = getRandomResult(number)
         }

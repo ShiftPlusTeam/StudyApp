@@ -67,11 +67,9 @@ class GenreSelectViewController: UIViewController, UITableViewDelegate, UITableV
     
     //セルがタップされた時に呼び出されるデリゲートメソッド
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("タップサイン_\(genreList[indexPath.row])")
+        //print("タップサイン_\(genreList[indexPath.row])")
         
         AppDataController.genre = [genreList[indexPath.row]]
-        //AppDataController.genreId = [genreIdList[indexPath.row]]
-        //↑AppDataControllerにgenreId作って
         
         //次頁、問題表示画面へ遷移
         tableView.deselectRow(at: indexPath, animated: true)

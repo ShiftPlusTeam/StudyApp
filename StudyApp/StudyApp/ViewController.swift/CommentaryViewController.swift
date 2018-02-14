@@ -47,8 +47,10 @@ class CommentaryViewController: UIViewController{
         //この画面に遷移した時に全て✖︎で表示される→原因調査よろしくお願い（勉強のためにね）
         if answer == correctlabel.text{
             imageView.image = maruimage;
+            results.histUpdate(true, true)
         }else{
             imageView.image = batsuimage;
+            results.histUpdate(true, false)
         }
     }
     
