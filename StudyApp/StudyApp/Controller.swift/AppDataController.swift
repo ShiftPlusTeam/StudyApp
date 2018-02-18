@@ -41,6 +41,17 @@ class AppDataController {
     //成績の出力時に使用
     static var currentCorrect: Int = 0
     
+    
+    static func resetAppDataController() -> () {
+        //AppDataControllerの各種値を初期化
+        count = 0
+        kind = "全問"
+        random = true
+        currentCount = 0
+        print("AppDataContorllerの初期化")
+        
+    }
+    
     //所定の条件のもとで問題を作成する
     //各種フィールド値をセットしたら、このメソッドを実行する想定
     //てかこれを動かさず他のメソッドを動かすとやばい

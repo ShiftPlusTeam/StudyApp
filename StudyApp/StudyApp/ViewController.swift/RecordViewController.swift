@@ -110,6 +110,13 @@ class RecordViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func backHome(_ sender: Any) {
+        
+        //AppDataControllerの初期化を実行する
+        AppDataController.resetAppDataController()
+    }
+    
+    
 }
 
 
