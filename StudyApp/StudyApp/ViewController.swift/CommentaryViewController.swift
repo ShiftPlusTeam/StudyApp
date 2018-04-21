@@ -33,26 +33,21 @@ class CommentaryViewController: UIViewController{
         batsuimage = UIImage(named: "mark_batsu")
         
         //現在の問題を定義
-        let results = AppDataController.getCurrentQuestionData()
-        
-        //回答した選択肢を定義
-        //以下で一度変数を置き換えた意味はなんでしょうか？？？？？？？？
-        //わかりにくくなるだけだと思うんだが、、、
-        let answer = AppDataController.selectAnswer
+        let result = AppDataController.getCurrentQuestionData()
         
         //各種表示の更新
-        commentlabel.text = results.comment
-        correctlabel.text = results.answer
+        commentlabel.text = result.comment
+        correctlabel.text = result.answer
         
         //正誤判定
-        //なんで以下の実装では突然、;入れてるの？コピペ？？？？？コーディングは統一してくれ見にくい！！！！！！！
         //この画面に遷移した時に全て✖︎で表示される→原因調査よろしくお願い（勉強のためにね）
-        if answer == correctlabel.text{
-            imageView.image = maruimage;
-            results.histUpdate(true, true)
+        if AppDataController.selectAnswer == result.answer{
+            imageView.image = maruimage
+            AppDataController.currentCorrect = AppDataController.currentCorrect + 1
+            result.histUpdate(true, true)
         }else{
-            imageView.image = batsuimage;
-            results.histUpdate(true, false)
+            imageView.image = batsuimage
+            result.histUpdate(true, false)
         }
     }
     

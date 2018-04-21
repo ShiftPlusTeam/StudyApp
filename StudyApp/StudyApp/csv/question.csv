@@ -198,3 +198,13 @@
 00020098,0198,0002,マネジメント系,SLAに含めることが適切な項目はどれか。,SLA(Service Level Agreement)は、通信サービス事業者などのサービス提供者と利用者の間で交わされる、サービスの品質保証に関する合意もしくは契約です。,サーバの性能,サービス提供時間帯,システムの運用コスト,新規サービスの追加手順,B
 00020099,0199,0002,マネジメント系,プロジェクト管理においてマイルストーンに分類されるものはどれか。,マイルストーンとは、昔に道沿いに設置された目印・道しるべのことで目的地までの距離(1マイル=1.6km)等を記したものです。そこから転じてプロジェクト管理でのマイルストーンは、区切りやチェックポイントとしての意味で使われます。,結合テスト工程,コーディング作業,設計レビュー開始日,保守作業,C
 00020100,0200,0002,マネジメント系,業務用サーバの停電対策として導入予定の自家発電設備は、停電を感知してから安定した電源供給が得られるまでに1分かかる。その1分間のサーバ用電源を確保するために必要な装置はどれか。,停電が起こるとシステムを構成する機器に電気が流れなくなり、稼働がストップするばかりか現在の作業状況をバックアップすることもできなくなってしまい業務に重大な支障をきたす恐れがあります。,A/Dコンバータ,RAID,UPS,ファイアウォール,C
+00030001,0101,0003,kasaharaTest1系,問題1 正解はA,~~~ここに解説文~~~,AAAAAAAAAAAAA,BBBBBBBBBBBBBBB,CCCCCCCCCCCCCC,DDDDDDDDDDDDDDD,A
+00030002,0102,0003,kasaharaTest1系,問題2 正解はA,~~~ここに解説文~~~,AAAAAAAAAAAAA,BBBBBBBBBBBBBBB,CCCCCCCCCCCCCC,DDDDDDDDDDDDDDD,A
+00030003,0103,0003,kasaharaTest1系,問題3 正解はA,~~~ここに解説文~~~,AAAAAAAAAAAAA,BBBBBBBBBBBBBBB,CCCCCCCCCCCCCC,DDDDDDDDDDDDDDD,A
+00030004,0104,0003,kasaharaTest1系,問題4 正解はA,~~~ここに解説文~~~,AAAAAAAAAAAAA,BBBBBBBBBBBBBBB,CCCCCCCCCCCCCC,DDDDDDDDDDDDDDD,A
+00030005,0105,0003,kasaharaTest1系,問題5 正解はA,~~~ここに解説文~~~,AAAAAAAAAAAAA,BBBBBBBBBBBBBBB,CCCCCCCCCCCCCC,DDDDDDDDDDDDDDD,A
+00030006,0106,0003,kasaharaTest2系,問題6 正解はA,~~~ここに解説文~~~,AAAAAAAAAAAAA,BBBBBBBBBBBBBBB,CCCCCCCCCCCCCC,DDDDDDDDDDDDDDD,A
+00030007,0107,0003,kasaharaTest2系,問題7 正解はA,~~~ここに解説文~~~,AAAAAAAAAAAAA,BBBBBBBBBBBBBBB,CCCCCCCCCCCCCC,DDDDDDDDDDDDDDD,A
+00030008,0108,0003,kasaharaTest2系,問題8 正解はA,~~~ここに解説文~~~,AAAAAAAAAAAAA,BBBBBBBBBBBBBBB,CCCCCCCCCCCCCC,DDDDDDDDDDDDDDD,A
+00030009,0109,0003,kasaharaTest2系,問題9 正解はA,~~~ここに解説文~~~,AAAAAAAAAAAAA,BBBBBBBBBBBBBBB,CCCCCCCCCCCCCC,DDDDDDDDDDDDDDD,A
+00030010,0110,0003,kasaharaTest2系,問題10 正解はA,~~~ここに解説文~~~,AAAAAAAAAAAAA,BBBBBBBBBBBBBBB,CCCCCCCCCCCCCC,DDDDDDDDDDDDDDD,A

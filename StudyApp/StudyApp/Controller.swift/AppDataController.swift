@@ -34,7 +34,6 @@ class AppDataController {
     static var selectAnswer: String = " "
     
     //現在の問題数(現在何問目か)
-    //0から始めること(インデックスに使うため)
     static var currentCount: Int = 0
     
     //現在の正解数
@@ -44,11 +43,12 @@ class AppDataController {
     
     static func resetAppDataController() -> () {
         //AppDataControllerの各種値を初期化
+        print("AppDataContorllerの初期化")
         count = 0
         kind = "全問"
         random = true
         currentCount = 0
-        print("AppDataContorllerの初期化")
+        currentCorrect = 0
         
     }
     
@@ -69,7 +69,7 @@ class AppDataController {
         } else if kind == "未回答" {
             results = realmControllerQuestion.getRandomResultNotDone(count)
             
-        } else if kind == "未正解" {
+        } else if kind == "不正解" {
             results = realmControllerQuestion.getRandomResultNotCorrect(count)
             
         } else {

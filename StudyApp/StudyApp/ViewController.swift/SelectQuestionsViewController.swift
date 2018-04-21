@@ -24,11 +24,21 @@ class SelectQuestionsViewController: UIViewController {
     func nextPage() {
         //realmデータをセット
         AppDataController.createQuestion()
-        //次画面への遷移
-        performSegue(withIdentifier: "goQuestion",sender: nil)
-//        let storyboard: UIStoryboard = self.storyboard!
-//        let nextView = storyboard.instantiateViewController(withIdentifier: "question")
-//        self.present(nextView, animated: true, completion: nil)
+        print("relsutsのカウント数： \(String(describing: AppDataController.results?.count))")
+        
+        //問題上書き
+        AppDataController.count = (AppDataController.results?.count)!
+        
+        if AppDataController.results?.count == 0 {
+            //問題数が0だった時の処理を記載→今度です。。。。。。。。。。
+            
+        } else {
+            //次画面への遷移
+            performSegue(withIdentifier: "goQuestion",sender: nil)
+            //        let storyboard: UIStoryboard = self.storyboard!
+            //        let nextView = storyboard.instantiateViewController(withIdentifier: "question")
+            //        self.present(nextView, animated: true, completion: nil)
+        }
     }
     
     
@@ -46,7 +56,7 @@ class SelectQuestionsViewController: UIViewController {
     
     @IBAction func tapTwentyOfAll() {
         AppDataController.count = 20
-        AppDataController.kind = "全問 "
+        AppDataController.kind = "全問"
         nextPage()
     }
     
@@ -103,7 +113,7 @@ class SelectQuestionsViewController: UIViewController {
         AppDataController.kind = "不正解"
         nextPage()
     }
-
+    
 }
 
 @IBDesignable class RoundedButton: UIButton {
