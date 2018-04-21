@@ -23,7 +23,7 @@ class AppDataController {
     //資格名
     static var name: String = "資格名"
     //ジャンル
-    static var genre: [String] = []
+    static var genre: String = "ジャンル"
     //問題数(5 10 20 100)
     static var count: Int = 5
     //問題の種別(全問 未回答 不正解)
@@ -59,6 +59,9 @@ class AppDataController {
         
         //RealmControllerQuestionのインスタンス生成
         let realmControllerQuestion = RealmControllerQuestion(id)
+        
+        realmControllerQuestion.squeezeGenre(genre)
+        
         
         if kind == "全問" {
             results = realmControllerQuestion.getRandomResult(count)

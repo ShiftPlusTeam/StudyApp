@@ -25,6 +25,8 @@ class CommentaryViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
+        
         
         // バンドルした画像ファイルを読み込み
         maruimage = UIImage(named: "mark_maru")

@@ -69,7 +69,7 @@ class GenreSelectViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //print("タップサイン_\(genreList[indexPath.row])")
         
-        AppDataController.genre = [genreList[indexPath.row]]
+        AppDataController.genre = genreList[indexPath.row]
         
         //次頁、問題表示画面へ遷移
         tableView.deselectRow(at: indexPath, animated: true)

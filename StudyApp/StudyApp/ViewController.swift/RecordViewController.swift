@@ -82,6 +82,8 @@ class RecordViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        self.navigationItem.hidesBackButton = true
+        
         //成績グラフのレンダリング
         let pieChartView = PieChartView()
         pieChartView.frame = CGRect(x:0, y:100, width: view.frame.size.width, height: 200)

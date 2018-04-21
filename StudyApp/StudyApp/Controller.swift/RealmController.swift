@@ -80,7 +80,7 @@ class RealmControllerQuestion{
     
     //全問題をジャンルで絞る
     func squeezeGenre(_ genre :String){
-        result = try! Realm().objects(Question.self).filter("genre == '\(genre)'")
+        result = result.filter("genre == '\(genre)'")
         print("ジャンルで絞る：\(genre)")
     }
     
