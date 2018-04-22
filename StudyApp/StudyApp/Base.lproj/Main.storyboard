@@ -541,16 +541,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="問" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtK-wX-zDY">
-<<<<<<< HEAD
                                 <rect key="frame" x="26" y="84" width="17.5" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="GbR-To-DLd"/>
-=======
-                                <rect key="frame" x="26" y="84" width="87" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="GbR-To-DLd"/>
-                                    <constraint firstAttribute="width" constant="87" id="eM8-sF-4Cr"/>
->>>>>>> b0b53d433f746a69de852484b7ff75b65f578493
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -898,12 +891,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
         <segue reference="JeE-8R-E32"/>
-=======
-        <segue reference="b98-Da-3hy"/>
-        <segue reference="fq8-jv-XdG"/>
->>>>>>> b0b53d433f746a69de852484b7ff75b65f578493
         <segue reference="DSk-I6-qzR"/>
         <segue reference="2Ze-os-eeD"/>
     </inferredMetricsTieBreakers>
