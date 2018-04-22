@@ -22,6 +22,8 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.hidesBackButton = true
+        
         //StoryBoard上で下記は実装しているため、コメントアウト
 //        tableView.dataSource = self
 //        tableView.delegate = self
@@ -74,6 +76,7 @@ class LicenseViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         // セルに表示する値を設定する
         customCell.customLabel.text = object.name
+        //customCell.customLabel?.font = UIFont.systemFont(ofSize:12)
         //print(object.name)
         
         //未購入の場合はセルをグレーアウト

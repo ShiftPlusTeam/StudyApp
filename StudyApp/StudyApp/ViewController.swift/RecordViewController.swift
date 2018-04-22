@@ -82,6 +82,8 @@ class RecordViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        self.navigationItem.hidesBackButton = true
+        
         //成績グラフのレンダリング
         let pieChartView = PieChartView()
         pieChartView.frame = CGRect(x:0, y:100, width: view.frame.size.width, height: 200)
@@ -96,7 +98,7 @@ class RecordViewController: UIViewController {
             correctRate = 0
             incorrectRate = 100
         } else {
-            correctRate = CGFloat(AppDataController.currentCorrect / AppDataController.count * 100)
+            correctRate = CGFloat(AppDataController.currentCorrect * 100 / AppDataController.count)
             incorrectRate = 100 - correctRate
         }
         
@@ -111,7 +113,9 @@ class RecordViewController: UIViewController {
     }
     
     @IBAction func backHome(_ sender: Any) {
-        
+        let newRate = RealmControllerQuestion(AppDataController.id).getRate()
+        let realmControllerLicense = RealmControllerLicense()
+        realmControllerLicense.getResult(AppDataController.id).rateUpdata(newRate)
         //AppDataControllerの初期化を実行する
         AppDataController.resetAppDataController()
     }

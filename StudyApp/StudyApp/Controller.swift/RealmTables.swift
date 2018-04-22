@@ -25,6 +25,10 @@ class License: Object  {
     override static func primaryKey() -> String? {
         return "id"
     }
+    
+    func rateUpdata(_ newRate: Int8) {
+        rate = newRate
+    }
 }
 
 

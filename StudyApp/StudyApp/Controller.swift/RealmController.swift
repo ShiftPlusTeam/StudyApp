@@ -22,10 +22,11 @@ class RealmControllerLicense{
         return List<License>(result)
     }
     
-    //条件に合致した資格を返す
-    func getResult(_ query :String) -> List<License> {
-        let searchResult = result.filter(query)
-        return List<License>(searchResult)
+    //idを指定して資格情報を返す
+    func getResult(_ id :String) -> License {
+        let searchResult = result.filter("id == \(id)")
+        //↑ココでエラー
+        return searchResult[0]
     }
 
     //CSVの１センテンスをパーズしてRealmにレコードをインサートする
@@ -80,7 +81,7 @@ class RealmControllerQuestion{
     
     //全問題をジャンルで絞る
     func squeezeGenre(_ genre :String){
-        result = try! Realm().objects(Question.self).filter("genre == '\(genre)'")
+        result = result.filter("genre == '\(genre)'")
         print("ジャンルで絞る：\(genre)")
     }
     
@@ -93,7 +94,7 @@ class RealmControllerQuestion{
     func getRandomResult(_ number :Int) -> List<Question> {
         let searchResult = result
         let randomResult = List<Question>()
-        let count = searchResult.count - 1
+        let count = searchResult.count
         var numbList :[Int] = []
         
         //0~resultCount-1までの数値の配列を作る
@@ -107,6 +108,10 @@ class RealmControllerQuestion{
             if i != ranI {
                 numbList.swapAt(i, ranI)
             }
+        }
+        
+        for i in 0..<(numbList.count) {
+            print("ランダムNo：\(numbList[i])")
         }
         
         //randomResultにsearchResultを書き写す(countを超えた場合はそこまで返す)
@@ -133,8 +138,12 @@ class RealmControllerQuestion{
         return searchResult
     }
     
-
-    
+    //正答率を取得
+    func getRate() -> Int8 {
+        let rate = Int8( getResult("correct == true").count * 100 / result.count )
+        print("getRate：レート計算：\(rate)")
+        return rate
+    }
     
     
 
@@ -171,8 +180,10 @@ class RealmControllerQuestion{
     func getRandomResult(_ query :String , _ number :Int) -> List<Question> {
         let searchResult = result.filter(query)
         let randomResult = List<Question>()
-        let count = searchResult.count - 1
+        let count = searchResult.count
         var numbList :[Int] = []
+        
+        
         
         //0~resultCount-1までの数値の配列を作る
         for i in 0..<(count){

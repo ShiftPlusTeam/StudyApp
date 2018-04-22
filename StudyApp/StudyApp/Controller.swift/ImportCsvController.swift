@@ -44,7 +44,7 @@ class ImportLicense {
                         print(myLicense.name)
                         myLicense.rate = 0
                         print(myLicense.rate)
-                        myLicense.purshase = false
+                        myLicense.purshase = true
                         print(myLicense.purshase)
                         
                         //CSV１レコード文の取得が完了

@@ -23,7 +23,7 @@ class AppDataController {
     //資格名
     static var name: String = "資格名"
     //ジャンル
-    static var genre: [String] = []
+    static var genre: String = "ジャンル"
     //問題数(5 10 20 100)
     static var count: Int = 5
     //問題の種別(全問 未回答 不正解)
@@ -34,7 +34,6 @@ class AppDataController {
     static var selectAnswer: String = " "
     
     //現在の問題数(現在何問目か)
-    //0から始めること(インデックスに使うため)
     static var currentCount: Int = 0
     
     //現在の正解数
@@ -44,11 +43,12 @@ class AppDataController {
     
     static func resetAppDataController() -> () {
         //AppDataControllerの各種値を初期化
+        print("AppDataContorllerの初期化")
         count = 0
         kind = "全問"
         random = true
         currentCount = 0
-        print("AppDataContorllerの初期化")
+        currentCorrect = 0
         
     }
     
@@ -60,13 +60,16 @@ class AppDataController {
         //RealmControllerQuestionのインスタンス生成
         let realmControllerQuestion = RealmControllerQuestion(id)
         
+        realmControllerQuestion.squeezeGenre(genre)
+        
+        
         if kind == "全問" {
             results = realmControllerQuestion.getRandomResult(count)
             
         } else if kind == "未回答" {
             results = realmControllerQuestion.getRandomResultNotDone(count)
             
-        } else if kind == "未正解" {
+        } else if kind == "不正解" {
             results = realmControllerQuestion.getRandomResultNotCorrect(count)
             
         } else {
